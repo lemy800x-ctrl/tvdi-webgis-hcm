@@ -451,3 +451,24 @@ def health():
 
 if (ROOT / "frontend").exists():
     app.mount("/", StaticFiles(directory=ROOT / "frontend", html=True), name="frontend")
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+import os
+
+app = FastAPI()
+
+# Đường dẫn tới thư mục frontend
+FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "..", "frontend")
+
+# Mount thư mục frontend để load CSS, JS, hình ảnh (nếu có)
+if os.path.exists(FRONTEND_DIR):
+    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+
+# Route trang chủ trả về file index.html
+@app.get("/")
+def read_root():
+    index_path = os.path.join(FRONTEND_DIR, "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    return {"message": "WebGIS TVDI HCM API đang hoạt động!"}
