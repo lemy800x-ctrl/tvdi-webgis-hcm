@@ -5,15 +5,9 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-# Xác định đường dẫn thư mục gốc dự án
+# Xác định đường dẫn thư mục frontend
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
-
-# Mount thư mục frontend làm static để trình duyệt load file css, js, images
-if os.path.exists(FRONTEND_DIR):
-    app.mount("/frontend", StaticFiles(directory=FRONTEND_DIR), name="frontend")
-    # Nếu frontend của bạn dùng thư mục con như css/js/static thì mount thêm dòng dưới:
-    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
 @app.get("/")
 def read_root():
@@ -21,3 +15,7 @@ def read_root():
     if os.path.exists(index_path):
         return FileResponse(index_path)
     return {"message": "WebGIS TVDI HCM API đang hoạt động!"}
+
+# Mount toàn bộ thư mục frontend vào root (ĐẶT Ở CUỐI NGHỀ ĐỂ KHÔNG ĐÈ ROUTE API)
+if os.path.exists(FRONTEND_DIR):
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
