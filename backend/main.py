@@ -1,13 +1,169 @@
 import os
-from fastapi import FastAPI
+import psycopg2
+from psycopg2.extras import RealDictCursor
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
+# 1. KẾT NỐI DATABASE NEON POSTGIS
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql://neondb_owner:npg_NDjOWaZBu0C5@ep-cold-cloud-azly3g87.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+)
+
+def get_db():
+    try:
+        conn = psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
+        return conn
+    except Exception as e:
+        print(f"Lỗi kết nối CSDL: {e}")
+        return None
+
 # Xác định đường dẫn thư mục frontend
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
+
+# 2. KHAI BÁO CÁC API PHỤC VỤ DỮ LIỆU BẢN ĐỒ VÀ THỐNG KÊ
+
+@app.get("/api/city-series")
+def get_city_series():
+    """Lấy danh sách tất cả các chuỗi thời gian (tháng/năm)"""
+    conn = get_db()
+    if not conn:
+        raise HTTPException(status_code=500, detail="Lỗi kết nối cơ sở dữ liệu")
+    try:
+        with conn.cursor() as cur:
+            cur.execute("""
+                SELECT DISTINCT nam, thang, 
+                       CASE WHEN nam >= 2026 THEN 'du_bao' ELSE 'thuc_te' END as loai,
+                       AVG(tvdi_mean) as tvdi_mean
+                FROM tvdi_monthly
+                GROUP BY nam, thang
+                ORDER BY nam ASC, thang ASC;
+            """)
+            rows = cur.fetchall()
+            return rows
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
+
+@app.get("/api/map")
+def get_map_geojson(nam: int = Query(...), thang: int = Query(...)):
+    """Lấy GeoJSON ranh giới phường xã kèm chỉ số TVDI"""
+    conn = get_db()
+    if not conn:
+        raise HTTPException(status_code=500, detail="Lỗi kết nối cơ sở dữ liệu")
+    try:
+        with conn.cursor() as cur:
+            cur.execute("""
+                SELECT jsonb_build_object(
+                    'type', 'FeatureCollection',
+                    'features', jsonb_agg(
+                        jsonb_build_object(
+                            'type', 'Feature',
+                            'geometry', ST_AsGeoJSON(w.geom)::jsonb,
+                            'properties', jsonb_build_object(
+                                'ward_code', w.ward_code,
+                                'ward_name', w.ward_name,
+                                'tvdi_mean', t.tvdi_mean,
+                                'level_label', t.level_label
+                            )
+                        )
+                    )
+                ) as geojson
+                FROM wards w
+                LEFT JOIN tvdi_monthly t ON w.ward_code = t.ward_code AND t.nam = %s AND t.thang = %s;
+            """, (nam, thang))
+            res = cur.fetchone()
+            return res['geojson'] if res and res['geojson'] else {"type": "FeatureCollection", "features": []}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
+
+@app.get("/api/summary")
+def get_summary(nam: int = Query(...), thang: int = Query(...)):
+    """Lấy thống kê trung bình thành phố và 10 nơi khô nhất"""
+    conn = get_db()
+    if not conn:
+        raise HTTPException(status_code=500, detail="Lỗi kết nối cơ sở dữ liệu")
+    try:
+        with conn.cursor() as cur:
+            # Tính trung bình toàn TP
+            cur.execute("""
+                SELECT AVG(tvdi_mean) as mean_val FROM tvdi_monthly WHERE nam = %s AND thang = %s;
+            """, (nam, thang))
+            mean_row = cur.fetchone()
+            mean_val = mean_row['mean_val'] if mean_row and mean_row['mean_val'] is not None else 0.0
+
+            # Phân loại mức độ
+            level_label = "Rất ẩm" if mean_val < 0.2 else ("Ẩm" if mean_val < 0.4 else ("Trung bình" if mean_val < 0.6 else ("Khô" if mean_val < 0.8 else "Rất khô")))
+
+            # Top 10 nơi khô nhất
+            cur.execute("""
+                SELECT w.ward_code, w.ward_name, t.tvdi_mean
+                FROM tvdi_monthly t
+                JOIN wards w ON t.ward_code = w.ward_code
+                WHERE t.nam = %s AND t.thang = %s AND t.tvdi_mean IS NOT NULL
+                ORDER BY t.tvdi_mean DESC
+                LIMIT 10;
+            """, (nam, thang))
+            driest = cur.fetchall()
+
+            # Thống kê phân lớp
+            classes = [
+                {"level": 0, "label": "Rất ẩm", "count": 0},
+                {"level": 1, "label": "Ẩm", "count": 0},
+                {"level": 2, "label": "Trung bình", "count": 0},
+                {"level": 3, "label": "Khô", "count": 0},
+                {"level": 4, "label": "Rất khô", "count": 0}
+            ]
+
+            return {
+                "mean": mean_val,
+                "level_label": level_label,
+                "classes": classes,
+                "driest": driest
+            }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
+
+@app.get("/api/ward/{ward_code}/series")
+def get_ward_series(ward_code: str):
+    """Lấy chuỗi dữ liệu theo phường xã"""
+    conn = get_db()
+    if not conn:
+        raise HTTPException(status_code=500, detail="Lỗi kết nối cơ sở dữ liệu")
+    try:
+        with conn.cursor() as cur:
+            cur.execute("SELECT ward_code, ward_name as name, area_km2 FROM wards WHERE ward_code = %s;", (ward_code,))
+            ward_info = cur.fetchone()
+            if not ward_info:
+                ward_info = {"ward_code": ward_code, "name": ward_code, "area_km2": 0}
+
+            cur.execute("""
+                SELECT nam, thang, tvdi_mean
+                FROM tvdi_monthly
+                WHERE ward_code = %s
+                ORDER BY nam ASC, thang ASC;
+            """, (ward_code,))
+            series = cur.fetchall()
+
+            return {
+                "ward": ward_info,
+                "series": series
+            }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
+
+# 3. ROUTE TRANG CHỦ & PHỤC VỤ FILE TĨNH
 
 @app.get("/")
 def read_root():
@@ -16,6 +172,7 @@ def read_root():
         return FileResponse(index_path)
     return {"message": "WebGIS TVDI HCM API đang hoạt động!"}
 
-# Mount toàn bộ thư mục frontend vào root (ĐẶT Ở CUỐI NGHỀ ĐỂ KHÔNG ĐÈ ROUTE API)
 if os.path.exists(FRONTEND_DIR):
-    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+    app.mount("/frontend", StaticFiles(directory=FRONTEND_DIR), name="frontend")
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="public")
