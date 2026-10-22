@@ -455,16 +455,3 @@
 
 </body>
 </html>
-from fastapi import FastAPI
-from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
-
-app = FastAPI()
-
-# Mount thư mục chứa các file static (CSS, JS, images)
-app.mount("/static", StaticFiles(directory="frontend"), name="static")
-
-# Route trang chủ trả về file index.html
-@app.get("/")
-def read_root():
-    return FileResponse("frontend/index.html")
