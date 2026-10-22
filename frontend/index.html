@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TVDI TP.HCM - Theo dõi khô hạn</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Giao diện thanh thời gian -->
+  <style>
+    .strip-wrap {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 500;
+      box-sizing: border-box;
+      padding: 12px 14px 8px;
+      background: rgba(255,255,255,.97);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(15,23,42,.12);
+      color: #334155;
+    }
+
+    .strip-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-bottom: 12px;
+    }
+
+    #strip-caption {
+      color: #334155;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .strip-key {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #64748b;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .strip-key i {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      border: 1px solid #94a3b8;
+      border-radius: 3px;
+    }
+
+    .strip-key .key-actual {
+      background: #3b82f6;
+    }
+
+    .strip-key .key-forecast {
+      background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0,
+        #ffffff 3px,
+        #0d9488 3px,
+        #0d9488 5px
+      );
+    }
+
+    #strip.strip {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 4px 4px 10px;
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+      scroll-behavior: smooth;
+    }
+
+    #strip.strip::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    #strip.strip::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #strip.strip::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 20px;
+    }
+
+    #strip .year {
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    #strip .year-label {
+      min-height: 17px;
+      padding-left: 2px;
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 17px;
+    }
+
+    #strip .cells {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 18px;
+      align-items: center;
+      gap: 4px;
+    }
+
+    #strip .cell {
+      display: block;
+      width: 18px;
+      min-width: 18px;
+      height: 30px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    #strip .cell.forecast {
+      background-image: repeating-linear-gradient(
+        135deg,
+        transparent 0,
+        transparent 4px,
+        rgba(255,255,255,.85) 4px,
+        rgba(255,255,255,.85) 6px
+      );
+      border-color: rgba(15,23,42,.18);
+    }
+
+    #strip .cell.active {
+      outline: 2px solid #1e293b;
+      outline-offset: 2px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+    }
+
+    #strip .cell:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 6px rgba(15,23,42,.18);
+    }
+
+    /* Tránh thanh thời gian che quá nhiều bản đồ trên điện thoại */
+    @media (max-width: 640px) {
+      .strip-wrap {
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .strip-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+        margin-bottom: 10px;
+      }
+
+      .strip-key {
+        justify-content: flex-start;
+      }
+
+      #strip .cells {
+        grid-auto-columns: 16px;
+        gap: 3px;
+      }
+
+      #strip .cell {
+        width: 16px;
+        min-width: 16px;
+        height: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- BẢN ĐỒ VÀ THANH THỜI GIAN -->
+    <section class="stage" aria-label="Bản đồ TVDI">
+
+      <div
+        id="map"
+        role="application"
+        aria-label="Bản đồ TVDI theo phường xã"
+      ></div>
+
+      <!-- CHÚ GIẢI TVDI -->
+      <div class="legend" aria-label="Chú giải TVDI">
+
+        <div class="legend-title">
+          TVDI (0 ẩm - 1 khô)
+        </div>
+
+        <div class="legend-bar" id="legend-bar"></div>
+
+        <div class="legend-ticks">
+          <span>0</span>
+          <span>0,2</span>
+          <span>0,4</span>
+          <span>0,6</span>
+          <span>0,8</span>
+          <span>1</span>
+        </div>
+
+        <div class="legend-nodata">
+          <i></i>
+          <span>Không có dữ liệu</span>
+        </div>
+
+      </div>
+
+      <!-- THANH THỜI GIAN -->
+      <div class="strip-wrap">
+
+        <div class="strip-head">
+
+          <span id="strip-caption">
+            Chọn tháng để xem trên bản đồ
+          </span>
+
+          <span class="strip-key">
+            <i class="key-actual"></i>
+            <span>Thực tế</span>
+
+            <i class="key-forecast"></i>
+            <span>Dự báo AI</span>
+          </span>
+
+        </div>
+
+        <div
+          id="strip"
+          class="strip"
+          tabindex="0"
+          role="slider"
+          aria-label="Thanh thời gian theo tháng"
+          aria-orientation="horizontal"
+          aria-valuemin="0"
+          aria-valuemax="0"
+          aria-valuenow="0"
+        ></div>
+
+      </div>
+    </section>
+
+    <!-- CỘT THÔNG TIN -->
+    <aside class="rail">
+
+      <header class="rail-head">
+        <h1>Khô hạn TP.HCM</h1>
+      </header>
+
+      <!-- CÁC TAB -->
+      <div class="tabs" role="tablist" aria-label="Nội dung">
+
+        <button
+          role="tab"
+          id="tab-area"
+          aria-selected="true"
+          aria-controls="panel-area"
+        >
+          Khu vực
+        </button>
+
+        <button
+          role="tab"
+          id="tab-model"
+          aria-selected="false"
+          aria-controls="panel-model"
+          tabindex="-1"
+        >
+          Mô hình
+        </button>
+
+      </div>
+
+      <!-- TAB KHU VỰC -->
+      <div
+        id="panel-area"
+        role="tabpanel"
+        aria-labelledby="tab-area"
+      >
+
+        <div id="empty" class="notice" hidden></div>
+
+        <!-- THỐNG KÊ TOÀN THÀNH PHỐ -->
+        <section
+          class="block"
+          id="period-block"
+          aria-live="polite"
+        >
+
+          <div class="period-line">
+            <h2 id="period-title">-</h2>
+            <span id="period-badge" class="badge">-</span>
+          </div>
+
+          <div class="mean-line">
+            <span id="mean-value" class="mean-value">-</span>
+
+            <span id="mean-label" class="mean-label">
+              TVDI trung bình toàn thành phố
+            </span>
+          </div>
+
+          <div
+            id="class-bar"
+            class="class-bar"
+            aria-hidden="true"
+          ></div>
+
+          <ul id="class-list" class="class-list"></ul>
+
+        </section>
+
+        <!-- CHI TIẾT PHƯỜNG/XÃ -->
+        <section class="block" id="ward-block" hidden>
+
+          <h2 id="ward-name">-</h2>
+
+          <p id="ward-meta" class="muted"></p>
+
+          <div class="chart-box">
+            <canvas
+              id="ward-chart"
+              aria-label="Biểu đồ TVDI theo tháng của phường xã"
+            ></canvas>
+          </div>
+
+          <button
+            id="predict-btn"
+            class="btn"
+            type="button"
+          >
+            Dự báo 6 tháng tới bằng AI
+          </button>
+
+          <div
+            id="predict-result"
+            class="predict-result"
+            aria-live="polite"
+          ></div>
+
+        </section>
+
+        <!-- DANH SÁCH NƠI KHÔ NHẤT -->
+        <section class="block" id="driest-block">
+
+          <h2>10 nơi khô nhất tháng này</h2>
+
+          <ol id="driest-list" class="driest-list"></ol>
+
+        </section>
+
+      </div>
+
+      <!-- TAB MÔ HÌNH -->
+      <div
+        id="panel-model"
+        role="tabpanel"
+        aria-labelledby="tab-model"
+        hidden
+      >
+
+        <section class="block">
+
+          <h2>So sánh các mô hình dự báo</h2>
+
+          <p class="muted">
+            MAE và RMSE càng thấp càng tốt.
+            R² càng gần 1 càng tốt.
+          </p>
+
+          <div class="table-wrap">
+            <table id="model-table">
+
+              <thead>
+                <tr>
+                  <th>Mô hình</th>
+                  <th>MAE</th>
+                  <th>RMSE</th>
+                  <th>R²</th>
+                  <th>MAPE %</th>
+                </tr>
+              </thead>
+
+              <tbody></tbody>
+
+            </table>
+          </div>
+
+        </section>
+
+        <section class="block">
+
+          <h2>Độ phù hợp của cạnh khô/cạnh ướt theo tháng</h2>
+
+          <p class="muted">
+            R² trung bình của đường hồi quy NDVI-LST.
+            Độ phù hợp có thể thay đổi theo mùa và điều kiện dữ liệu.
+          </p>
+
+          <div class="chart-box">
+            <canvas
+              id="edge-chart"
+              aria-label="R² cạnh khô và cạnh ướt theo tháng"
+            ></canvas>
+          </div>
+
+        </section>
+
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- THƯ VIỆN -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- JAVASCRIPT CHÍNH -->
+  <script src="app.js"></script>
+
+</body>
+</html>

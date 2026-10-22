@@ -1,0 +1,1003 @@
+ward_code,nam,thang,mo_hinh,tvdi_du_bao
+An Hội Tây,2026,1,XGBoost,0.5511
+An Hội Tây,2026,2,XGBoost,0.747
+An Hội Tây,2026,3,XGBoost,0.6826
+An Hội Tây,2026,4,XGBoost,0.6899
+An Hội Tây,2026,5,XGBoost,0.6789
+An Hội Tây,2026,6,XGBoost,0.6209
+An Hội Đông,2026,1,XGBoost,0.6418
+An Hội Đông,2026,2,XGBoost,0.9084
+An Hội Đông,2026,3,XGBoost,0.6283
+An Hội Đông,2026,4,XGBoost,0.7587
+An Hội Đông,2026,5,XGBoost,0.5494
+An Hội Đông,2026,6,XGBoost,0.6844
+An Khánh,2026,1,XGBoost,0.3263
+An Khánh,2026,2,XGBoost,0.5611
+An Khánh,2026,3,XGBoost,0.5547
+An Khánh,2026,4,XGBoost,0.5257
+An Khánh,2026,5,XGBoost,0.5411
+An Khánh,2026,6,XGBoost,0.5284
+An Long,2026,1,XGBoost,0.6246
+An Long,2026,2,XGBoost,0.6073
+An Long,2026,3,XGBoost,0.5937
+An Long,2026,4,XGBoost,0.6581
+An Long,2026,5,XGBoost,0.5529
+An Long,2026,6,XGBoost,0.5511
+An Lạc,2026,1,XGBoost,0.5085
+An Lạc,2026,2,XGBoost,0.3027
+An Lạc,2026,3,XGBoost,0.8205
+An Lạc,2026,4,XGBoost,0.4968
+An Lạc,2026,5,XGBoost,0.602
+An Lạc,2026,6,XGBoost,0.5312
+An Nhơn,2026,1,XGBoost,0.6191
+An Nhơn,2026,2,XGBoost,0.63
+An Nhơn,2026,3,XGBoost,0.6636
+An Nhơn,2026,4,XGBoost,0.5529
+An Nhơn,2026,5,XGBoost,0.5529
+An Nhơn,2026,6,XGBoost,0.5439
+An Nhơn Tây,2026,1,XGBoost,0.5638
+An Nhơn Tây,2026,2,XGBoost,0.6164
+An Nhơn Tây,2026,3,XGBoost,0.6064
+An Nhơn Tây,2026,4,XGBoost,0.6509
+An Nhơn Tây,2026,5,XGBoost,0.5439
+An Nhơn Tây,2026,6,XGBoost,0.5529
+An Phú,2026,1,XGBoost,0.6745
+An Phú,2026,2,XGBoost,0.7334
+An Phú,2026,3,XGBoost,0.5593
+An Phú,2026,4,XGBoost,0.7352
+An Phú,2026,5,XGBoost,0.7334
+An Phú,2026,6,XGBoost,0.6336
+An Phú Đông,2026,1,XGBoost,0.4913
+An Phú Đông,2026,2,XGBoost,0.5003
+An Phú Đông,2026,3,XGBoost,0.7352
+An Phú Đông,2026,4,XGBoost,0.5067
+An Phú Đông,2026,5,XGBoost,0.6272
+An Phú Đông,2026,6,XGBoost,0.5339
+An Thới Đông,2026,1,XGBoost,0.318
+An Thới Đông,2026,2,XGBoost,0.4442
+An Thới Đông,2026,3,XGBoost,0.95
+An Thới Đông,2026,4,XGBoost,0.95
+An Thới Đông,2026,5,XGBoost,0.7324
+An Thới Đông,2026,6,XGBoost,0.7315
+An Đông,2026,1,XGBoost,0.7035
+An Đông,2026,2,XGBoost,0.611
+An Đông,2026,3,XGBoost,0.7134
+An Đông,2026,4,XGBoost,0.5746
+An Đông,2026,5,XGBoost,0.6336
+An Đông,2026,6,XGBoost,0.5448
+Bà Rịa,2026,1,XGBoost,0.3498
+Bà Rịa,2026,2,XGBoost,0.8196
+Bà Rịa,2026,3,XGBoost,0.7379
+Bà Rịa,2026,4,XGBoost,0.7197
+Bà Rịa,2026,5,XGBoost,0.6009
+Bà Rịa,2026,6,XGBoost,0.7017
+Bà Điểm,2026,1,XGBoost,0.5284
+Bà Điểm,2026,2,XGBoost,0.6309
+Bà Điểm,2026,3,XGBoost,0.6463
+Bà Điểm,2026,4,XGBoost,0.6817
+Bà Điểm,2026,5,XGBoost,0.5575
+Bà Điểm,2026,6,XGBoost,0.5683
+Bàn Cờ,2026,1,XGBoost,0.5593
+Bàn Cờ,2026,2,XGBoost,0.4858
+Bàn Cờ,2026,3,XGBoost,0.4858
+Bàn Cờ,2026,4,XGBoost,0.65
+Bàn Cờ,2026,5,XGBoost,0.5393
+Bàn Cờ,2026,6,XGBoost,0.5494
+Bàu Bàng,2026,1,XGBoost,0.5003
+Bàu Bàng,2026,2,XGBoost,0.494
+Bàu Bàng,2026,3,XGBoost,0.9193
+Bàu Bàng,2026,4,XGBoost,0.65
+Bàu Bàng,2026,5,XGBoost,0.7679
+Bàu Bàng,2026,6,XGBoost,0.552
+Bàu Lâm,2026,1,XGBoost,0.1839
+Bàu Lâm,2026,2,XGBoost,0.5865
+Bàu Lâm,2026,3,XGBoost,0.95
+Bàu Lâm,2026,4,XGBoost,0.95
+Bàu Lâm,2026,5,XGBoost,0.8186
+Bàu Lâm,2026,6,XGBoost,0.8214
+Bình Chánh,2026,1,XGBoost,0.3145
+Bình Chánh,2026,2,XGBoost,0.3997
+Bình Chánh,2026,3,XGBoost,0.4968
+Bình Chánh,2026,4,XGBoost,0.7234
+Bình Chánh,2026,5,XGBoost,0.513
+Bình Chánh,2026,6,XGBoost,0.6237
+Bình Châu,2026,1,XGBoost,0.12
+Bình Châu,2026,2,XGBoost,0.2365
+Bình Châu,2026,3,XGBoost,0.95
+Bình Châu,2026,4,XGBoost,0.8858
+Bình Châu,2026,5,XGBoost,0.7425
+Bình Châu,2026,6,XGBoost,0.7497
+Bình Cơ,2026,1,XGBoost,0.5157
+Bình Cơ,2026,2,XGBoost,0.6627
+Bình Cơ,2026,3,XGBoost,0.7688
+Bình Cơ,2026,4,XGBoost,0.5067
+Bình Cơ,2026,5,XGBoost,0.6708
+Bình Cơ,2026,6,XGBoost,0.5284
+Bình Dương,2026,1,XGBoost,0.3489
+Bình Dương,2026,2,XGBoost,0.6436
+Bình Dương,2026,3,XGBoost,0.6436
+Bình Dương,2026,4,XGBoost,0.5167
+Bình Dương,2026,5,XGBoost,0.5439
+Bình Dương,2026,6,XGBoost,0.5339
+Bình Giã,2026,1,XGBoost,0.12
+Bình Giã,2026,2,XGBoost,0.5974
+Bình Giã,2026,3,XGBoost,0.7534
+Bình Giã,2026,4,XGBoost,0.12
+Bình Giã,2026,5,XGBoost,0.5303
+Bình Giã,2026,6,XGBoost,0.5992
+Bình Hoà,2026,1,XGBoost,0.4495
+Bình Hoà,2026,2,XGBoost,0.5121
+Bình Hoà,2026,3,XGBoost,0.5575
+Bình Hoà,2026,4,XGBoost,0.5992
+Bình Hoà,2026,5,XGBoost,0.7035
+Bình Hoà,2026,6,XGBoost,0.5494
+Bình Hưng,2026,1,XGBoost,0.5003
+Bình Hưng,2026,2,XGBoost,0.4813
+Bình Hưng,2026,3,XGBoost,0.602
+Bình Hưng,2026,4,XGBoost,0.6572
+Bình Hưng,2026,5,XGBoost,0.5529
+Bình Hưng,2026,6,XGBoost,0.5466
+Bình Hưng Hoà,2026,1,XGBoost,0.6491
+Bình Hưng Hoà,2026,2,XGBoost,0.6798
+Bình Hưng Hoà,2026,3,XGBoost,0.6554
+Bình Hưng Hoà,2026,4,XGBoost,0.4523
+Bình Hưng Hoà,2026,5,XGBoost,0.6255
+Bình Hưng Hoà,2026,6,XGBoost,0.543
+Bình Khánh,2026,1,XGBoost,0.3625
+Bình Khánh,2026,2,XGBoost,0.4324
+Bình Khánh,2026,3,XGBoost,0.95
+Bình Khánh,2026,4,XGBoost,0.932
+Bình Khánh,2026,5,XGBoost,0.7216
+Bình Khánh,2026,6,XGBoost,0.7315
+Bình Lợi,2026,1,XGBoost,0.552
+Bình Lợi,2026,2,XGBoost,0.6173
+Bình Lợi,2026,3,XGBoost,0.6671
+Bình Lợi,2026,4,XGBoost,0.6581
+Bình Lợi,2026,5,XGBoost,0.5738
+Bình Lợi,2026,6,XGBoost,0.5466
+Bình Lợi Trung,2026,1,XGBoost,0.4832
+Bình Lợi Trung,2026,2,XGBoost,0.4885
+Bình Lợi Trung,2026,3,XGBoost,0.5621
+Bình Lợi Trung,2026,4,XGBoost,0.5393
+Bình Lợi Trung,2026,5,XGBoost,0.5411
+Bình Lợi Trung,2026,6,XGBoost,0.5312
+Bình Mỹ,2026,1,XGBoost,0.6264
+Bình Mỹ,2026,2,XGBoost,0.4442
+Bình Mỹ,2026,3,XGBoost,0.3706
+Bình Mỹ,2026,4,XGBoost,0.5547
+Bình Mỹ,2026,5,XGBoost,0.5194
+Bình Mỹ,2026,6,XGBoost,0.5139
+Bình Phú,2026,1,XGBoost,0.746
+Bình Phú,2026,2,XGBoost,0.4477
+Bình Phú,2026,3,XGBoost,0.6798
+Bình Phú,2026,4,XGBoost,0.4324
+Bình Phú,2026,5,XGBoost,0.5466
+Bình Phú,2026,6,XGBoost,0.542
+Bình Quới,2026,1,XGBoost,0.4432
+Bình Quới,2026,2,XGBoost,0.602
+Bình Quới,2026,3,XGBoost,0.8041
+Bình Quới,2026,4,XGBoost,0.6145
+Bình Quới,2026,5,XGBoost,0.5874
+Bình Quới,2026,6,XGBoost,0.5711
+Bình Thạnh,2026,1,XGBoost,0.5766
+Bình Thạnh,2026,2,XGBoost,0.4895
+Bình Thạnh,2026,3,XGBoost,0.4442
+Bình Thạnh,2026,4,XGBoost,0.5148
+Bình Thạnh,2026,5,XGBoost,0.5031
+Bình Thạnh,2026,6,XGBoost,0.5121
+Bình Thới,2026,1,XGBoost,0.5621
+Bình Thới,2026,2,XGBoost,0.4514
+Bình Thới,2026,3,XGBoost,0.6073
+Bình Thới,2026,4,XGBoost,0.659
+Bình Thới,2026,5,XGBoost,0.5494
+Bình Thới,2026,6,XGBoost,0.5529
+Bình Tiên,2026,1,XGBoost,0.7578
+Bình Tiên,2026,2,XGBoost,0.4387
+Bình Tiên,2026,3,XGBoost,0.9138
+Bình Tiên,2026,4,XGBoost,0.6055
+Bình Tiên,2026,5,XGBoost,0.6436
+Bình Tiên,2026,6,XGBoost,0.5439
+Bình Trưng,2026,1,XGBoost,0.4333
+Bình Trưng,2026,2,XGBoost,0.5746
+Bình Trưng,2026,3,XGBoost,0.7026
+Bình Trưng,2026,4,XGBoost,0.5494
+Bình Trưng,2026,5,XGBoost,0.6283
+Bình Trưng,2026,6,XGBoost,0.5411
+Bình Trị Đông,2026,1,XGBoost,0.6119
+Bình Trị Đông,2026,2,XGBoost,0.5104
+Bình Trị Đông,2026,3,XGBoost,0.8104
+Bình Trị Đông,2026,4,XGBoost,0.5294
+Bình Trị Đông,2026,5,XGBoost,0.7651
+Bình Trị Đông,2026,6,XGBoost,0.5483
+Bình Tân,2026,1,XGBoost,0.6219
+Bình Tân,2026,2,XGBoost,0.7107
+Bình Tân,2026,3,XGBoost,0.6182
+Bình Tân,2026,4,XGBoost,0.5656
+Bình Tân,2026,5,XGBoost,0.6662
+Bình Tân,2026,6,XGBoost,0.5439
+Bình Tây,2026,1,XGBoost,0.5746
+Bình Tây,2026,2,XGBoost,0.5284
+Bình Tây,2026,3,XGBoost,0.6055
+Bình Tây,2026,4,XGBoost,0.6156
+Bình Tây,2026,5,XGBoost,0.5494
+Bình Tây,2026,6,XGBoost,0.5439
+Bình Đông,2026,1,XGBoost,0.5457
+Bình Đông,2026,2,XGBoost,0.3598
+Bình Đông,2026,3,XGBoost,0.62
+Bình Đông,2026,4,XGBoost,0.6454
+Bình Đông,2026,5,XGBoost,0.5529
+Bình Đông,2026,6,XGBoost,0.5494
+Bảy Hiền,2026,1,XGBoost,0.5231
+Bảy Hiền,2026,2,XGBoost,0.4359
+Bảy Hiền,2026,3,XGBoost,0.6237
+Bảy Hiền,2026,4,XGBoost,0.6662
+Bảy Hiền,2026,5,XGBoost,0.5494
+Bảy Hiền,2026,6,XGBoost,0.5647
+Bắc Tân Uyên,2026,1,XGBoost,0.3671
+Bắc Tân Uyên,2026,2,XGBoost,0.6064
+Bắc Tân Uyên,2026,3,XGBoost,0.8612
+Bắc Tân Uyên,2026,4,XGBoost,0.6327
+Bắc Tân Uyên,2026,5,XGBoost,0.6028
+Bắc Tân Uyên,2026,6,XGBoost,0.5711
+Bến Cát,2026,1,XGBoost,0.5983
+Bến Cát,2026,2,XGBoost,0.4659
+Bến Cát,2026,3,XGBoost,0.9057
+Bến Cát,2026,4,XGBoost,0.6336
+Bến Cát,2026,5,XGBoost,0.7343
+Bến Cát,2026,6,XGBoost,0.5448
+Bến Thành,2026,1,XGBoost,0.465
+Bến Thành,2026,2,XGBoost,0.3943
+Bến Thành,2026,3,XGBoost,0.62
+Bến Thành,2026,4,XGBoost,0.6554
+Bến Thành,2026,5,XGBoost,0.5494
+Bến Thành,2026,6,XGBoost,0.5494
+Chánh Hiệp,2026,1,XGBoost,0.3453
+Chánh Hiệp,2026,2,XGBoost,0.2255
+Chánh Hiệp,2026,3,XGBoost,0.8586
+Chánh Hiệp,2026,4,XGBoost,0.6092
+Chánh Hiệp,2026,5,XGBoost,0.7234
+Chánh Hiệp,2026,6,XGBoost,0.5176
+Chánh Hưng,2026,1,XGBoost,0.6454
+Chánh Hưng,2026,2,XGBoost,0.4768
+Chánh Hưng,2026,3,XGBoost,0.6526
+Chánh Hưng,2026,4,XGBoost,0.7153
+Chánh Hưng,2026,5,XGBoost,0.5575
+Chánh Hưng,2026,6,XGBoost,0.6291
+Chánh Phú Hoà,2026,1,XGBoost,0.611
+Chánh Phú Hoà,2026,2,XGBoost,0.9237
+Chánh Phú Hoà,2026,3,XGBoost,0.95
+Chánh Phú Hoà,2026,4,XGBoost,0.7488
+Chánh Phú Hoà,2026,5,XGBoost,0.7679
+Chánh Phú Hoà,2026,6,XGBoost,0.6853
+Châu Pha,2026,1,XGBoost,0.339
+Châu Pha,2026,2,XGBoost,0.7905
+Châu Pha,2026,3,XGBoost,0.6526
+Châu Pha,2026,4,XGBoost,0.5893
+Châu Pha,2026,5,XGBoost,0.5257
+Châu Pha,2026,6,XGBoost,0.6173
+Châu Đức,2026,1,XGBoost,0.12
+Châu Đức,2026,2,XGBoost,0.2301
+Châu Đức,2026,3,XGBoost,0.95
+Châu Đức,2026,4,XGBoost,0.2455
+Châu Đức,2026,5,XGBoost,0.6028
+Châu Đức,2026,6,XGBoost,0.5738
+Chợ Lớn,2026,1,XGBoost,0.8214
+Chợ Lớn,2026,2,XGBoost,0.5792
+Chợ Lớn,2026,3,XGBoost,0.6899
+Chợ Lớn,2026,4,XGBoost,0.6156
+Chợ Lớn,2026,5,XGBoost,0.669
+Chợ Lớn,2026,6,XGBoost,0.6535
+Chợ Quán,2026,1,XGBoost,0.7416
+Chợ Quán,2026,2,XGBoost,0.4867
+Chợ Quán,2026,3,XGBoost,0.5738
+Chợ Quán,2026,4,XGBoost,0.6662
+Chợ Quán,2026,5,XGBoost,0.5494
+Chợ Quán,2026,6,XGBoost,0.5647
+Cát Lái,2026,1,XGBoost,0.3281
+Cát Lái,2026,2,XGBoost,0.5049
+Cát Lái,2026,3,XGBoost,0.4913
+Cát Lái,2026,4,XGBoost,0.4768
+Cát Lái,2026,5,XGBoost,0.4994
+Cát Lái,2026,6,XGBoost,0.4977
+Cần Giờ,2026,1,XGBoost,0.12
+Cần Giờ,2026,2,XGBoost,0.2038
+Cần Giờ,2026,3,XGBoost,0.8884
+Cần Giờ,2026,4,XGBoost,0.7343
+Cần Giờ,2026,5,XGBoost,0.5838
+Cần Giờ,2026,6,XGBoost,0.7334
+Cầu Kiệu,2026,1,XGBoost,0.6046
+Cầu Kiệu,2026,2,XGBoost,0.474
+Cầu Kiệu,2026,3,XGBoost,0.5757
+Cầu Kiệu,2026,4,XGBoost,0.6808
+Cầu Kiệu,2026,5,XGBoost,0.5494
+Cầu Kiệu,2026,6,XGBoost,0.572
+Cầu Ông Lãnh,2026,1,XGBoost,0.5621
+Cầu Ông Lãnh,2026,2,XGBoost,0.4532
+Cầu Ông Lãnh,2026,3,XGBoost,0.5893
+Cầu Ông Lãnh,2026,4,XGBoost,0.6763
+Cầu Ông Lãnh,2026,5,XGBoost,0.5494
+Cầu Ông Lãnh,2026,6,XGBoost,0.5711
+Củ Chi,2026,1,XGBoost,0.5656
+Củ Chi,2026,2,XGBoost,0.6572
+Củ Chi,2026,3,XGBoost,0.5621
+Củ Chi,2026,4,XGBoost,0.6899
+Củ Chi,2026,5,XGBoost,0.5494
+Củ Chi,2026,6,XGBoost,0.6219
+Diên Hồng,2026,1,XGBoost,0.563
+Diên Hồng,2026,2,XGBoost,0.465
+Diên Hồng,2026,3,XGBoost,0.5956
+Diên Hồng,2026,4,XGBoost,0.6272
+Diên Hồng,2026,5,XGBoost,0.5529
+Diên Hồng,2026,6,XGBoost,0.543
+Dĩ An,2026,1,XGBoost,0.6346
+Dĩ An,2026,2,XGBoost,0.1812
+Dĩ An,2026,3,XGBoost,0.513
+Dĩ An,2026,4,XGBoost,0.5647
+Dĩ An,2026,5,XGBoost,0.6998
+Dĩ An,2026,6,XGBoost,0.5257
+Dầu Tiếng,2026,1,XGBoost,0.3843
+Dầu Tiếng,2026,2,XGBoost,0.708
+Dầu Tiếng,2026,3,XGBoost,0.911
+Dầu Tiếng,2026,4,XGBoost,0.7162
+Dầu Tiếng,2026,5,XGBoost,0.6681
+Dầu Tiếng,2026,6,XGBoost,0.6228
+Gia Định,2026,1,XGBoost,0.5611
+Gia Định,2026,2,XGBoost,0.4977
+Gia Định,2026,3,XGBoost,0.5774
+Gia Định,2026,4,XGBoost,0.6662
+Gia Định,2026,5,XGBoost,0.5494
+Gia Định,2026,6,XGBoost,0.5647
+Gò Vấp,2026,1,XGBoost,0.6064
+Gò Vấp,2026,2,XGBoost,0.5511
+Gò Vấp,2026,3,XGBoost,0.602
+Gò Vấp,2026,4,XGBoost,0.591
+Gò Vấp,2026,5,XGBoost,0.6535
+Gò Vấp,2026,6,XGBoost,0.5439
+Hiệp Bình,2026,1,XGBoost,0.4895
+Hiệp Bình,2026,2,XGBoost,0.4686
+Hiệp Bình,2026,3,XGBoost,0.6472
+Hiệp Bình,2026,4,XGBoost,0.5393
+Hiệp Bình,2026,5,XGBoost,0.5529
+Hiệp Bình,2026,6,XGBoost,0.5339
+Hiệp Phước,2026,1,XGBoost,0.2864
+Hiệp Phước,2026,2,XGBoost,0.6092
+Hiệp Phước,2026,3,XGBoost,0.6554
+Hiệp Phước,2026,4,XGBoost,0.922
+Hiệp Phước,2026,5,XGBoost,0.6518
+Hiệp Phước,2026,6,XGBoost,0.6681
+Hoà Bình,2026,1,XGBoost,0.5494
+Hoà Bình,2026,2,XGBoost,0.4078
+Hoà Bình,2026,3,XGBoost,0.5693
+Hoà Bình,2026,4,XGBoost,0.4541
+Hoà Bình,2026,5,XGBoost,0.5157
+Hoà Bình,2026,6,XGBoost,0.5095
+Hoà Hiệp,2026,1,XGBoost,0.12
+Hoà Hiệp,2026,2,XGBoost,0.4541
+Hoà Hiệp,2026,3,XGBoost,0.95
+Hoà Hiệp,2026,4,XGBoost,0.95
+Hoà Hiệp,2026,5,XGBoost,0.9311
+Hoà Hiệp,2026,6,XGBoost,0.8477
+Hoà Hưng,2026,1,XGBoost,0.6971
+Hoà Hưng,2026,2,XGBoost,0.5494
+Hoà Hưng,2026,3,XGBoost,0.7252
+Hoà Hưng,2026,4,XGBoost,0.65
+Hoà Hưng,2026,5,XGBoost,0.6336
+Hoà Hưng,2026,6,XGBoost,0.552
+Hoà Hội,2026,1,XGBoost,0.12
+Hoà Hội,2026,2,XGBoost,0.12
+Hoà Hội,2026,3,XGBoost,0.95
+Hoà Hội,2026,4,XGBoost,0.3969
+Hoà Hội,2026,5,XGBoost,0.6989
+Hoà Hội,2026,6,XGBoost,0.4749
+Hoà Lợi,2026,1,XGBoost,0.4251
+Hoà Lợi,2026,2,XGBoost,0.3625
+Hoà Lợi,2026,3,XGBoost,0.8667
+Hoà Lợi,2026,4,XGBoost,0.6092
+Hoà Lợi,2026,5,XGBoost,0.6581
+Hoà Lợi,2026,6,XGBoost,0.5411
+Hóc Môn,2026,1,XGBoost,0.7806
+Hóc Môn,2026,2,XGBoost,0.4477
+Hóc Môn,2026,3,XGBoost,0.6763
+Hóc Môn,2026,4,XGBoost,0.6808
+Hóc Môn,2026,5,XGBoost,0.6191
+Hóc Môn,2026,6,XGBoost,0.6092
+Hưng Long,2026,1,XGBoost,0.4033
+Hưng Long,2026,2,XGBoost,0.5402
+Hưng Long,2026,3,XGBoost,0.6291
+Hưng Long,2026,4,XGBoost,0.766
+Hưng Long,2026,5,XGBoost,0.5167
+Hưng Long,2026,6,XGBoost,0.6237
+Hạnh Thông,2026,1,XGBoost,0.6228
+Hạnh Thông,2026,2,XGBoost,0.5511
+Hạnh Thông,2026,3,XGBoost,0.4813
+Hạnh Thông,2026,4,XGBoost,0.6355
+Hạnh Thông,2026,5,XGBoost,0.543
+Hạnh Thông,2026,6,XGBoost,0.5439
+Hồ Tràm,2026,1,XGBoost,0.12
+Hồ Tràm,2026,2,XGBoost,0.4541
+Hồ Tràm,2026,3,XGBoost,0.95
+Hồ Tràm,2026,4,XGBoost,0.12
+Hồ Tràm,2026,5,XGBoost,0.5647
+Hồ Tràm,2026,6,XGBoost,0.6327
+Khánh Hội,2026,1,XGBoost,0.6662
+Khánh Hội,2026,2,XGBoost,0.602
+Khánh Hội,2026,3,XGBoost,0.6472
+Khánh Hội,2026,4,XGBoost,0.6817
+Khánh Hội,2026,5,XGBoost,0.5575
+Khánh Hội,2026,6,XGBoost,0.572
+Kim Long,2026,1,XGBoost,0.12
+Kim Long,2026,2,XGBoost,0.1812
+Kim Long,2026,3,XGBoost,0.6418
+Kim Long,2026,4,XGBoost,0.12
+Kim Long,2026,5,XGBoost,0.3272
+Kim Long,2026,6,XGBoost,0.542
+Linh Xuân,2026,1,XGBoost,0.3607
+Linh Xuân,2026,2,XGBoost,0.6318
+Linh Xuân,2026,3,XGBoost,0.4931
+Linh Xuân,2026,4,XGBoost,0.5185
+Linh Xuân,2026,5,XGBoost,0.513
+Linh Xuân,2026,6,XGBoost,0.5031
+Long Bình,2026,1,XGBoost,0.3453
+Long Bình,2026,2,XGBoost,0.5738
+Long Bình,2026,3,XGBoost,0.669
+Long Bình,2026,4,XGBoost,0.5257
+Long Bình,2026,5,XGBoost,0.5621
+Long Bình,2026,6,XGBoost,0.5611
+Long Hoà,2026,1,XGBoost,0.2928
+Long Hoà,2026,2,XGBoost,0.7134
+Long Hoà,2026,3,XGBoost,0.9084
+Long Hoà,2026,4,XGBoost,0.7252
+Long Hoà,2026,5,XGBoost,0.6654
+Long Hoà,2026,6,XGBoost,0.6246
+Long Hương,2026,1,XGBoost,0.1376
+Long Hương,2026,2,XGBoost,0.6182
+Long Hương,2026,3,XGBoost,0.7561
+Long Hương,2026,4,XGBoost,0.1486
+Long Hương,2026,5,XGBoost,0.5113
+Long Hương,2026,6,XGBoost,0.5683
+Long Hải,2026,1,XGBoost,0.1286
+Long Hải,2026,2,XGBoost,0.552
+Long Hải,2026,3,XGBoost,0.7959
+Long Hải,2026,4,XGBoost,0.12
+Long Hải,2026,5,XGBoost,0.5303
+Long Hải,2026,6,XGBoost,0.5992
+Long Nguyên,2026,1,XGBoost,0.4822
+Long Nguyên,2026,2,XGBoost,0.4378
+Long Nguyên,2026,3,XGBoost,0.854
+Long Nguyên,2026,4,XGBoost,0.5693
+Long Nguyên,2026,5,XGBoost,0.6546
+Long Nguyên,2026,6,XGBoost,0.5411
+Long Phước,2026,1,XGBoost,0.4723
+Long Phước,2026,2,XGBoost,0.4768
+Long Phước,2026,3,XGBoost,0.6772
+Long Phước,2026,4,XGBoost,0.6618
+Long Phước,2026,5,XGBoost,0.533
+Long Phước,2026,6,XGBoost,0.5792
+Long Sơn,2026,1,XGBoost,0.2882
+Long Sơn,2026,2,XGBoost,0.5638
+Long Sơn,2026,3,XGBoost,0.6754
+Long Sơn,2026,4,XGBoost,0.7751
+Long Sơn,2026,5,XGBoost,0.5483
+Long Sơn,2026,6,XGBoost,0.6708
+Long Trường,2026,1,XGBoost,0.1277
+Long Trường,2026,2,XGBoost,0.4677
+Long Trường,2026,3,XGBoost,0.4596
+Long Trường,2026,4,XGBoost,0.474
+Long Trường,2026,5,XGBoost,0.4714
+Long Trường,2026,6,XGBoost,0.4949
+Long Điền,2026,1,XGBoost,0.12
+Long Điền,2026,2,XGBoost,0.3318
+Long Điền,2026,3,XGBoost,0.8086
+Long Điền,2026,4,XGBoost,0.12
+Long Điền,2026,5,XGBoost,0.3462
+Long Điền,2026,6,XGBoost,0.5656
+Lái Thiêu,2026,1,XGBoost,0.3553
+Lái Thiêu,2026,2,XGBoost,0.6418
+Lái Thiêu,2026,3,XGBoost,0.5076
+Lái Thiêu,2026,4,XGBoost,0.5212
+Lái Thiêu,2026,5,XGBoost,0.5439
+Lái Thiêu,2026,6,XGBoost,0.5339
+Minh Phụng,2026,1,XGBoost,0.6046
+Minh Phụng,2026,2,XGBoost,0.4686
+Minh Phụng,2026,3,XGBoost,0.6073
+Minh Phụng,2026,4,XGBoost,0.6772
+Minh Phụng,2026,5,XGBoost,0.5494
+Minh Phụng,2026,6,XGBoost,0.572
+Minh Thạnh,2026,1,XGBoost,0.1413
+Minh Thạnh,2026,2,XGBoost,0.922
+Minh Thạnh,2026,3,XGBoost,0.8376
+Minh Thạnh,2026,4,XGBoost,0.6881
+Minh Thạnh,2026,5,XGBoost,0.6699
+Minh Thạnh,2026,6,XGBoost,0.6835
+Nghĩa Thành,2026,1,XGBoost,0.3434
+Nghĩa Thành,2026,2,XGBoost,0.6717
+Nghĩa Thành,2026,3,XGBoost,0.6844
+Nghĩa Thành,2026,4,XGBoost,0.7515
+Nghĩa Thành,2026,5,XGBoost,0.5448
+Nghĩa Thành,2026,6,XGBoost,0.6546
+Ngãi Giao,2026,1,XGBoost,0.3281
+Ngãi Giao,2026,2,XGBoost,0.7506
+Ngãi Giao,2026,3,XGBoost,0.6491
+Ngãi Giao,2026,4,XGBoost,0.4695
+Ngãi Giao,2026,5,XGBoost,0.5575
+Ngãi Giao,2026,6,XGBoost,0.5611
+Nhiêu Lộc,2026,1,XGBoost,0.6609
+Nhiêu Lộc,2026,2,XGBoost,0.5729
+Nhiêu Lộc,2026,3,XGBoost,0.6427
+Nhiêu Lộc,2026,4,XGBoost,0.6925
+Nhiêu Lộc,2026,5,XGBoost,0.5494
+Nhiêu Lộc,2026,6,XGBoost,0.6209
+Nhuận Đức,2026,1,XGBoost,0.602
+Nhuận Đức,2026,2,XGBoost,0.6291
+Nhuận Đức,2026,3,XGBoost,0.5494
+Nhuận Đức,2026,4,XGBoost,0.5411
+Nhuận Đức,2026,5,XGBoost,0.5411
+Nhuận Đức,2026,6,XGBoost,0.5439
+Nhà Bè,2026,1,XGBoost,0.4024
+Nhà Bè,2026,2,XGBoost,0.5647
+Nhà Bè,2026,3,XGBoost,0.6699
+Nhà Bè,2026,4,XGBoost,0.7243
+Nhà Bè,2026,5,XGBoost,0.5384
+Nhà Bè,2026,6,XGBoost,0.6546
+Phú An,2026,1,XGBoost,0.6156
+Phú An,2026,2,XGBoost,0.6763
+Phú An,2026,3,XGBoost,0.5647
+Phú An,2026,4,XGBoost,0.5212
+Phú An,2026,5,XGBoost,0.5711
+Phú An,2026,6,XGBoost,0.542
+Phú Giáo,2026,1,XGBoost,0.6073
+Phú Giáo,2026,2,XGBoost,0.7642
+Phú Giáo,2026,3,XGBoost,0.5937
+Phú Giáo,2026,4,XGBoost,0.5638
+Phú Giáo,2026,5,XGBoost,0.5711
+Phú Giáo,2026,6,XGBoost,0.5602
+Phú Hoà Đông,2026,1,XGBoost,0.7361
+Phú Hoà Đông,2026,2,XGBoost,0.5983
+Phú Hoà Đông,2026,3,XGBoost,0.4749
+Phú Hoà Đông,2026,4,XGBoost,0.4867
+Phú Hoà Đông,2026,5,XGBoost,0.5121
+Phú Hoà Đông,2026,6,XGBoost,0.5113
+Phú Lâm,2026,1,XGBoost,0.4949
+Phú Lâm,2026,2,XGBoost,0.3616
+Phú Lâm,2026,3,XGBoost,0.6318
+Phú Lâm,2026,4,XGBoost,0.5393
+Phú Lâm,2026,5,XGBoost,0.5529
+Phú Lâm,2026,6,XGBoost,0.5284
+Phú Lợi,2026,1,XGBoost,0.416
+Phú Lợi,2026,2,XGBoost,0.95
+Phú Lợi,2026,3,XGBoost,0.8658
+Phú Lợi,2026,4,XGBoost,0.7162
+Phú Lợi,2026,5,XGBoost,0.728
+Phú Lợi,2026,6,XGBoost,0.6962
+Phú Mỹ,2026,1,XGBoost,0.8803
+Phú Mỹ,2026,2,XGBoost,0.95
+Phú Mỹ,2026,3,XGBoost,0.8177
+Phú Mỹ,2026,4,XGBoost,0.6037
+Phú Mỹ,2026,5,XGBoost,0.7506
+Phú Mỹ,2026,6,XGBoost,0.5983
+Phú Nhuận,2026,1,XGBoost,0.563
+Phú Nhuận,2026,2,XGBoost,0.4405
+Phú Nhuận,2026,3,XGBoost,0.5602
+Phú Nhuận,2026,4,XGBoost,0.6808
+Phú Nhuận,2026,5,XGBoost,0.5494
+Phú Nhuận,2026,6,XGBoost,0.5711
+Phú Thuận,2026,1,XGBoost,0.5457
+Phú Thuận,2026,2,XGBoost,0.5783
+Phú Thuận,2026,3,XGBoost,0.6463
+Phú Thuận,2026,4,XGBoost,0.6817
+Phú Thuận,2026,5,XGBoost,0.5575
+Phú Thuận,2026,6,XGBoost,0.5683
+Phú Thạnh,2026,1,XGBoost,0.6028
+Phú Thạnh,2026,2,XGBoost,0.5021
+Phú Thạnh,2026,3,XGBoost,0.5085
+Phú Thạnh,2026,4,XGBoost,0.4096
+Phú Thạnh,2026,5,XGBoost,0.5067
+Phú Thạnh,2026,6,XGBoost,0.5003
+Phú Thọ,2026,1,XGBoost,0.6272
+Phú Thọ,2026,2,XGBoost,0.5974
+Phú Thọ,2026,3,XGBoost,0.6055
+Phú Thọ,2026,4,XGBoost,0.6156
+Phú Thọ,2026,5,XGBoost,0.5494
+Phú Thọ,2026,6,XGBoost,0.5439
+Phú Thọ Hoà,2026,1,XGBoost,0.5638
+Phú Thọ Hoà,2026,2,XGBoost,0.5711
+Phú Thọ Hoà,2026,3,XGBoost,0.6255
+Phú Thọ Hoà,2026,4,XGBoost,0.6418
+Phú Thọ Hoà,2026,5,XGBoost,0.5494
+Phú Thọ Hoà,2026,6,XGBoost,0.5439
+Phú Định,2026,1,XGBoost,0.5494
+Phú Định,2026,2,XGBoost,0.3824
+Phú Định,2026,3,XGBoost,0.5956
+Phú Định,2026,4,XGBoost,0.6291
+Phú Định,2026,5,XGBoost,0.5494
+Phú Định,2026,6,XGBoost,0.5411
+Phước Hoà,2026,1,XGBoost,0.6101
+Phước Hoà,2026,2,XGBoost,0.7451
+Phước Hoà,2026,3,XGBoost,0.6717
+Phước Hoà,2026,4,XGBoost,0.5874
+Phước Hoà,2026,5,XGBoost,0.5919
+Phước Hoà,2026,6,XGBoost,0.5448
+Phước Hải,2026,1,XGBoost,0.12
+Phước Hải,2026,2,XGBoost,0.12
+Phước Hải,2026,3,XGBoost,0.8395
+Phước Hải,2026,4,XGBoost,0.12
+Phước Hải,2026,5,XGBoost,0.3662
+Phước Hải,2026,6,XGBoost,0.474
+Phước Long,2026,1,XGBoost,0.5538
+Phước Long,2026,2,XGBoost,0.5638
+Phước Long,2026,3,XGBoost,0.5411
+Phước Long,2026,4,XGBoost,0.6119
+Phước Long,2026,5,XGBoost,0.6808
+Phước Long,2026,6,XGBoost,0.5439
+Phước Thành,2026,1,XGBoost,0.6156
+Phước Thành,2026,2,XGBoost,0.12
+Phước Thành,2026,3,XGBoost,0.4822
+Phước Thành,2026,4,XGBoost,0.4931
+Phước Thành,2026,5,XGBoost,0.4622
+Phước Thành,2026,6,XGBoost,0.4867
+Phước Thắng,2026,1,XGBoost,0.12
+Phước Thắng,2026,2,XGBoost,0.1939
+Phước Thắng,2026,3,XGBoost,0.95
+Phước Thắng,2026,4,XGBoost,0.1495
+Phước Thắng,2026,5,XGBoost,0.5956
+Phước Thắng,2026,6,XGBoost,0.5738
+Rạch Dừa,2026,1,XGBoost,0.1657
+Rạch Dừa,2026,2,XGBoost,0.4569
+Rạch Dừa,2026,3,XGBoost,0.7171
+Rạch Dừa,2026,4,XGBoost,0.12
+Rạch Dừa,2026,5,XGBoost,0.5266
+Rạch Dừa,2026,6,XGBoost,0.5494
+Sài Gòn,2026,1,XGBoost,0.6101
+Sài Gòn,2026,2,XGBoost,0.6237
+Sài Gòn,2026,3,XGBoost,0.6092
+Sài Gòn,2026,4,XGBoost,0.6581
+Sài Gòn,2026,5,XGBoost,0.5593
+Sài Gòn,2026,6,XGBoost,0.5511
+Tam Bình,2026,1,XGBoost,0.5503
+Tam Bình,2026,2,XGBoost,0.5185
+Tam Bình,2026,3,XGBoost,0.5674
+Tam Bình,2026,4,XGBoost,0.6119
+Tam Bình,2026,5,XGBoost,0.669
+Tam Bình,2026,6,XGBoost,0.5439
+Tam Long,2026,1,XGBoost,0.2347
+Tam Long,2026,2,XGBoost,0.5702
+Tam Long,2026,3,XGBoost,0.6609
+Tam Long,2026,4,XGBoost,0.6581
+Tam Long,2026,5,XGBoost,0.5113
+Tam Long,2026,6,XGBoost,0.5511
+Tam Thắng,2026,1,XGBoost,0.3254
+Tam Thắng,2026,2,XGBoost,0.5901
+Tam Thắng,2026,3,XGBoost,0.6745
+Tam Thắng,2026,4,XGBoost,0.5049
+Tam Thắng,2026,5,XGBoost,0.513
+Tam Thắng,2026,6,XGBoost,0.5303
+Thanh An,2026,1,XGBoost,0.5312
+Thanh An,2026,2,XGBoost,0.6436
+Thanh An,2026,3,XGBoost,0.7026
+Thanh An,2026,4,XGBoost,0.5203
+Thanh An,2026,5,XGBoost,0.6373
+Thanh An,2026,6,XGBoost,0.5284
+Thuận An,2026,1,XGBoost,0.3925
+Thuận An,2026,2,XGBoost,0.6355
+Thuận An,2026,3,XGBoost,0.5946
+Thuận An,2026,4,XGBoost,0.5167
+Thuận An,2026,5,XGBoost,0.5439
+Thuận An,2026,6,XGBoost,0.5339
+Thuận Giao,2026,1,XGBoost,0.5838
+Thuận Giao,2026,2,XGBoost,0.9437
+Thuận Giao,2026,3,XGBoost,0.6136
+Thuận Giao,2026,4,XGBoost,0.6826
+Thuận Giao,2026,5,XGBoost,0.7334
+Thuận Giao,2026,6,XGBoost,0.6445
+Thái Mỹ,2026,1,XGBoost,0.5783
+Thái Mỹ,2026,2,XGBoost,0.2038
+Thái Mỹ,2026,3,XGBoost,0.6482
+Thái Mỹ,2026,4,XGBoost,0.4841
+Thái Mỹ,2026,5,XGBoost,0.5483
+Thái Mỹ,2026,6,XGBoost,0.5212
+Thông Tây Hội,2026,1,XGBoost,0.5085
+Thông Tây Hội,2026,2,XGBoost,0.7144
+Thông Tây Hội,2026,3,XGBoost,0.6699
+Thông Tây Hội,2026,4,XGBoost,0.7651
+Thông Tây Hội,2026,5,XGBoost,0.5702
+Thông Tây Hội,2026,6,XGBoost,0.6283
+Thường Tân,2026,1,XGBoost,0.222
+Thường Tân,2026,2,XGBoost,0.4559
+Thường Tân,2026,3,XGBoost,0.6781
+Thường Tân,2026,4,XGBoost,0.6327
+Thường Tân,2026,5,XGBoost,0.4822
+Thường Tân,2026,6,XGBoost,0.543
+Thạnh An,2026,1,XGBoost,0.12
+Thạnh An,2026,2,XGBoost,0.2483
+Thạnh An,2026,3,XGBoost,0.95
+Thạnh An,2026,4,XGBoost,0.12
+Thạnh An,2026,5,XGBoost,0.5584
+Thạnh An,2026,6,XGBoost,0.5992
+Thạnh Mỹ Tây,2026,1,XGBoost,0.5393
+Thạnh Mỹ Tây,2026,2,XGBoost,0.5729
+Thạnh Mỹ Tây,2026,3,XGBoost,0.5511
+Thạnh Mỹ Tây,2026,4,XGBoost,0.5529
+Thạnh Mỹ Tây,2026,5,XGBoost,0.5384
+Thạnh Mỹ Tây,2026,6,XGBoost,0.5411
+Thới An,2026,1,XGBoost,0.4668
+Thới An,2026,2,XGBoost,0.8196
+Thới An,2026,3,XGBoost,0.6336
+Thới An,2026,4,XGBoost,0.6336
+Thới An,2026,5,XGBoost,0.5411
+Thới An,2026,6,XGBoost,0.5829
+Thới Hoà,2026,1,XGBoost,0.3843
+Thới Hoà,2026,2,XGBoost,0.7878
+Thới Hoà,2026,3,XGBoost,0.8884
+Thới Hoà,2026,4,XGBoost,0.7569
+Thới Hoà,2026,5,XGBoost,0.6699
+Thới Hoà,2026,6,XGBoost,0.6699
+Thủ Dầu Một,2026,1,XGBoost,0.4033
+Thủ Dầu Một,2026,2,XGBoost,0.6436
+Thủ Dầu Một,2026,3,XGBoost,0.6708
+Thủ Dầu Một,2026,4,XGBoost,0.5167
+Thủ Dầu Một,2026,5,XGBoost,0.5647
+Thủ Dầu Một,2026,6,XGBoost,0.5339
+Thủ Đức,2026,1,XGBoost,0.5231
+Thủ Đức,2026,2,XGBoost,0.7534
+Thủ Đức,2026,3,XGBoost,0.6808
+Thủ Đức,2026,4,XGBoost,0.7017
+Thủ Đức,2026,5,XGBoost,0.7089
+Thủ Đức,2026,6,XGBoost,0.6336
+Trung Mỹ Tây,2026,1,XGBoost,0.5638
+Trung Mỹ Tây,2026,2,XGBoost,0.8332
+Trung Mỹ Tây,2026,3,XGBoost,0.6408
+Trung Mỹ Tây,2026,4,XGBoost,0.6899
+Trung Mỹ Tây,2026,5,XGBoost,0.6509
+Trung Mỹ Tây,2026,6,XGBoost,0.6627
+Trừ Văn Thố,2026,1,XGBoost,0.3716
+Trừ Văn Thố,2026,2,XGBoost,0.8349
+Trừ Văn Thố,2026,3,XGBoost,0.95
+Trừ Văn Thố,2026,4,XGBoost,0.7388
+Trừ Văn Thố,2026,5,XGBoost,0.7125
+Trừ Văn Thố,2026,6,XGBoost,0.6671
+Tân An Hội,2026,1,XGBoost,0.6164
+Tân An Hội,2026,2,XGBoost,0.5275
+Tân An Hội,2026,3,XGBoost,0.5212
+Tân An Hội,2026,4,XGBoost,0.543
+Tân An Hội,2026,5,XGBoost,0.5284
+Tân An Hội,2026,6,XGBoost,0.5439
+Tân Bình,2026,1,XGBoost,0.5231
+Tân Bình,2026,2,XGBoost,0.5284
+Tân Bình,2026,3,XGBoost,0.8503
+Tân Bình,2026,4,XGBoost,0.728
+Tân Bình,2026,5,XGBoost,0.6336
+Tân Bình,2026,6,XGBoost,0.6283
+Tân Hiệp,2026,1,XGBoost,0.5367
+Tân Hiệp,2026,2,XGBoost,0.2755
+Tân Hiệp,2026,3,XGBoost,0.5611
+Tân Hiệp,2026,4,XGBoost,0.4994
+Tân Hiệp,2026,5,XGBoost,0.5466
+Tân Hiệp,2026,6,XGBoost,0.5339
+Tân Hoà,2026,1,XGBoost,0.5294
+Tân Hoà,2026,2,XGBoost,0.4913
+Tân Hoà,2026,3,XGBoost,0.8231
+Tân Hoà,2026,4,XGBoost,0.6364
+Tân Hoà,2026,5,XGBoost,0.6336
+Tân Hoà,2026,6,XGBoost,0.5439
+Tân Hưng,2026,1,XGBoost,0.6228
+Tân Hưng,2026,2,XGBoost,0.5602
+Tân Hưng,2026,3,XGBoost,0.6145
+Tân Hưng,2026,4,XGBoost,0.6789
+Tân Hưng,2026,5,XGBoost,0.5529
+Tân Hưng,2026,6,XGBoost,0.572
+Tân Hải,2026,1,XGBoost,0.1413
+Tân Hải,2026,2,XGBoost,0.6844
+Tân Hải,2026,3,XGBoost,0.95
+Tân Hải,2026,4,XGBoost,0.3544
+Tân Hải,2026,5,XGBoost,0.5584
+Tân Hải,2026,6,XGBoost,0.5992
+Tân Khánh,2026,1,XGBoost,0.4758
+Tân Khánh,2026,2,XGBoost,0.8177
+Tân Khánh,2026,3,XGBoost,0.8141
+Tân Khánh,2026,4,XGBoost,0.6662
+Tân Khánh,2026,5,XGBoost,0.6581
+Tân Khánh,2026,6,XGBoost,0.6073
+Tân Mỹ,2026,1,XGBoost,0.6209
+Tân Mỹ,2026,2,XGBoost,0.5856
+Tân Mỹ,2026,3,XGBoost,0.6291
+Tân Mỹ,2026,4,XGBoost,0.5566
+Tân Mỹ,2026,5,XGBoost,0.5529
+Tân Mỹ,2026,6,XGBoost,0.5448
+Tân Nhựt,2026,1,XGBoost,0.4188
+Tân Nhựt,2026,2,XGBoost,0.4604
+Tân Nhựt,2026,3,XGBoost,0.7334
+Tân Nhựt,2026,4,XGBoost,0.7569
+Tân Nhựt,2026,5,XGBoost,0.6009
+Tân Nhựt,2026,6,XGBoost,0.6546
+Tân Phú,2026,1,XGBoost,0.5647
+Tân Phú,2026,2,XGBoost,0.5766
+Tân Phú,2026,3,XGBoost,0.6182
+Tân Phú,2026,4,XGBoost,0.4569
+Tân Phú,2026,5,XGBoost,0.5076
+Tân Phú,2026,6,XGBoost,0.5121
+Tân Phước,2026,1,XGBoost,0.3145
+Tân Phước,2026,2,XGBoost,0.7705
+Tân Phước,2026,3,XGBoost,0.6699
+Tân Phước,2026,4,XGBoost,0.513
+Tân Phước,2026,5,XGBoost,0.5729
+Tân Phước,2026,6,XGBoost,0.5792
+Tân Sơn,2026,1,XGBoost,0.6291
+Tân Sơn,2026,2,XGBoost,0.6083
+Tân Sơn,2026,3,XGBoost,0.6526
+Tân Sơn,2026,4,XGBoost,0.6092
+Tân Sơn,2026,5,XGBoost,0.6754
+Tân Sơn,2026,6,XGBoost,0.5439
+Tân Sơn Hoà,2026,1,XGBoost,0.5257
+Tân Sơn Hoà,2026,2,XGBoost,0.5928
+Tân Sơn Hoà,2026,3,XGBoost,0.6572
+Tân Sơn Hoà,2026,4,XGBoost,0.6817
+Tân Sơn Hoà,2026,5,XGBoost,0.5494
+Tân Sơn Hoà,2026,6,XGBoost,0.5711
+Tân Sơn Nhì,2026,1,XGBoost,0.5231
+Tân Sơn Nhì,2026,2,XGBoost,0.5058
+Tân Sơn Nhì,2026,3,XGBoost,0.6264
+Tân Sơn Nhì,2026,4,XGBoost,0.5746
+Tân Sơn Nhì,2026,5,XGBoost,0.5494
+Tân Sơn Nhì,2026,6,XGBoost,0.5439
+Tân Sơn Nhất,2026,1,XGBoost,0.5738
+Tân Sơn Nhất,2026,2,XGBoost,0.5792
+Tân Sơn Nhất,2026,3,XGBoost,0.6373
+Tân Sơn Nhất,2026,4,XGBoost,0.6817
+Tân Sơn Nhất,2026,5,XGBoost,0.5411
+Tân Sơn Nhất,2026,6,XGBoost,0.5711
+Tân Thuận,2026,1,XGBoost,0.5266
+Tân Thuận,2026,2,XGBoost,0.3888
+Tân Thuận,2026,3,XGBoost,0.5865
+Tân Thuận,2026,4,XGBoost,0.6899
+Tân Thuận,2026,5,XGBoost,0.5494
+Tân Thuận,2026,6,XGBoost,0.6209
+Tân Thành,2026,1,XGBoost,0.1784
+Tân Thành,2026,2,XGBoost,0.5376
+Tân Thành,2026,3,XGBoost,0.659
+Tân Thành,2026,4,XGBoost,0.4505
+Tân Thành,2026,5,XGBoost,0.5376
+Tân Thành,2026,6,XGBoost,0.5638
+Tân Thới Hiệp,2026,1,XGBoost,0.6355
+Tân Thới Hiệp,2026,2,XGBoost,0.7806
+Tân Thới Hiệp,2026,3,XGBoost,0.6219
+Tân Thới Hiệp,2026,4,XGBoost,0.6925
+Tân Thới Hiệp,2026,5,XGBoost,0.6662
+Tân Thới Hiệp,2026,6,XGBoost,0.6645
+Tân Tạo,2026,1,XGBoost,0.5157
+Tân Tạo,2026,2,XGBoost,0.4197
+Tân Tạo,2026,3,XGBoost,0.7923
+Tân Tạo,2026,4,XGBoost,0.4559
+Tân Tạo,2026,5,XGBoost,0.5992
+Tân Tạo,2026,6,XGBoost,0.5339
+Tân Uyên,2026,1,XGBoost,0.4804
+Tân Uyên,2026,2,XGBoost,0.7488
+Tân Uyên,2026,3,XGBoost,0.8703
+Tân Uyên,2026,4,XGBoost,0.6654
+Tân Uyên,2026,5,XGBoost,0.7234
+Tân Uyên,2026,6,XGBoost,0.5602
+Tân Vĩnh Lộc,2026,1,XGBoost,0.543
+Tân Vĩnh Lộc,2026,2,XGBoost,0.7171
+Tân Vĩnh Lộc,2026,3,XGBoost,0.6346
+Tân Vĩnh Lộc,2026,4,XGBoost,0.7506
+Tân Vĩnh Lộc,2026,5,XGBoost,0.5494
+Tân Vĩnh Lộc,2026,6,XGBoost,0.6283
+Tân Đông Hiệp,2026,1,XGBoost,0.3072
+Tân Đông Hiệp,2026,2,XGBoost,0.3035
+Tân Đông Hiệp,2026,3,XGBoost,0.9038
+Tân Đông Hiệp,2026,4,XGBoost,0.6482
+Tân Đông Hiệp,2026,5,XGBoost,0.6681
+Tân Đông Hiệp,2026,6,XGBoost,0.552
+Tân Định,2026,1,XGBoost,0.6726
+Tân Định,2026,2,XGBoost,0.4913
+Tân Định,2026,3,XGBoost,0.5992
+Tân Định,2026,4,XGBoost,0.6808
+Tân Định,2026,5,XGBoost,0.5494
+Tân Định,2026,6,XGBoost,0.572
+Tây Nam,2026,1,XGBoost,0.4949
+Tây Nam,2026,2,XGBoost,0.5402
+Tây Nam,2026,3,XGBoost,0.6662
+Tây Nam,2026,4,XGBoost,0.5339
+Tây Nam,2026,5,XGBoost,0.5621
+Tây Nam,2026,6,XGBoost,0.5312
+Tây Thạnh,2026,1,XGBoost,0.785
+Tây Thạnh,2026,2,XGBoost,0.7107
+Tây Thạnh,2026,3,XGBoost,0.5829
+Tây Thạnh,2026,4,XGBoost,0.5312
+Tây Thạnh,2026,5,XGBoost,0.6064
+Tây Thạnh,2026,6,XGBoost,0.5774
+Tăng Nhơn Phú,2026,1,XGBoost,0.4015
+Tăng Nhơn Phú,2026,2,XGBoost,0.7869
+Tăng Nhơn Phú,2026,3,XGBoost,0.4442
+Tăng Nhơn Phú,2026,4,XGBoost,0.5992
+Tăng Nhơn Phú,2026,5,XGBoost,0.5439
+Tăng Nhơn Phú,2026,6,XGBoost,0.5856
+Vĩnh Hội,2026,1,XGBoost,0.6798
+Vĩnh Hội,2026,2,XGBoost,0.6382
+Vĩnh Hội,2026,3,XGBoost,0.6618
+Vĩnh Hội,2026,4,XGBoost,0.7035
+Vĩnh Hội,2026,5,XGBoost,0.5575
+Vĩnh Hội,2026,6,XGBoost,0.6291
+Vĩnh Lộc,2026,1,XGBoost,0.533
+Vĩnh Lộc,2026,2,XGBoost,0.5992
+Vĩnh Lộc,2026,3,XGBoost,0.5884
+Vĩnh Lộc,2026,4,XGBoost,0.6817
+Vĩnh Lộc,2026,5,XGBoost,0.5494
+Vĩnh Lộc,2026,6,XGBoost,0.5683
+Vĩnh Tân,2026,1,XGBoost,0.5638
+Vĩnh Tân,2026,2,XGBoost,0.6391
+Vĩnh Tân,2026,3,XGBoost,0.863
+Vĩnh Tân,2026,4,XGBoost,0.6028
+Vĩnh Tân,2026,5,XGBoost,0.6546
+Vĩnh Tân,2026,6,XGBoost,0.5448
+Vũng Tàu,2026,1,XGBoost,0.12
+Vũng Tàu,2026,2,XGBoost,0.4451
+Vũng Tàu,2026,3,XGBoost,0.7416
+Vũng Tàu,2026,4,XGBoost,0.9002
+Vũng Tàu,2026,5,XGBoost,0.7044
+Vũng Tàu,2026,6,XGBoost,0.7125
+Vườn Lài,2026,1,XGBoost,0.7696
+Vườn Lài,2026,2,XGBoost,0.611
+Vườn Lài,2026,3,XGBoost,0.7098
+Vườn Lài,2026,4,XGBoost,0.6671
+Vườn Lài,2026,5,XGBoost,0.6509
+Vườn Lài,2026,6,XGBoost,0.5665
+Xuyên Mộc,2026,1,XGBoost,0.2047
+Xuyên Mộc,2026,2,XGBoost,0.3154
+Xuyên Mộc,2026,3,XGBoost,0.95
+Xuyên Mộc,2026,4,XGBoost,0.95
+Xuyên Mộc,2026,5,XGBoost,0.7425
+Xuyên Mộc,2026,6,XGBoost,0.7569
+Xuân Hoà,2026,1,XGBoost,0.6526
+Xuân Hoà,2026,2,XGBoost,0.4523
+Xuân Hoà,2026,3,XGBoost,0.5919
+Xuân Hoà,2026,4,XGBoost,0.7017
+Xuân Hoà,2026,5,XGBoost,0.5494
+Xuân Hoà,2026,6,XGBoost,0.6291
+Xuân Sơn,2026,1,XGBoost,0.1512
+Xuân Sơn,2026,2,XGBoost,0.3453
+Xuân Sơn,2026,3,XGBoost,0.95
+Xuân Sơn,2026,4,XGBoost,0.2555
+Xuân Sơn,2026,5,XGBoost,0.6264
+Xuân Sơn,2026,6,XGBoost,0.5665
+Xuân Thới Sơn,2026,1,XGBoost,0.6219
+Xuân Thới Sơn,2026,2,XGBoost,0.6237
+Xuân Thới Sơn,2026,3,XGBoost,0.5874
+Xuân Thới Sơn,2026,4,XGBoost,0.6581
+Xuân Thới Sơn,2026,5,XGBoost,0.5529
+Xuân Thới Sơn,2026,6,XGBoost,0.5529
+Xóm Chiếu,2026,1,XGBoost,0.6708
+Xóm Chiếu,2026,2,XGBoost,0.6173
+Xóm Chiếu,2026,3,XGBoost,0.659
+Xóm Chiếu,2026,4,XGBoost,0.6817
+Xóm Chiếu,2026,5,XGBoost,0.5575
+Xóm Chiếu,2026,6,XGBoost,0.572
+Đông Hoà,2026,1,XGBoost,0.435
+Đông Hoà,2026,2,XGBoost,0.12
+Đông Hoà,2026,3,XGBoost,0.4197
+Đông Hoà,2026,4,XGBoost,0.4269
+Đông Hoà,2026,5,XGBoost,0.6272
+Đông Hoà,2026,6,XGBoost,0.6618
+Đông Hưng Thuận,2026,1,XGBoost,0.602
+Đông Hưng Thuận,2026,2,XGBoost,0.8186
+Đông Hưng Thuận,2026,3,XGBoost,0.5557
+Đông Hưng Thuận,2026,4,XGBoost,0.6899
+Đông Hưng Thuận,2026,5,XGBoost,0.6662
+Đông Hưng Thuận,2026,6,XGBoost,0.659
+Đông Thạnh,2026,1,XGBoost,0.6219
+Đông Thạnh,2026,2,XGBoost,0.6156
+Đông Thạnh,2026,3,XGBoost,0.6699
+Đông Thạnh,2026,4,XGBoost,0.5783
+Đông Thạnh,2026,5,XGBoost,0.5647
+Đông Thạnh,2026,6,XGBoost,0.5448
+Đất Đỏ,2026,1,XGBoost,0.1422
+Đất Đỏ,2026,2,XGBoost,0.5965
+Đất Đỏ,2026,3,XGBoost,0.9066
+Đất Đỏ,2026,4,XGBoost,0.2518
+Đất Đỏ,2026,5,XGBoost,0.5856
+Đất Đỏ,2026,6,XGBoost,0.5992
+Đức Nhuận,2026,1,XGBoost,0.572
+Đức Nhuận,2026,2,XGBoost,0.6563
+Đức Nhuận,2026,3,XGBoost,0.611
+Đức Nhuận,2026,4,XGBoost,0.6754
+Đức Nhuận,2026,5,XGBoost,0.5494
+Đức Nhuận,2026,6,XGBoost,0.5711

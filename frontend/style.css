@@ -1,0 +1,1329 @@
+
+/* =========================================================
+   TVDI TP.HCM — GIAO DIỆN HIỆN ĐẠI, GẦN GŨI, DỄ SỬ DỤNG
+   Giữ nguyên các ID và chức năng hiện có trong app.js
+   ========================================================= */
+
+:root {
+  --ink: #20352f;
+  --muted: #6b7d76;
+  --paper: #f4f8f6;
+  --panel: #ffffff;
+  --line: #e1eae5;
+
+  --accent: #18836c;
+  --accent-dark: #116b58;
+  --accent-soft: #e6f5ef;
+
+  --danger: #c24136;
+  --nodata: #9aa7b3;
+
+  --rail-w: 400px;
+  --radius: 16px;
+  --shadow: 0 4px 18px rgba(34, 72, 56, 0.09);
+
+  font-family: "Be Vietnam Pro", system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: var(--paper);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(24, 131, 108, 0.3);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   1. BỐ CỤC CHÍNH
+   ========================================================= */
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--rail-w);
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+/* =========================================================
+   2. BẢN ĐỒ
+   ========================================================= */
+
+.stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  background: #e9f0ec;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+  background: #e9f0ec;
+}
+
+/* Chú giải bản đồ */
+
+.legend {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 500;
+  width: 238px;
+  padding: 14px 15px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(225, 234, 229, 0.95);
+  border-radius: 14px;
+  font-size: 12.5px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.legend-title {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.legend-bar {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.legend-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.legend-nodata {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.legend-nodata i,
+.legend-nodata-swatch {
+  display: inline-block;
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  background: var(--nodata);
+  border: 1px solid #778590;
+  border-radius: 3px;
+}
+
+/* Tooltip tên phường/xã */
+
+.ward-tip {
+  padding: 8px 10px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+  font-family: inherit !important;
+  color: var(--ink) !important;
+}
+
+.leaflet-tooltip:before {
+  border-top-color: white;
+}
+
+/* Điều khiển phóng to bản đồ */
+
+.leaflet-bar {
+  overflow: hidden;
+  border: 1px solid var(--line) !important;
+  border-radius: 11px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  border-bottom-color: var(--line) !important;
+  color: var(--ink) !important;
+  background: white !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+}
+
+/* =========================================================
+   3. THANH THỜI GIAN
+   ========================================================= */
+
+.strip-wrap {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 500;
+  padding: 12px 13px 11px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(225, 234, 229, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 22px rgba(34, 72, 56, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.strip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+#strip-caption {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.strip-key {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  white-space: nowrap;
+  font-size: 11.5px;
+}
+
+.strip-key i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(32, 53, 47, 0.4);
+  border-radius: 3px;
+}
+
+.strip-key .key-actual {
+  margin-left: 5px;
+  background: #3b82f6;
+}
+
+.strip-key .key-forecast {
+  background: repeating-linear-gradient(
+    45deg,
+    #18836c 0 3px,
+    #ffffff 3px 6px
+  );
+}
+
+.strip {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 5px 3px 7px;
+  border-radius: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #bdcec5 transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.strip::-webkit-scrollbar-thumb {
+  background: #bdcec5;
+  border-radius: 10px;
+}
+
+.year {
+  flex: 0 0 auto;
+}
+
+.year-label {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.cells {
+  display: flex;
+  gap: 3px;
+}
+
+.cell {
+  position: relative;
+  flex: 0 0 auto;
+  width: 15px;
+  height: 29px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cell:hover {
+  z-index: 2;
+  filter: brightness(0.96);
+  transform: translateY(-2px);
+}
+
+.cell.forecast {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.75) 0,
+    rgba(255, 255, 255, 0.75) 3px,
+    transparent 3px,
+    transparent 6px
+  ) !important;
+  border: 1px solid rgba(32, 53, 47, 0.6) !important;
+}
+
+.cell.active {
+  z-index: 3;
+  outline: 2.5px solid #20352f;
+  outline-offset: 2px;
+  border-radius: 4px;
+  transform: translateY(-1px) scale(1.08);
+}
+
+/* =========================================================
+   4. CỘT THÔNG TIN
+   ========================================================= */
+
+.rail {
+  position: relative;
+  z-index: 510;
+  min-width: 0;
+  background: var(--panel);
+  border-left: 1px solid var(--line);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d2dfd8 transparent;
+}
+
+.rail-head {
+  padding: 23px 20px 16px;
+  background: linear-gradient(180deg, #f0f8f4 0%, #ffffff 100%);
+}
+
+.rail-head h1 {
+  font-size: 23px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: -0.65px;
+  color: #234c3e;
+}
+
+.rail-head p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Tab */
+
+.tabs {
+  display: flex;
+  gap: 5px;
+  padding: 0 20px;
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+
+.tabs button {
+  position: relative;
+  padding: 11px 13px;
+  border: 0;
+  border-radius: 9px 9px 0 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tabs button:hover {
+  background: #f2f8f5;
+  color: var(--accent-dark);
+}
+
+.tabs button[aria-selected="true"] {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.tabs button[aria-selected="true"]:after {
+  position: absolute;
+  right: 10px;
+  bottom: -1px;
+  left: 10px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 5px 5px 0 0;
+  content: "";
+}
+
+/* Các khối nội dung */
+
+.block {
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.block h2 {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 650;
+  letter-spacing: -0.15px;
+}
+
+.block p {
+  line-height: 1.65;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+/* Thông báo lỗi và trạng thái */
+
+.notice {
+  margin: 14px 16px 0;
+  padding: 12px 14px;
+  background: #fff6e8;
+  border: 1px solid #f3dfb6;
+  border-radius: 11px;
+  color: #805b17;
+  font-size: 13px;
+}
+
+.notice[hidden],
+#ward-block[hidden],
+#panel-model[hidden] {
+  display: none !important;
+}
+
+/* =========================================================
+   5. THỐNG KÊ TVDI
+   ========================================================= */
+
+.period-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 5px;
+}
+
+.period-line h2 {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge.forecast {
+  background: #e8f0ff;
+  color: #315ea8;
+}
+
+.mean-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.mean-value {
+  color: #244f40;
+  font-size: 38px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.mean-label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.class-bar {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  margin-top: 15px;
+  overflow: hidden;
+  background: #edf1ee;
+  border-radius: 20px;
+}
+
+.class-bar span {
+  display: block;
+  flex: 0 0 auto;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.class-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+  font-size: 12.5px;
+}
+
+.class-list li {
+  display: grid;
+  grid-template-columns: 13px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 18px;
+}
+
+.class-list li i {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
+}
+
+.class-list li span {
+  color: #344b42;
+}
+
+.class-list li b {
+  color: #30463d;
+  font-size: 12px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   6. CHI TIẾT PHƯỜNG/XÃ VÀ BIỂU ĐỒ
+   ========================================================= */
+
+#ward-block {
+  background: #ffffff;
+}
+
+#ward-name {
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+#ward-meta {
+  margin-bottom: 12px;
+}
+
+.chart-box {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  margin-top: 12px;
+}
+
+.chart-box canvas {
+  max-width: 100%;
+}
+
+#ward-chart,
+#edge-chart {
+  width: 100%;
+}
+
+#ward-block .chart-box {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+/* Nút dự báo */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(24, 131, 108, 0.14);
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+  box-shadow: 0 5px 12px rgba(24, 131, 108, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.predict-result {
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+
+.predict-result p {
+  margin-bottom: 8px;
+}
+
+.predict-result .error {
+  padding: 10px 12px;
+  background: #fff0ee;
+  border-radius: 9px;
+  color: var(--danger);
+}
+
+.predict-result table,
+#model-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.predict-result th,
+.predict-result td,
+#model-table th,
+#model-table td {
+  padding: 9px 7px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.predict-result th,
+#model-table th {
+  background: #f3f8f5;
+  color: #38594b;
+  font-weight: 600;
+}
+
+.table-wrap {
+  max-width: 100%;
+  margin-top: 12px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+/* =========================================================
+   7. DANH SÁCH 10 KHU VỰC KHÔ NHẤT
+   ========================================================= */
+
+#driest-block h2 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.driest-list {
+  display: grid;
+  gap: 2px;
+  counter-reset: driest;
+}
+
+.driest-list li {
+  min-width: 0;
+  border-radius: 9px;
+  transition: background 0.15s ease;
+}
+
+.driest-list li:hover {
+  background: #f1f8f4;
+}
+
+.driest-list button {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 43px;
+  padding: 8px 4px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.driest-list button:hover {
+  color: var(--accent-dark);
+}
+
+.driest-list .rank {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: #f0f5f2;
+  color: #536b5e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.driest-list li:nth-child(-n+3) .rank {
+  background: #fff2d7;
+  color: #96651a;
+}
+
+.driest-list .w-name {
+  min-width: 0;
+  overflow: hidden;
+  color: #2c4238;
+  font-size: 12.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.driest-list .w-val {
+  padding-left: 4px;
+  color: #314b3f;
+  font-size: 13px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   8. TRỢ LÝ AI TVDI
+   Tùy chỉnh nút được tạo động bởi app.js
+   ========================================================= */
+
+/* Nút lửa: CSS tạo biểu tượng và nhãn mà không cần sửa JS */
+
+#tvdi-chat-launcher {
+  position: fixed !important;
+  z-index: 2000 !important;
+  left: 20px !important;
+  bottom: 132px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  width: 62px !important;
+  height: 62px !important;
+  overflow: visible !important;
+
+  border: 3px solid rgba(255, 255, 255, 0.95) !important;
+  border-radius: 50% !important;
+
+  background: linear-gradient(145deg, #fff5d9, #ffca70) !important;
+  color: #e45b29 !important;
+
+  font-size: 0 !important;
+  cursor: pointer !important;
+
+  box-shadow:
+    0 5px 16px rgba(116, 76, 26, 0.2),
+    0 0 0 5px rgba(255, 255, 255, 0.4) !important;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Thay biểu tượng chat bằng emoji ngọn lửa */
+
+#tvdi-chat-launcher::before {
+  content: "🔥";
+  font-size: 29px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 1px rgba(125, 67, 15, 0.12));
+}
+
+#tvdi-chat-launcher::after {
+  content: "AI TVDI";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  padding: 3px 9px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  background: #187b65;
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+}
+
+#tvdi-chat-launcher:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow:
+    0 8px 20px rgba(116, 76, 26, 0.24),
+    0 0 0 5px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Khung chat */
+
+#tvdi-chat-panel {
+  position: fixed !important;
+  z-index: 2001 !important;
+  left: 20px !important;
+  bottom: 210px !important;
+
+  width: min(370px, calc(100vw - 32px)) !important;
+  max-height: min(480px, calc(100dvh - 250px)) !important;
+
+  overflow: hidden !important;
+  border: 1px solid #dfeae4 !important;
+  border-radius: 18px !important;
+
+  background: #ffffff !important;
+  box-shadow: 0 12px 40px rgba(28, 65, 49, 0.2) !important;
+
+  font-family: "Be Vietnam Pro", sans-serif !important;
+}
+
+#tvdi-chat-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding: 15px 16px !important;
+
+  background: linear-gradient(120deg, #187b65, #279a7d) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+}
+
+#tvdi-chat-close {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 30px !important;
+  height: 30px !important;
+  border: 0 !important;
+  border-radius: 9px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  font-size: 21px !important;
+  cursor: pointer !important;
+}
+
+#tvdi-chat-close:hover {
+  background: rgba(255, 255, 255, 0.26) !important;
+}
+
+#tvdi-chat-messages {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  min-height: 110px !important;
+  padding: 15px !important;
+  overflow-y: auto !important;
+  background: #f8fbf9 !important;
+}
+
+.tvdi-chat-message {
+  max-width: 94% !important;
+  padding: 11px 13px !important;
+  border-radius: 13px !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+  overflow-wrap: anywhere !important;
+  white-space: pre-line !important;
+}
+
+.tvdi-chat-bot {
+  align-self: flex-start !important;
+  border: 1px solid #e5eee9 !important;
+  border-bottom-left-radius: 4px !important;
+  background: #ffffff !important;
+  color: #30463c !important;
+}
+
+.tvdi-chat-user {
+  align-self: flex-end !important;
+  border-bottom-right-radius: 4px !important;
+  background: #187b65 !important;
+  color: #ffffff !important;
+}
+
+#tvdi-chat-form {
+  display: flex !important;
+  gap: 8px !important;
+  padding: 12px !important;
+  border-top: 1px solid #e5eee9 !important;
+  background: #ffffff !important;
+}
+
+#tvdi-chat-input {
+  flex: 1 !important;
+  min-width: 0 !important;
+  min-height: 42px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #d7e4dc !important;
+  border-radius: 11px !important;
+  outline: none !important;
+  background: #f9fbfa !important;
+  color: var(--ink) !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  font-size: 12px !important;
+}
+
+#tvdi-chat-input::placeholder {
+  color: #899b91 !important;
+}
+
+#tvdi-chat-input:focus {
+  border-color: #18836c !important;
+  box-shadow: 0 0 0 3px rgba(24, 131, 108, 0.1) !important;
+}
+
+#tvdi-chat-send {
+  min-width: 58px !important;
+  padding: 0 13px !important;
+  border: 0 !important;
+  border-radius: 11px !important;
+  background: #187b65 !important;
+  color: white !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+#tvdi-chat-send:hover:not(:disabled) {
+  background: #116b58 !important;
+}
+
+#tvdi-chat-send:disabled {
+  opacity: 0.55 !important;
+  cursor: wait !important;
+}
+
+/* =========================================================
+   9. MÀN HÌNH LAPTOP NHỎ
+   ========================================================= */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  :root {
+    --rail-w: 350px;
+  }
+
+  .rail-head {
+    padding: 19px 17px 13px;
+  }
+
+  .rail-head h1 {
+    font-size: 21px;
+  }
+
+  .block {
+    padding: 17px;
+  }
+
+  .legend {
+    width: 220px;
+  }
+
+  .mean-value {
+    font-size: 34px;
+  }
+
+  .chart-box {
+    height: 195px;
+  }
+}
+
+/* =========================================================
+   10. ĐIỆN THOẠI VÀ MÀN HÌNH HẸP
+   ========================================================= */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  /* Bản đồ nằm trên, thông tin nằm bên dưới */
+
+  .stage {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 62dvh;
+    min-height: 420px;
+    max-height: 650px;
+  }
+
+  #map {
+    position: absolute;
+    inset: 0;
+  }
+
+  .legend {
+    top: 10px;
+    right: 10px;
+    width: 190px;
+    padding: 10px 11px;
+    border-radius: 12px;
+    font-size: 11px;
+  }
+
+  .legend-title {
+    margin-bottom: 6px;
+    font-size: 11.5px;
+  }
+
+  .legend-bar {
+    height: 9px;
+  }
+
+  .legend-ticks {
+    font-size: 10.5px;
+  }
+
+  .legend-nodata {
+    margin-top: 7px;
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .legend-nodata i,
+  .legend-nodata-swatch {
+    width: 13px;
+    height: 13px;
+    flex-basis: 13px;
+  }
+
+  .strip-wrap {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    padding: 9px 9px 7px;
+    border-radius: 12px;
+  }
+
+  .strip-head {
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 5px;
+    font-size: 10.5px;
+  }
+
+  #strip-caption {
+    max-width: 58%;
+    line-height: 1.45;
+  }
+
+  .strip-key {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px;
+    font-size: 9.5px;
+  }
+
+  .strip-key i {
+    width: 10px;
+    height: 10px;
+  }
+
+  .strip {
+    gap: 7px;
+    padding-top: 4px;
+  }
+
+  .year-label {
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
+
+  .cells {
+    gap: 3px;
+  }
+
+  .cell {
+    width: 15px;
+    height: 27px;
+    border-radius: 3px;
+  }
+
+  /* Cột thông tin chuyển thành nội dung cuộn tự nhiên */
+
+  .rail {
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+    background: #ffffff;
+  }
+
+  .rail-head {
+    padding: 19px 16px 12px;
+    background: #ffffff;
+  }
+
+  .rail-head h1 {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  .rail-head p {
+    font-size: 12.5px;
+  }
+
+  .tabs {
+    padding: 0 16px;
+  }
+
+  .tabs button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .block {
+    padding: 17px 16px;
+  }
+
+  .block h2 {
+    font-size: 15px;
+  }
+
+  .period-line h2 {
+    font-size: 15px;
+  }
+
+  .mean-value {
+    font-size: 35px;
+  }
+
+  .mean-label {
+    font-size: 12px;
+  }
+
+  .class-list {
+    gap: 9px;
+    font-size: 12.5px;
+  }
+
+  .class-list li b {
+    font-size: 12px;
+  }
+
+  .chart-box {
+    height: 200px;
+  }
+
+  .btn {
+    min-height: 46px;
+    border-radius: 10px;
+  }
+
+  .driest-list button {
+    min-height: 43px;
+    grid-template-columns: 25px minmax(0, 1fr) auto;
+  }
+
+  .driest-list .w-name {
+    font-size: 13px;
+  }
+
+  .driest-list .w-val {
+    font-size: 13px;
+  }
+
+  /* Nút AI không che thanh thời gian trên điện thoại */
+
+  #tvdi-chat-launcher {
+    left: 15px !important;
+    bottom: 118px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  #tvdi-chat-launcher::before {
+    font-size: 26px;
+  }
+
+  #tvdi-chat-launcher::after {
+    bottom: -11px;
+    font-size: 9px;
+  }
+
+  #tvdi-chat-panel {
+    left: 12px !important;
+    bottom: 188px !important;
+    width: min(360px, calc(100vw - 24px)) !important;
+    max-height: min(430px, calc(100dvh - 220px)) !important;
+    border-radius: 16px !important;
+  }
+
+  #tvdi-chat-messages {
+    min-height: 90px !important;
+    padding: 12px !important;
+  }
+}
+
+/* =========================================================
+   11. ĐIỆN THOẠI RẤT NHỎ
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .stage {
+    height: 60dvh;
+    min-height: 390px;
+  }
+
+  .legend {
+    width: 174px;
+    padding: 9px;
+  }
+
+  .strip-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #strip-caption {
+    max-width: 100%;
+  }
+
+  .strip-key {
+    justify-content: flex-start;
+  }
+
+  .mean-value {
+    font-size: 32px;
+  }
+
+  .block {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+
+/* =========================================================
+   12. THIẾT BỊ CẢM ỨNG VÀ GIẢM CHUYỂN ĐỘNG
+   ========================================================= */
+
+@media (hover: none) {
+  .driest-list li:hover,
+  .btn:hover {
+    background: inherit;
+    transform: none;
+  }
+
+  .cell:hover {
+    filter: none;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+models/*.pkl
+*.parquet
+*.tif
+pgdata/
+*.sql
+.DS_Store
