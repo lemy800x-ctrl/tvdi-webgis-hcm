@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <!-- =================== RAIL CONTROL =================== -->
+    <!-- =================== CỘT ĐIỀU KHIỂN (RAIL) =================== -->
     <aside class="rail">
 
       <header class="rail-head">
@@ -82,6 +82,28 @@
       <div id="panel-area" role="tabpanel" aria-labelledby="tab-area">
 
         <div id="empty" class="notice" hidden></div>
+
+        <!-- THỐNG KÊ TỔNG QUAN THÁNG -->
+        <section class="block">
+          <div class="period-line">
+            <h2 id="period-title">Đang tải...</h2>
+            <span id="period-badge" class="badge">Thực tế</span>
+          </div>
+
+          <div class="mean-line">
+            <span id="mean-value" class="mean-value">-</span>
+            <span id="mean-label" class="mean-label">TVDI trung bình</span>
+          </div>
+
+          <div id="class-bar" class="class-bar"></div>
+          <ul id="class-list" class="class-list"></ul>
+        </section>
+
+        <!-- TOP 10 KHU VỰC KHÔ NHẤT -->
+        <section class="block" id="driest-block">
+          <h2>Top 10 khu vực khô nhất</h2>
+          <ul id="driest-list" class="driest-list"></ul>
+        </section>
 
         <!-- TRA CỨU & XẾP HẠNG -->
         <section class="block feature-panel" id="ward-tools-panel">
@@ -129,69 +151,81 @@
           </div>
 
           <div class="feature-actions" style="margin-top: 10px;">
-            <button id="apply-filter-btn" type="button" class="btn-primary">Lọc phường/xã</button>
-            <button id="reset-filter-btn" type="button" class="btn-secondary">Xóa lọc</button>
+            <button id="apply-ward-filter-btn" type="button" class="btn-primary">Lọc phường/xã</button>
+            <button id="reset-ward-filter-btn" type="button" class="btn-secondary">Xóa lọc</button>
+            <button id="refresh-ranking-btn" type="button" class="btn-secondary">Làm mới</button>
           </div>
 
-          <!-- DÙNG RENDER KẾT QUẢ RANKING / FILTER -->
-          <div id="ranking-results-wrap" class="ranking-results" style="margin-top: 15px; max-height: 200px; overflow-y: auto;">
-            <ul id="ranking-list" class="ranking-list"></ul>
+          <p id="ward-tools-status" class="feature-status"></p>
+
+          <!-- KHUNG BẢNG XẾP HẠNG THỰC TẾ DÙNG TABLE ĐÚNG VỚI APP.JS -->
+          <div class="ranking-table-wrap">
+            <table id="ward-ranking-table">
+              <thead>
+                <tr>
+                  <th style="width: 35px;">#</th>
+                  <th>Phường/Xã</th>
+                  <th id="ranking-value-heading" style="width: 80px; text-align: right;">TVDI</th>
+                </tr>
+              </thead>
+              <tbody id="ward-ranking-body">
+                <tr><td colspan="3" class="muted">Đang tải dữ liệu...</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
         <!-- THÔNG TIN CHI TIẾT PHƯỜNG XÃ KHI CLICK BẢN ĐỒ -->
-        <section class="block" id="ward-detail-panel">
-          <h2>Chi tiết Phường/Xã</h2>
-          <div id="ward-info-content">
-            <p class="muted">Nhấp vào một phường/xã trên bản đồ để xem dữ liệu chi tiết và đồ thị chuỗi thời gian.</p>
-          </div>
-          <div id="ward-chart-wrap" style="position: relative; height: 220px; width: 100%; margin-top: 10px;" hidden>
+        <section class="block" id="ward-block" hidden>
+          <h2 id="ward-name">Chi tiết Phường/Xã</h2>
+          <p id="ward-meta" class="muted"></p>
+
+          <div class="chart-box">
             <canvas id="ward-chart"></canvas>
           </div>
+
+          <!-- NÚT DỰ BÁO VÀ KẾT QUẢ ĐƯỢC BỌC ĐÚNG VÀO TRONG WARD-BLOCK -->
+          <button id="predict-btn" type="button" class="btn" style="margin-top: 12px;" hidden>
+            Dự báo 6 tháng tới bằng AI
+          </button>
+          <div id="predict-result" class="predict-result"></div>
         </section>
 
       </div>
 
-      <!-- PANEL MÔ HÌNH (DÀNH CHO ADMIN / XEM ĐÁNH GIÁ) -->
+      <!-- PANEL MÔ HÌNH -->
       <div id="panel-model" role="tabpanel" aria-labelledby="tab-model" hidden>
         <section class="block">
           <h2>Đánh giá mô hình Machine Learning</h2>
-          <div id="model-eval-table-wrap">
-            <p class="muted">Đang tải dữ liệu mô hình...</p>
+          <div class="table-wrap">
+            <table id="model-table">
+              <thead>
+                <tr>
+                  <th>Mô hình</th>
+                  <th>MAE</th>
+                  <th>RMSE</th>
+                  <th>R²</th>
+                  <th>MAPE (%)</th>
+                </tr>
+              </thead>
+              <tbody id="model-table-body">
+                <tr><td colspan="5" class="muted">Đang tải dữ liệu...</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
-        <section class="block" id="admin-action-panel" hidden>
-          <h2>Thao tác Quản trị (Admin)</h2>
-          <div class="feature-field">
-            <label for="predict-ward-select">Chọn Phường/Xã chạy dự báo:</label>
-            <select id="predict-ward-select"></select>
+        <section class="block">
+          <h2>Thông số đường cạnh (Dry/Wet Edge)</h2>
+          <div class="chart-box">
+            <canvas id="edge-chart"></canvas>
           </div>
-          <button id="run-predict-btn" type="button" class="btn-primary" style="margin-top: 10px; width: 100%;">
-            🚀 Chạy dự báo AI 6 tháng
-          </button>
         </section>
       </div>
 
     </aside>
 
   </div>
-
-  <!-- MODAL ĐĂNG NHẬP ADMIN -->
-  <dialog id="admin-modal" class="modal">
-    <form method="dialog" id="admin-login-form" class="modal-box">
-      <h3>Đăng nhập Quản trị viên</h3>
-      <p class="muted">Nhập ADMIN_TOKEN để kích hoạt tính năng chạy dự báo CSDL.</p>
-      <div class="feature-field" style="margin: 15px 0;">
-        <label for="admin-token-input">Admin Token</label>
-        <input type="password" id="admin-token-input" placeholder="Nhập token..." required>
-      </div>
-      <div class="modal-actions" style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button type="button" id="admin-modal-close" class="btn-secondary">Hủy</button>
-        <button type="submit" class="btn-primary">Đăng nhập</button>
-      </div>
-    </form>
-  </dialog>
 
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

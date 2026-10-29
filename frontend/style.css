@@ -16,7 +16,6 @@
   --danger: #c24136;
   --nodata: #9aa7b3;
 
-  /* Bản đồ chủ đạo: rail hẹp 340px */
   --rail-w: 340px;
   --radius: 16px;
   --shadow: 0 4px 18px rgba(34, 72, 56, 0.09);
@@ -26,7 +25,6 @@
   color: var(--ink);
 }
 
-/* Sửa lỗi 1: Đổi - thành * */
 * { box-sizing: border-box; }
 
 html, body {
@@ -57,7 +55,7 @@ select:focus-visible {
 button:disabled { opacity: 0.6; cursor: not-allowed; }
 
 /* =========================================================
-   1. BỐ CỤC CHÍNH — BẢN ĐỒ CHỦ ĐẠO
+   1. BỐ CỤC CHÍNH
    ========================================================= */
 
 .app {
@@ -89,14 +87,12 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   transition: transform 0.5s ease;
 }
 
-/* Góc nhìn 3D (tilt CSS) */
 #map.view-3d {
   transform: perspective(900px) rotateX(38deg) scale(1.05);
   transform-origin: center 60%;
 }
 #map.view-3d .leaflet-control-attribution { display: none; }
 
-/* Tiêu đề bản đồ */
 .map-heading {
   position: absolute; z-index: 450; top: 12px; left: 12px;
   max-width: calc(100% - 320px); padding: 9px 13px;
@@ -108,7 +104,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 .map-heading strong { display: block; font-size: 14px; letter-spacing: .2px; }
 .map-heading small { display: block; margin-top: 3px; font-size: 11px; color: #647b80; }
 
-/* Công cụ bản đồ */
 .map-tools {
   position: absolute; z-index: 600; top: 12px; right: 12px;
   display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;
@@ -125,7 +120,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   background: #dff3ef; border-color: #82c9bd; font-weight: 600;
 }
 
-/* La bàn */
 .north-arrow {
   position: absolute; z-index: 450; right: 18px; top: 62px;
   width: 38px; padding: 6px 0; text-align: center;
@@ -135,7 +129,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 }
 .north-arrow span { display: block; font-size: 22px; line-height: 22px; }
 
-/* Toạ độ */
 .map-coordinate {
   position: absolute; z-index: 450; left: 12px; bottom: 118px;
   padding: 5px 8px; background: rgba(255,255,255,.92);
@@ -144,7 +137,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   font-variant-numeric: tabular-nums;
 }
 
-/* Chú giải */
 .legend {
   position: absolute; top: 16px; right: 16px; z-index: 500;
   width: 238px; padding: 14px 15px;
@@ -165,13 +157,12 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   display: flex; align-items: center; gap: 8px;
   margin-top: 8px; color: var(--muted); font-size: 12.5px;
 }
-.legend-nodata i, .legend-nodata-swatch {
+.legend-nodata i {
   display: inline-block; flex: 0 0 14px;
   width: 14px; height: 14px;
   background: var(--nodata); border: 1px solid #778590; border-radius: 3px;
 }
 
-/* Tooltip */
 .ward-tip {
   padding: 8px 10px !important;
   border: 1px solid var(--line) !important;
@@ -179,22 +170,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
   font-family: inherit !important; color: var(--ink) !important;
 }
-.leaflet-tooltip:before { border-top-color: white; }
-
-/* Điều khiển zoom */
-.leaflet-bar {
-  overflow: hidden;
-  border: 1px solid var(--line) !important;
-  border-radius: 11px !important;
-  box-shadow: var(--shadow) !important;
-}
-.leaflet-bar a, .leaflet-bar a:hover {
-  width: 34px !important; height: 34px !important;
-  line-height: 34px !important;
-  border-bottom-color: var(--line) !important;
-  color: var(--ink) !important; background: white !important;
-}
-.leaflet-control-attribution { font-size: 10px !important; }
 
 /* =========================================================
    3. THANH THỜI GIAN
@@ -238,9 +213,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent;
   scroll-behavior: smooth;
 }
-#strip.strip::-webkit-scrollbar { height: 6px; }
-#strip.strip::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 20px; }
-
 #strip .year {
   display: flex; flex: 0 0 auto;
   flex-direction: column; gap: 8px;
@@ -271,10 +243,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   position: relative; z-index: 2;
   box-shadow: 0 0 0 3px rgba(59,130,246,.15);
 }
-#strip .cell:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 6px rgba(15,23,42,.18);
-}
 
 /* =========================================================
    4. CỘT THÔNG TIN (RAIL)
@@ -296,9 +264,7 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   letter-spacing: -0.6px; color: #234c3e;
 }
 .rail-head p { margin-top: 5px; color: var(--muted); font-size: 12.5px; }
-#auth-status { font-weight: 500; }
 
-/* Tabs */
 .tabs {
   display: flex; gap: 5px; padding: 0 18px;
   background: white; border-bottom: 1px solid var(--line);
@@ -307,9 +273,7 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   position: relative; padding: 10px 12px;
   border: 0; border-radius: 9px 9px 0 0;
   background: transparent; color: var(--muted); cursor: pointer;
-  transition: background .2s, color .2s;
 }
-.tabs button:hover { background: #f2f8f5; color: var(--accent-dark); }
 .tabs button[aria-selected="true"] { color: var(--accent-dark); font-weight: 600; }
 .tabs button[aria-selected="true"]:after {
   position: absolute; right: 10px; bottom: -1px; left: 10px;
@@ -317,42 +281,32 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   border-radius: 5px 5px 0 0; content: "";
 }
 
-/* Khối nội dung */
 .block { padding: 18px; border-bottom: 1px solid var(--line); }
 .block h2 {
   margin-bottom: 8px; color: var(--ink);
   font-size: 15px; line-height: 1.5; font-weight: 650;
-  letter-spacing: -0.15px;
 }
-.block p { line-height: 1.65; }
 .muted { color: var(--muted); font-size: 12.5px; }
 
-/* Thông báo */
 .notice {
   margin: 14px 16px 0; padding: 12px 14px;
   background: #fff6e8; border: 1px solid #f3dfb6;
   border-radius: 11px; color: #805b17; font-size: 13px;
 }
-.notice[hidden], #ward-block[hidden], #panel-model[hidden],
-#predict-btn[hidden], #filter-max-wrap[hidden] {
-  display: none !important;
-}
 
 /* =========================================================
-   5. THỐNG KÊ TVDI
+   5. THỐNG KÊ TVDI & TOP 10
    ========================================================= */
 
 .period-line {
   display: flex; flex-wrap: wrap; align-items: center;
   gap: 9px; margin-bottom: 5px;
 }
-.period-line h2 { margin-bottom: 0; font-size: 16px; font-weight: 650; }
-
 .badge {
   display: inline-flex; align-items: center;
   min-height: 23px; padding: 3px 9px; border-radius: 20px;
   background: var(--accent-soft); color: var(--accent-dark);
-  font-size: 11.5px; font-weight: 600; white-space: nowrap;
+  font-size: 11.5px; font-weight: 600;
 }
 .badge.forecast { background: #e8f0ff; color: #315ea8; }
 
@@ -363,7 +317,6 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 .mean-value {
   color: #244f40; font-size: 38px; line-height: 1.3;
   font-weight: 700; letter-spacing: -1.2px;
-  font-variant-numeric: tabular-nums;
 }
 .mean-label { color: var(--muted); font-size: 12px; }
 
@@ -372,156 +325,51 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   margin-top: 15px; overflow: hidden;
   background: #edf1ee; border-radius: 20px;
 }
-.class-bar span {
-  display: block; flex: 0 0 auto; height: 100%;
-  transition: width .3s ease;
-}
+.class-bar span { display: block; flex: 0 0 auto; height: 100%; }
 
-.class-list {
-  display: grid; gap: 9px; margin-top: 14px; font-size: 12.5px;
-}
+.class-list { display: grid; gap: 9px; margin-top: 14px; font-size: 12.5px; }
 .class-list li {
   display: grid; grid-template-columns: 13px minmax(0,1fr) auto;
-  align-items: center; gap: 9px; min-height: 18px;
+  align-items: center; gap: 9px;
 }
-.class-list li i {
-  display: block; width: 13px; height: 13px; border-radius: 4px;
-}
-.class-list li span { color: #344b42; }
-.class-list li b {
-  color: #30463d; font-size: 12px; font-weight: 650;
-  font-variant-numeric: tabular-nums;
-}
+.class-list li i { display: block; width: 13px; height: 13px; border-radius: 4px; }
 
-/* =========================================================
-   6. CHI TIẾT PHƯỜNG/XÃ & BIỂU ĐỒ
-   ========================================================= */
-
-#ward-block { background: #ffffff; }
-#ward-name { margin-bottom: 5px; font-size: 17px; font-weight: 650; }
-#ward-meta { margin-bottom: 12px; }
-
-.chart-box {
-  position: relative; width: 100%; height: 210px; margin-top: 12px;
-}
-.chart-box canvas { max-width: 100%; }
-#ward-chart, #edge-chart { width: 100%; }
-#ward-block .chart-box { margin-top: 12px; margin-bottom: 6px; }
-
-.btn {
-  display: inline-flex; justify-content: center; align-items: center;
-  gap: 8px; width: 100%; min-height: 46px; margin-top: 12px;
-  padding: 12px 16px; border: 1px solid transparent; border-radius: 11px;
-  background: var(--accent); color: #fff; font-weight: 600;
-  cursor: pointer; box-shadow: 0 3px 8px rgba(24,131,108,.14);
-  transition: background .2s, transform .2s, box-shadow .2s;
-}
-.btn:hover:not(:disabled) {
-  background: var(--accent-dark);
-  box-shadow: 0 5px 12px rgba(24,131,108,.2);
-  transform: translateY(-1px);
-}
-.btn:active:not(:disabled) { transform: translateY(0); }
-
-.predict-result {
-  margin-top: 12px; overflow-wrap: anywhere; font-size: 13px;
-}
-.predict-result p { margin-bottom: 8px; }
-.predict-result .error {
-  padding: 10px 12px; background: #fff0ee;
-  border-radius: 99px; color: var(--danger);
-}
-.predict-result table, #model-table {
-  width: 100%; border-collapse: collapse; font-size: 12px;
-}
-.predict-result th, .predict-result td,
-#model-table th, #model-table td {
-  padding: 9px 7px; border-bottom: 1px solid var(--line); text-align: left;
-}
-.predict-result th, #model-table th {
-  background: #f3f8f5; color: #38594b; font-weight: 600;
-}
-.table-wrap {
-  max-width: 100%; margin-top: 12px;
-  overflow-x: auto; border: 1px solid var(--line); border-radius: 10px;
-}
-
-/* =========================================================
-   7. DANH SÁCH 10 KHU VỰC KHÔ NHẤT
-   ========================================================= */
-
-#driest-block h2 { margin-bottom: 10px; font-size: 15px; }
-
-.driest-list {
-  display: grid; gap: 2px; counter-reset: driest;
-}
-.driest-list li {
-  min-width: 0; border-radius: 9px;
-  transition: background .15s ease;
-}
-.driest-list li:hover { background: #f1f8f4; }
+.driest-list { display: grid; gap: 2px; }
 .driest-list button {
   display: grid; grid-template-columns: 26px minmax(0,1fr) auto;
   align-items: center; gap: 8px; width: 100%; min-height: 43px;
   padding: 8px 4px; border: 0; border-radius: 9px;
   background: transparent; text-align: left; cursor: pointer;
 }
-.driest-list button:hover { color: var(--accent-dark); }
 .driest-list .rank {
   display: inline-flex; justify-content: center; align-items: center;
   width: 24px; height: 24px; border-radius: 7px;
-  background: #f0f5f2; color: #536b5e;
-  font-size: 12px; font-weight: 600;
+  background: #f0f5f2; color: #536b5e; font-size: 12px; font-weight: 600;
 }
-.driest-list li:nth-child(-n+3) .rank {
-  background: #fff2d7; color: #96651a;
-}
-.driest-list .w-name {
-  min-width: 0; overflow: hidden; color: #2c4238;
-  font-size: 12.5px; text-overflow: ellipsis; white-space: nowrap;
-}
-.driest-list .w-val {
-  padding-left: 4px; color: #314b3f;
-  font-size: 13px; font-weight: 650;
-  font-variant-numeric: tabular-nums;
-}
+.driest-list li:nth-child(-n+3) .rank { background: #fff2d7; color: #96651a; }
+.driest-list .w-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* =========================================================
-   8. TRA CỨU & XẾP HẠNG (feature-panel)
+   6. TRA CỨU & XẾP HẠNG
    ========================================================= */
 
-.feature-panel { margin-bottom: 12px; }
-.feature-panel h2 { margin: 0 0 10px; }
-
 .feature-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 8px;
+  display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;
 }
-.feature-field {
-  display: flex; flex-direction: column; gap: 4px; min-width: 0;
-}
-.feature-field label {
-  font-size: 12px; color: #60777b; font-weight: 600;
-}
+.feature-field { display: flex; flex-direction: column; gap: 4px; }
+.feature-field label { font-size: 12px; color: #60777b; font-weight: 600; }
 .feature-field input, .feature-field select {
-  width: 100%; min-width: 0; box-sizing: border-box;
-  padding: 8px 9px; border: 1px solid #d5e2e3; border-radius: 8px;
-  background: #fff; color: #29464b; font-size: 13px;
+  width: 100%; padding: 8px 9px; border: 1px solid #d5e2e3;
+  border-radius: 8px; background: #fff; font-size: 13px;
 }
 
-.feature-actions {
-  display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px;
+.feature-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+.btn-primary, .btn-secondary {
+  border-radius: 8px; padding: 8px 10px; font-size: 12px;
+  font-weight: 600; cursor: pointer;
 }
-.feature-actions button {
-  border: 1px solid #c9e0dc; border-radius: 8px;
-  background: #eaf6f3; color: #245d58;
-  padding: 8px 10px; font-size: 12px; font-weight: 600;
-  cursor: pointer;
-}
-.feature-actions button.secondary {
-  background: #fff; color: #536c70; border-color: #d8e3e4;
-}
-.feature-actions button:hover { filter: brightness(0.97); }
+.btn-primary { background: #eaf6f3; color: #245d58; border: 1px solid #c9e0dc; }
+.btn-secondary { background: #fff; color: #536c70; border: 1px solid #d8e3e4; }
 
 .feature-status { font-size: 12px; color: #627a7e; margin: 8px 0 0; }
 
@@ -529,143 +377,327 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   max-height: 280px; overflow: auto; margin-top: 10px;
   border: 1px solid var(--line); border-radius: 10px;
 }
-#ward-ranking-table {
-  width: 100%; border-collapse: collapse; font-size: 12px;
-}
+#ward-ranking-table { width: 100%; border-collapse: collapse; font-size: 12px; }
 #ward-ranking-table th, #ward-ranking-table td {
   padding: 7px 8px; border-bottom: 1px solid #edf1f1; text-align: left;
 }
 #ward-ranking-table th {
-  position: sticky; top: 0; background: #f3f8f7; color: #456267;
-  font-weight: 600;
+  position: sticky; top: 0; background: #f3f8f7; color: #456267; font-weight: 600;
 }
-#ward-ranking-table tbody tr:hover { background: #f1f8f4; cursor: pointer; }
-
-.map-scale-note { font-size: 11px; color: #6d8387; margin-top: 5px; }
+#ward-ranking-table tbody tr:hover { background: #f1f8f4; }
 
 /* =========================================================
-   9. TRỢ LÝ AI TVDI
+   7. CHI TIẾT & MÔ HÌNH
+   ========================================================= */
+
+.chart-box { position: relative; width: 100%; height: 210px; margin-top: 12px; }
+.chart-box canvas { width: 100% !important; height: 100% !important; }
+
+.btn {
+  display: inline-flex; justify-content: center; align-items: center;
+  width: 100%; min-height: 44px; padding: 12px; border: none;
+  border-radius: 11px; background: var(--accent); color: #fff;
+  font-weight: 600; cursor: pointer;
+}
+
+.predict-result { margin-top: 12px; font-size: 13px; }
+.predict-result table, #model-table {
+  width: 100%; border-collapse: collapse; font-size: 12px;
+}
+.predict-result th, .predict-result td,
+#model-table th, #model-table td {
+  padding: 8px 7px; border-bottom: 1px solid var(--line); text-align: left;
+}
+.predict-result th, #model-table th { background: #f3f8f5; color: #38594b; }
+.table-wrap { max-width: 100%; margin-top: 10px; overflow-x: auto; }
+/* =========================================================
+   8. TOP 10 KHO NHẤT — bổ sung
+   ========================================================= */
+
+#driest-block h2 { margin-bottom: 10px; font-size: 15px; }
+
+.driest-list li {
+  min-width: 0;
+  border-radius: 9px;
+  transition: background .15s ease;
+}
+.driest-list li:hover { background: #f1f8f4; }
+
+.driest-list .w-name {
+  min-width: 0;
+  color: #2c4238;
+  font-size: 12.5px;
+}
+.driest-list .w-val {
+  padding-left: 4px;
+  color: #314b3f;
+  font-size: 13px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   9. NÚT / LINK HOVER
+   ========================================================= */
+
+.btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+  box-shadow: 0 5px 12px rgba(24,131,108,.2);
+  transform: translateY(-1px);
+}
+.btn:active:not(:disabled) { transform: translateY(0); }
+
+.btn-primary:hover { filter: brightness(0.97); }
+.btn-secondary:hover { filter: brightness(0.97); }
+
+.tabs button:hover {
+  background: #f2f8f5;
+  color: var(--accent-dark);
+}
+
+.feature-actions button:hover { filter: brightness(0.97); }
+
+/* =========================================================
+   10. THANH CUỘN ĐẸP + CELL HOVER
+   ========================================================= */
+
+#strip.strip::-webkit-scrollbar { height: 6px; }
+#strip.strip::-webkit-scrollbar-track { background: transparent; }
+#strip.strip::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+#strip .cell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(15,23,42,.18);
+}
+
+/* =========================================================
+   11. LEAFLET CONTROLS
+   ========================================================= */
+
+.leaflet-bar {
+  overflow: hidden;
+  border: 1px solid var(--line) !important;
+  border-radius: 11px !important;
+  box-shadow: var(--shadow) !important;
+}
+.leaflet-bar a, .leaflet-bar a:hover {
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  border-bottom-color: var(--line) !important;
+  color: var(--ink) !important;
+  background: white !important;
+}
+.leaflet-tooltip:before { border-top-color: white; }
+.leaflet-control-attribution { font-size: 10px !important; }
+
+/* =========================================================
+   12. [hidden] — đảm bảo ẩn đúng
+   ========================================================= */
+
+.notice[hidden],
+#ward-block[hidden],
+#panel-model[hidden],
+#predict-btn[hidden],
+#filter-max-wrap[hidden] {
+  display: none !important;
+}
+
+/* =========================================================
+   13. TRỢ LÝ AI TVDI (nút lửa + khung chat)
    ========================================================= */
 
 #tvdi-chat-launcher {
-  position: fixed !important; z-index: 2000 !important;
-  left: 20px !important; bottom: 132px !important;
+  position: fixed !important;
+  z-index: 2000 !important;
+  left: 20px !important;
+  bottom: 132px !important;
 
-  display: flex !important; justify-content: center !important;
+  display: flex !important;
+  justify-content: center !important;
   align-items: center !important;
-  width: 62px !important; height: 62px !important; overflow: visible !important;
+
+  width: 62px !important;
+  height: 62px !important;
+  overflow: visible !important;
 
   border: 3px solid rgba(255,255,255,.95) !important;
   border-radius: 50% !important;
-  background: linear-gradient(145deg, #fff5d9, #ffca70) !important;
-  color: #e45b29 !important; font-size: 0 !important; cursor: pointer !important;
 
-  box-shadow: 0 5px 16px rgba(116,76,26,.2),
-              0 0 0 5px rgba(255,255,255,.4) !important;
-  transition: transform .2s, box-shadow .2s !important;
+  background: linear-gradient(145deg, #fff5d9, #ffca70) !important;
+  color: #e45b29 !important;
+  font-size: 0 !important;
+  cursor: pointer !important;
+
+  box-shadow:
+    0 5px 16px rgba(116,76,26,.2),
+    0 0 0 5px rgba(255,255,255,.4) !important;
+
+  transition: transform .2s ease, box-shadow .2s ease !important;
 }
+
 #tvdi-chat-launcher::before {
-  content: "🔥"; font-size: 29px; line-height: 1;
+  content: "🔥";
+  font-size: 29px;
+  line-height: 1;
   filter: drop-shadow(0 2px 1px rgba(125,67,15,.12));
 }
+
 #tvdi-chat-launcher::after {
   content: "AI TVDI";
-  position: absolute; left: 50%; bottom: -12px;
-  padding: 3px 9px; border: 2px solid #fff; border-radius: 20px;
-  background: #187b65; color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  padding: 3px 9px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  background: #187b65;
+  color: #ffffff;
   font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 10px; line-height: 1.5; font-weight: 700;
-  letter-spacing: .3px; white-space: nowrap;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: .3px;
+  white-space: nowrap;
   transform: translateX(-50%);
   box-shadow: 0 2px 7px rgba(0,0,0,.12);
 }
+
 #tvdi-chat-launcher:hover {
   transform: translateY(-3px) scale(1.04) !important;
-  box-shadow: 0 8px 20px rgba(116,76,26,.24),
-              0 0 0 5px rgba(255,255,255,.5) !important;
+  box-shadow:
+    0 8px 20px rgba(116,76,26,.24),
+    0 0 0 5px rgba(255,255,255,.5) !important;
 }
 
 #tvdi-chat-panel {
-  position: fixed !important; z-index: 2001 !important;
-  left: 20px !important; bottom: 210px !important;
+  position: fixed !important;
+  z-index: 2001 !important;
+  left: 20px !important;
+  bottom: 210px !important;
+
   width: min(370px, calc(100vw - 32px)) !important;
   max-height: min(480px, calc(100dvh - 250px)) !important;
+
   overflow: hidden !important;
-  border: 1px solid #dfeae4 !important; border-radius: 18px !important;
-  background: #fff !important;
+  border: 1px solid #dfeae4 !important;
+  border-radius: 18px !important;
+
+  background: #ffffff !important;
   box-shadow: 0 12px 40px rgba(28,65,49,.2) !important;
+
   font-family: "Be Vietnam Pro", sans-serif !important;
 }
 
 #tvdi-chat-header {
-  display: flex !important; align-items: center !important;
-  justify-content: space-between !important; gap: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
   padding: 15px 16px !important;
   background: linear-gradient(120deg, #187b65, #279a7d) !important;
-  color: #fff !important; font-size: 14px !important; font-weight: 650 !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
 }
+
 #tvdi-chat-close {
-  display: inline-flex !important; justify-content: center !important;
-  align-items: center !important; width: 30px !important; height: 30px !important;
-  border: 0 !important; border-radius: 9px !important;
-  background: rgba(255,255,255,.15) !important; color: #fff !important;
-  font-size: 21px !important; cursor: pointer !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 30px !important;
+  height: 30px !important;
+  border: 0 !important;
+  border-radius: 9px !important;
+  background: rgba(255,255,255,.15) !important;
+  color: #fff !important;
+  font-size: 21px !important;
+  cursor: pointer !important;
 }
 #tvdi-chat-close:hover { background: rgba(255,255,255,.26) !important; }
 
 #tvdi-chat-messages {
-  display: flex !important; flex-direction: column !important;
-  gap: 10px !important; min-height: 110px !important;
-  padding: 15px !important; overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  min-height: 110px !important;
+  padding: 15px !important;
+  overflow-y: auto !important;
   background: #f8fbf9 !important;
 }
+
 .tvdi-chat-message {
-  max-width: 94% !important; padding: 11px 13px !important;
+  max-width: 94% !important;
+  padding: 11px 13px !important;
   border-radius: 13px !important;
   font-family: "Be Vietnam Pro", sans-serif !important;
-  font-size: 12.5px !important; line-height: 1.7 !important;
-  overflow-wrap: anywhere !important; white-space: pre-line !important;
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+  overflow-wrap: anywhere !important;
+  white-space: pre-line !important;
 }
+
 .tvdi-chat-bot {
   align-self: flex-start !important;
   border: 1px solid #e5eee9 !important;
   border-bottom-left-radius: 4px !important;
-  background: #fff !important; color: #30463c !important;
+  background: #fff !important;
+  color: #30463c !important;
 }
+
 .tvdi-chat-user {
   align-self: flex-end !important;
   border-bottom-right-radius: 4px !important;
-  background: #187b65 !important; color: #fff !important;
+  background: #187b65 !important;
+  color: #fff !important;
 }
 
 #tvdi-chat-form {
-  display: flex !important; gap: 8px !important;
-  padding: 12px !important; border-top: 1px solid #e5eee9 !important;
-  background: #fff !important;
+  display: flex !important;
+  gap: 8px !important;
+  padding: 12px !important;
+  border-top: 1px solid #e5eee9 !important;
+  background: #ffffff !important;
 }
+
 #tvdi-chat-input {
-  flex: 1 !important; min-width: 0 !important; min-height: 42px !important;
-  padding: 10px 12px !important; border: 1px solid #d7e4dc !important;
-  border-radius: 11px !important; outline: none !important;
-  background: #f9fbfa !important; color: var(--ink) !important;
-  font-family: "Be Vietnam Pro", sans-serif !important; font-size: 12px !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  min-height: 42px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #d7e4dc !important;
+  border-radius: 11px !important;
+  outline: none !important;
+  background: #f9fbfa !important;
+  color: var(--ink) !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  font-size: 12px !important;
 }
 #tvdi-chat-input::placeholder { color: #899b91 !important; }
 #tvdi-chat-input:focus {
   border-color: #18836c !important;
   box-shadow: 0 0 0 3px rgba(24,131,108,.1) !important;
 }
+
 #tvdi-chat-send {
-  min-width: 58px !important; padding: 0 13px !important;
-  border: 0 !important; border-radius: 11px !important;
-  background: #187b65 !important; color: #fff !important;
-  font-size: 12px !important; font-weight: 600 !important; cursor: pointer !important;
+  min-width: 58px !important;
+  padding: 0 13px !important;
+  border: 0 !important;
+  border-radius: 11px !important;
+  background: #187b65 !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
 }
 #tvdi-chat-send:hover:not(:disabled) { background: #116b58 !important; }
 #tvdi-chat-send:disabled { opacity: .55 !important; cursor: wait !important; }
 
 /* =========================================================
-   10. LAPTOP NHỎ
+   14. LAPTOP NHỎ (<= 1100px)
    ========================================================= */
 
 @media (max-width: 1100px) and (min-width: 769px) {
@@ -680,30 +712,43 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 }
 
 /* =========================================================
-   11. ĐIỆN THOẠI
+   15. ĐIỆN THOẠI (<= 768px)
    ========================================================= */
 
 @media (max-width: 768px) {
   html, body {
-    min-height: 100%; height: auto;
-    overflow-x: hidden; overflow-y: auto;
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .app {
-    display: flex; flex-direction: column;
-    width: 100%; height: auto; min-height: 100dvh; overflow: visible;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
   }
 
-  /* Bản đồ chiếm 68dvh để vẫn là thành phần chủ đạo */
+  /* Bản đồ vẫn là thành phần chủ đạo: 68dvh */
   .stage {
-    flex: 0 0 auto; width: 100%;
-    height: 68dvh; min-height: 420px; max-height: 700px;
+    flex: 0 0 auto;
+    width: 100%;
+    height: 68dvh;
+    min-height: 420px;
+    max-height: 700px;
   }
 
   .legend {
-    top: 10px; right: 10px; width: 180px;
-    padding: 10px 11px; border-radius: 12px;
-    font-size: 11px; margin-top: 0;
+    top: 10px;
+    right: 10px;
+    width: 180px;
+    padding: 10px 11px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-top: 0;
   }
   .legend-title { margin-bottom: 6px; font-size: 11.5px; }
   .legend-bar { height: 9px; }
@@ -712,32 +757,121 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   .legend-nodata i { width: 13px; height: 13px; flex-basis: 13px; }
 
   .map-heading {
-    max-width: calc(100% - 24px); top: 10px; left: 10px;
+    max-width: calc(100% - 24px);
+    top: 10px;
+    left: 10px;
     padding: 7px 10px;
   }
   .map-heading strong { font-size: 12.5px; }
   .map-heading small { font-size: 10px; }
 
   .map-tools {
-    top: 70px; left: 10px; right: 10px;
-    max-width: none; justify-content: flex-start;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+    justify-content: flex-start;
   }
   .map-tools button, .map-tools select {
-    min-height: 32px; padding: 6px 9px; font-size: 11.5px;
+    min-height: 32px;
+    padding: 6px 9px;
+    font-size: 11.5px;
   }
   .north-arrow { top: 118px; right: 12px; width: 34px; }
   .map-coordinate { bottom: 150px; font-size: 10px; }
 
   .strip-wrap {
-    right: 8px; bottom: 8px; left: 8px;
-    padding: 9px 9px 7px; border-radius: 12px;
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    padding: 9px 9px 7px;
+    border-radius: 12px;
   }
   .strip-head {
-    align-items: flex-start; flex-direction: column;
-    gap: 7px; margin-bottom: 8px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 8px;
   }
   #strip-caption { max-width: 100%; font-size: 11.5px; }
   .strip-key { justify-content: flex-start; font-size: 10.5px; }
   .strip-key i { width: 10px; height: 10px; }
   #strip .cells { grid-auto-columns: 16px; gap: 3px; }
+  #strip .cell { width: 16px; min-width: 16px; height: 27px; }
+
+  /* Rail chuyển thành nội dung cuộn tự nhiên */
+  .rail {
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+    background: #ffffff;
+  }
+  .rail-head { padding: 18px 16px 12px; background: #ffffff; }
+  .rail-head h1 { font-size: 20px; }
+  .rail-head p { font-size: 12.5px; }
+  .tabs { padding: 0 16px; }
+  .tabs button { padding: 9px 12px; font-size: 13px; }
+  .block { padding: 16px; }
+  .block h2 { font-size: 14.5px; }
+  .mean-value { font-size: 35px; }
+  .chart-box { height: 200px; }
+  .feature-grid { grid-template-columns: 1fr; }
+
+  .btn { min-height: 46px; border-radius: 10px; }
+  .driest-list button { min-height: 43px; }
+  .driest-list .w-name { font-size: 13px; }
+  .driest-list .w-val { font-size: 13px; }
+
+  /* Chat AI */
+  #tvdi-chat-launcher {
+    left: 15px !important;
+    bottom: 118px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+  #tvdi-chat-launcher::before { font-size: 26px; }
+  #tvdi-chat-launcher::after { bottom: -11px; font-size: 9px; }
+
+  #tvdi-chat-panel {
+    left: 12px !important;
+    bottom: 188px !important;
+    width: min(360px, calc(100vw - 24px)) !important;
+    max-height: min(430px, calc(100dvh - 220px)) !important;
+    border-radius: 16px !important;
+  }
+  #tvdi-chat-messages { min-height: 90px !important; padding: 12px !important; }
+}
+
+/* =========================================================
+   16. ĐIỆN THOẠI RẤT NHỎ (<= 380px)
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .stage { height: 60dvh; min-height: 390px; }
+  .legend { width: 174px; padding: 9px; }
+  .mean-value { font-size: 32px; }
+  .block { padding: 14px 13px; }
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   17. CẢM ỨNG & GIẢM CHUYỂN ĐỘNG
+   ========================================================= */
+
+@media (hover: none) {
+  .driest-list li:hover,
+  .btn:hover,
+  .feature-actions button:hover { background: inherit; transform: none; filter: none; }
+  .cell:hover { filter: none; transform: none; box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

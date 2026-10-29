@@ -129,15 +129,13 @@ function initMap() {
 
   state.map.on("mousemove", (e) => {
     const { lat, lng } = e.latlng;
-    const coordEl = $("map-coordinate");
-    if (coordEl) {
-      coordEl.textContent = `Tọa độ: ${lat.toFixed(5)}°N, ${lng.toFixed(5)}°E`;
+    if ($("map-coordinate")) {
+      $("map-coordinate").textContent = `Tọa độ: ${lat.toFixed(5)}°N, ${lng.toFixed(5)}°E`;
     }
   });
   state.map.on("mouseout", () => {
-    const coordEl = $("map-coordinate");
-    if (coordEl) {
-      coordEl.textContent = "Tọa độ: di chuyển con trỏ trên bản đồ";
+    if ($("map-coordinate")) {
+      $("map-coordinate").textContent = "Tọa độ: di chuyển con trỏ trên bản đồ";
     }
   });
 }
@@ -232,17 +230,15 @@ function markActiveCell() {
     cell.scrollIntoView({ block: "nearest", inline: "center" });
   }
   const p = state.periods[state.idx];
-  const strip = $("strip");
-  if (p && strip) {
-    strip.setAttribute("aria-valuenow", String(state.idx));
-    strip.setAttribute("aria-valuetext", `${periodText(p)}, ${p.nam >= 2026 ? "dự báo" : "thực tế"}`);
+  if (p && $("strip")) {
+    $("strip").setAttribute("aria-valuenow", String(state.idx));
+    $("strip").setAttribute("aria-valuetext", `${periodText(p)}, ${p.nam >= 2026 ? "dự báo" : "thực tế"}`);
   }
 }
 
 function setupStripEvents() {
-  const strip = $("strip");
-  if (strip) {
-    strip.addEventListener("click", (e) => {
+  if ($("strip")) {
+    $("strip").addEventListener("click", (e) => {
       const cell = e.target.closest(".cell");
       if (cell) {
         stopAnimation();
@@ -277,8 +273,7 @@ async function goTo(i) {
 
     renderMap(geo);
     renderSummary(p, sum);
-    const notice = $("empty");
-    if (notice) notice.hidden = true;
+    if ($("empty")) $("empty").hidden = true;
 
     loadRanking().catch(() => {});
   } catch (err) {
@@ -368,8 +363,7 @@ async function selectWard(code, zoom = false) {
 
   state.wardCode = code;
   state.live = [];
-  const out = $("predict-result");
-  if (out) out.replaceChildren();
+  if ($("predict-result")) $("predict-result").replaceChildren();
 
   if (state.layer) {
     state.layer.eachLayer((layer) => {
@@ -408,9 +402,6 @@ async function selectWard(code, zoom = false) {
 
 function renderWardChart() {
   if (!state.wardSeries) return;
-
-  const chartWrap = $("ward-chart-wrap");
-  if (chartWrap) chartWrap.hidden = false;
 
   const series = state.wardSeries.series || [];
   const label = (nam, thang) => `${String(thang).padStart(2, "0")}/${nam}`;
@@ -536,7 +527,7 @@ async function runPredict() {
 }
 
 /* =========================================================
-   11. XẾP HẠNG + LỌC NGƯỠNG (SỬA ĐÚNG ID VÀ THÊM THẺ STATUS)
+   11. XẾP HẠNG + LỌC NGƯỠNG
    ========================================================= */
 
 async function loadRanking() {
@@ -550,32 +541,40 @@ async function loadRanking() {
   try {
     const data = await api(`/api/ward-ranking?${q}`);
     renderRankingTable(data.items, metric);
-    const status = $("ward-tools-status");
-    if (status) status.textContent = `${data.count} phường/xã (xếp theo ${metric.toUpperCase()}).`;
+    if ($("ward-tools-status")) {
+      $("ward-tools-status").textContent = `${data.count} phường/xã (xếp theo ${metric.toUpperCase()}).`;
+    }
   } catch (err) {
-    const status = $("ward-tools-status");
-    if (status) status.textContent = `Lỗi xếp hạng: ${err.message}`;
+    if ($("ward-tools-status")) {
+      $("ward-tools-status").textContent = `Lỗi xếp hạng: ${err.message}`;
+    }
   }
 }
 
 function renderRankingTable(items, metric) {
-  const list = $("ranking-list");
-  if (!list) return;
-  list.replaceChildren();
+  const tbody = $("ward-ranking-body");
+  if (!tbody) return;
+  tbody.replaceChildren();
+
+  if ($("ranking-value-heading")) {
+    $("ranking-value-heading").textContent =
+      metric === "lst" ? "LST (°C)" : metric === "ndvi" ? "NDVI" : "TVDI";
+  }
 
   if (!items || !items.length) {
-    list.append(el("li", { class: "muted", text: "Không có dữ liệu phù hợp." }));
+    tbody.append(el("tr", {}, [el("td", { colspan: "3", text: "Không có dữ liệu." })]));
     return;
   }
 
   items.forEach((it, i) => {
-    const btn = el("button", { type: "button", class: "ranking-item-btn" }, [
-      el("span", { class: "rank", text: `${i + 1}.` }),
-      el("span", { class: "w-name", text: it.ward_name }),
-      el("span", { class: "w-val", text: fmt(it.value) })
+    const tr = el("tr", {}, [
+      el("td", { text: String(i + 1) }),
+      el("td", { text: it.ward_name }),
+      el("td", { text: fmt(it.value), style: "text-align: right; font-weight: 600;" })
     ]);
-    btn.addEventListener("click", () => selectWard(it.ward_code, true));
-    list.append(el("li", {}, [btn]));
+    tr.style.cursor = "pointer";
+    tr.addEventListener("click", () => selectWard(it.ward_code, true));
+    tbody.append(tr);
   });
 }
 
@@ -614,13 +613,13 @@ async function applyWardFilter() {
 }
 
 function setupWardTools() {
-  // Sửa đúng ID nút trong HTML
-  $("apply-filter-btn")?.addEventListener("click", applyWardFilter);
-  $("reset-filter-btn")?.addEventListener("click", () => {
+  $("apply-ward-filter-btn")?.addEventListener("click", applyWardFilter);
+  $("reset-ward-filter-btn")?.addEventListener("click", () => {
     if ($("filter-value")) $("filter-value").value = "";
     if ($("filter-max-value")) $("filter-max-value").value = "";
     loadRanking();
   });
+  $("refresh-ranking-btn")?.addEventListener("click", loadRanking);
   $("ranking-metric")?.addEventListener("change", loadRanking);
   $("filter-operator")?.addEventListener("change", () => {
     const maxWrap = $("filter-max-wrap");
@@ -635,8 +634,7 @@ function setupWardTools() {
 function startAnimation() {
   if (state.animationTimer) return;
   const speed = Number($("animation-speed").value) || 1000;
-  const playBtn = $("animation-play-btn");
-  if (playBtn) playBtn.disabled = true;
+  if ($("animation-play-btn")) $("animation-play-btn").disabled = true;
   state.animationTimer = setInterval(() => {
     const next = (state.idx + 1) % state.periods.length;
     goTo(next);
@@ -648,8 +646,7 @@ function stopAnimation() {
     clearInterval(state.animationTimer);
     state.animationTimer = null;
   }
-  const btn = $("animation-play-btn");
-  if (btn) btn.disabled = false;
+  if ($("animation-play-btn")) $("animation-play-btn").disabled = false;
 }
 
 function setupMapTools() {
@@ -674,9 +671,8 @@ function setupMapTools() {
 
 function refreshAuthUI() {
   const admin = isAdmin();
-  const status = $("auth-status");
-  if (status) {
-    status.textContent = admin
+  if ($("auth-status")) {
+    $("auth-status").textContent = admin
       ? "Chế độ: Quản trị viên (toàn quyền)"
       : "Chế độ: Người dùng (chỉ xem)";
   }
@@ -685,8 +681,7 @@ function refreshAuthUI() {
     btn.textContent = admin ? "🔓 Đăng xuất" : "🔑 Admin";
     btn.title = admin ? "Đăng xuất admin" : "Đăng nhập admin";
   }
-  const predictBtn = $("predict-btn");
-  if (predictBtn) predictBtn.hidden = !admin;
+  if ($("predict-btn")) $("predict-btn").hidden = !admin;
 }
 
 function setupAdminLogin() {
@@ -704,7 +699,7 @@ function setupAdminLogin() {
 }
 
 /* =========================================================
-   14. KHỞI TẠO TABS
+   14. PANEL MÔ HÌNH (DÀNH CHO ĐÁNH GIÁ MÔ HÌNH)
    ========================================================= */
 
 function setupTabs() {
@@ -725,8 +720,60 @@ function setupTabs() {
       tabArea.setAttribute("aria-selected", "false");
       panelModel.hidden = false;
       panelArea.hidden = true;
+      loadModelData();
     });
   }
+}
+
+async function loadModelData() {
+  try {
+    const models = await api("/api/models");
+    const tbody = $("model-table-body");
+    if (tbody) {
+      tbody.replaceChildren();
+      models.forEach((m) => {
+        tbody.append(el("tr", {}, [
+          el("td", { text: m.mo_hinh }),
+          el("td", { text: fmt(m.mae, 3) }),
+          el("td", { text: fmt(m.rmse, 3) }),
+          el("td", { text: fmt(m.r2, 3) }),
+          el("td", { text: fmt(m.mape, 1) })
+        ]));
+      });
+    }
+  } catch (err) {
+    console.error("Lỗi tải bảng mô hình:", err);
+  }
+
+  try {
+    const edgeData = await api("/api/edge-r2");
+    renderEdgeChart(edgeData);
+  } catch (err) {
+    console.error("Lỗi tải thông số đường cạnh:", err);
+  }
+}
+
+function renderEdgeChart(edgeData) {
+  const canvas = $("edge-chart");
+  if (!canvas) return;
+
+  if (state.edgeChart) state.edgeChart.destroy();
+
+  state.edgeChart = new Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: edgeData.map((d) => `Tháng ${d.thang}`),
+      datasets: [
+        { label: "R² Cạnh khô", data: edgeData.map((d) => d.r2_dry), backgroundColor: "#ff6600" },
+        { label: "R² Cạnh ướt", data: edgeData.map((d) => d.r2_wet), backgroundColor: "#0bc400" }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { y: { min: 0, max: 1 } }
+    }
+  });
 }
 
 /* =========================================================
@@ -775,142 +822,3 @@ async function init() {
 }
 
 init();
-
-/* =========================================================
-   17. TRỢ LÝ CHAT AI TVDI (HOÀN THIỆN ĐOẠN XOÁ DẤU & NGUYÊN BẢN)
-   ========================================================= */
-
-(function setupTVDIChat() {
-  const chatStyle = document.createElement("style");
-  chatStyle.textContent = `
-    #tvdi-chat-launcher {
-      position: fixed; z-index: 2000; left: 20px; bottom: 132px;
-      display: flex; align-items: center; justify-content: center; gap: 7px;
-      min-width: 112px; height: 52px; padding: 0 15px;
-      border: 2px solid #ffffff; border-radius: 28px;
-      background: linear-gradient(135deg, #ffb347, #ff7043);
-      color: #ffffff; font-family: Arial, sans-serif;
-      font-size: 14px; font-weight: 700; cursor: pointer;
-      box-shadow: 0 4px 14px rgba(255, 112, 67, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    #tvdi-chat-launcher:hover { transform: translateY(-3px); }
-    #tvdi-chat-panel {
-      position: fixed; z-index: 2001; left: 20px; bottom: 195px;
-      width: min(360px, calc(100vw - 40px)); max-height: min(470px, calc(100vh - 210px));
-      display: none; flex-direction: column; overflow: hidden;
-      background: #fff; border: 1px solid #dbe3ec; border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
-      font-family: Arial, sans-serif;
-    }
-    #tvdi-chat-header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 13px 15px; color: #fff;
-      background: linear-gradient(135deg, #ff9f43, #ff7043);
-      font-weight: 700;
-    }
-    #tvdi-chat-close {
-      width: 30px; height: 30px; border: none; border-radius: 50%;
-      background: rgba(255,255,255,0.18); color: #fff;
-      font-size: 22px; cursor: pointer;
-    }
-    #tvdi-chat-messages {
-      min-height: 100px; max-height: 310px; overflow-y: auto;
-      padding: 13px; display: flex; flex-direction: column; gap: 11px;
-    }
-    .tvdi-chat-message {
-      max-width: 92%; padding: 11px 13px; border-radius: 13px;
-      font-size: 13px; line-height: 1.65; white-space: pre-line;
-    }
-    .tvdi-chat-bot { align-self: flex-start; background: #f1f5f9; color: #1b2a38; }
-    .tvdi-chat-user { align-self: flex-end; background: #1769aa; color: #fff; }
-    #tvdi-chat-form {
-      display: flex; align-items: center; gap: 8px;
-      padding: 10px; border-top: 1px solid #e5e7eb;
-    }
-    #tvdi-chat-input {
-      flex: 1; min-width: 0; padding: 11px 12px;
-      border: 1px solid #ccd5df; border-radius: 10px;
-      font-size: 13px; outline: none;
-    }
-    #tvdi-chat-send {
-      padding: 11px 13px; border: none; border-radius: 10px;
-      background: #1769aa; color: #fff; font-size: 13px;
-      font-weight: 700; cursor: pointer;
-    }
-  `;
-  document.head.appendChild(chatStyle);
-
-  const launcher = document.createElement("button");
-  launcher.id = "tvdi-chat-launcher";
-  launcher.type = "button";
-  launcher.innerHTML = `<span>🔥</span><span>AI TVDI</span>`;
-
-  const panel = document.createElement("section");
-  panel.id = "tvdi-chat-panel";
-  panel.innerHTML = `
-    <div id="tvdi-chat-header">
-      <div>🔥 AI TVDI — Trợ lý hạn hán</div>
-      <button id="tvdi-chat-close" type="button">×</button>
-    </div>
-    <div id="tvdi-chat-messages" aria-live="polite"></div>
-    <form id="tvdi-chat-form">
-      <input id="tvdi-chat-input" type="text"
-        placeholder="Nhập xã/phường và tháng/năm..."
-        autocomplete="off" required />
-      <button id="tvdi-chat-send" type="submit">Gửi</button>
-    </form>
-  `;
-
-  document.body.append(launcher, panel);
-
-  const messages = $("tvdi-chat-messages");
-  const form = $("tvdi-chat-form");
-  const input = $("tvdi-chat-input");
-
-  function addMessage(text, type = "bot") {
-    const div = document.createElement("div");
-    div.className = "tvdi-chat-message " + (type === "user" ? "tvdi-chat-user" : "tvdi-chat-bot");
-    div.textContent = text;
-    messages.appendChild(div);
-    messages.scrollTop = messages.scrollHeight;
-  }
-
-  addMessage("Xin chào! Mình là AI TVDI 🔥\nBạn có thể hỏi thông tin chỉ số TVDI của bất kỳ phường/xã nào!");
-
-  launcher.addEventListener("click", () => {
-    const open = panel.style.display === "flex";
-    panel.style.display = open ? "none" : "flex";
-    if (!open) input.focus();
-  });
-  $("tvdi-chat-close").addEventListener("click", () => { panel.style.display = "none"; });
-
-  function normalize(text) {
-    return String(text || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/đ/g, "d")
-      .replace(/Đ/g, "D")
-      .toLowerCase()
-      .trim();
-  }
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const query = input.value.trim();
-    if (!query) return;
-
-    addMessage(query, "user");
-    input.value = "";
-
-    try {
-      if (state.wardCode) {
-        addMessage(`Đang truy vấn thông tin cho phường/xã ${state.wardCode}...`);
-      } else {
-        addMessage("Vui lòng chọn 1 phường/xã trên bản đồ để xem chi tiết dự báo chính xác!");
-      }
-    } catch (err) {
-      addMessage("Rất tiếc, đã có lỗi xảy ra trong quá trình truy vấn.");
-    }
-  });
-})();
