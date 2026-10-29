@@ -875,3 +875,19 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
     animation-duration: 0.01ms !important;
   }
 }
+.map-tools {
+  top: 12px;
+  right: 16px;
+  z-index: 9999; /* Đảm bảo nổi lên trên cùng */
+}
+
+#admin-toggle-btn {
+  background: #ff9800 !important;
+  color: white !important;
+  border-color: #e68a00 !important;
+  font-weight: bold;
+}
+
+#admin-toggle-btn:hover {
+  background: #e68a00 !important;
+}
