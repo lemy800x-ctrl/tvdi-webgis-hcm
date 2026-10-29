@@ -1,1003 +1,1003 @@
-ward_code,nam,thang,mo_hinh,tvdi_du_bao
-An Hội Tây,2026,1,XGBoost,0.5511
-An Hội Tây,2026,2,XGBoost,0.747
-An Hội Tây,2026,3,XGBoost,0.6826
-An Hội Tây,2026,4,XGBoost,0.6899
-An Hội Tây,2026,5,XGBoost,0.6789
-An Hội Tây,2026,6,XGBoost,0.6209
-An Hội Đông,2026,1,XGBoost,0.6418
-An Hội Đông,2026,2,XGBoost,0.9084
-An Hội Đông,2026,3,XGBoost,0.6283
-An Hội Đông,2026,4,XGBoost,0.7587
-An Hội Đông,2026,5,XGBoost,0.5494
-An Hội Đông,2026,6,XGBoost,0.6844
-An Khánh,2026,1,XGBoost,0.3263
-An Khánh,2026,2,XGBoost,0.5611
-An Khánh,2026,3,XGBoost,0.5547
-An Khánh,2026,4,XGBoost,0.5257
-An Khánh,2026,5,XGBoost,0.5411
-An Khánh,2026,6,XGBoost,0.5284
-An Long,2026,1,XGBoost,0.6246
-An Long,2026,2,XGBoost,0.6073
-An Long,2026,3,XGBoost,0.5937
-An Long,2026,4,XGBoost,0.6581
-An Long,2026,5,XGBoost,0.5529
-An Long,2026,6,XGBoost,0.5511
-An Lạc,2026,1,XGBoost,0.5085
-An Lạc,2026,2,XGBoost,0.3027
-An Lạc,2026,3,XGBoost,0.8205
-An Lạc,2026,4,XGBoost,0.4968
-An Lạc,2026,5,XGBoost,0.602
-An Lạc,2026,6,XGBoost,0.5312
-An Nhơn,2026,1,XGBoost,0.6191
-An Nhơn,2026,2,XGBoost,0.63
-An Nhơn,2026,3,XGBoost,0.6636
-An Nhơn,2026,4,XGBoost,0.5529
-An Nhơn,2026,5,XGBoost,0.5529
-An Nhơn,2026,6,XGBoost,0.5439
-An Nhơn Tây,2026,1,XGBoost,0.5638
-An Nhơn Tây,2026,2,XGBoost,0.6164
-An Nhơn Tây,2026,3,XGBoost,0.6064
-An Nhơn Tây,2026,4,XGBoost,0.6509
-An Nhơn Tây,2026,5,XGBoost,0.5439
-An Nhơn Tây,2026,6,XGBoost,0.5529
-An Phú,2026,1,XGBoost,0.6745
-An Phú,2026,2,XGBoost,0.7334
-An Phú,2026,3,XGBoost,0.5593
-An Phú,2026,4,XGBoost,0.7352
-An Phú,2026,5,XGBoost,0.7334
-An Phú,2026,6,XGBoost,0.6336
-An Phú Đông,2026,1,XGBoost,0.4913
-An Phú Đông,2026,2,XGBoost,0.5003
-An Phú Đông,2026,3,XGBoost,0.7352
-An Phú Đông,2026,4,XGBoost,0.5067
-An Phú Đông,2026,5,XGBoost,0.6272
-An Phú Đông,2026,6,XGBoost,0.5339
-An Thới Đông,2026,1,XGBoost,0.318
-An Thới Đông,2026,2,XGBoost,0.4442
-An Thới Đông,2026,3,XGBoost,0.95
-An Thới Đông,2026,4,XGBoost,0.95
-An Thới Đông,2026,5,XGBoost,0.7324
-An Thới Đông,2026,6,XGBoost,0.7315
-An Đông,2026,1,XGBoost,0.7035
-An Đông,2026,2,XGBoost,0.611
-An Đông,2026,3,XGBoost,0.7134
-An Đông,2026,4,XGBoost,0.5746
-An Đông,2026,5,XGBoost,0.6336
-An Đông,2026,6,XGBoost,0.5448
-Bà Rịa,2026,1,XGBoost,0.3498
-Bà Rịa,2026,2,XGBoost,0.8196
-Bà Rịa,2026,3,XGBoost,0.7379
-Bà Rịa,2026,4,XGBoost,0.7197
-Bà Rịa,2026,5,XGBoost,0.6009
-Bà Rịa,2026,6,XGBoost,0.7017
-Bà Điểm,2026,1,XGBoost,0.5284
-Bà Điểm,2026,2,XGBoost,0.6309
-Bà Điểm,2026,3,XGBoost,0.6463
-Bà Điểm,2026,4,XGBoost,0.6817
-Bà Điểm,2026,5,XGBoost,0.5575
-Bà Điểm,2026,6,XGBoost,0.5683
-Bàn Cờ,2026,1,XGBoost,0.5593
-Bàn Cờ,2026,2,XGBoost,0.4858
-Bàn Cờ,2026,3,XGBoost,0.4858
-Bàn Cờ,2026,4,XGBoost,0.65
-Bàn Cờ,2026,5,XGBoost,0.5393
-Bàn Cờ,2026,6,XGBoost,0.5494
-Bàu Bàng,2026,1,XGBoost,0.5003
-Bàu Bàng,2026,2,XGBoost,0.494
-Bàu Bàng,2026,3,XGBoost,0.9193
-Bàu Bàng,2026,4,XGBoost,0.65
-Bàu Bàng,2026,5,XGBoost,0.7679
-Bàu Bàng,2026,6,XGBoost,0.552
-Bàu Lâm,2026,1,XGBoost,0.1839
-Bàu Lâm,2026,2,XGBoost,0.5865
-Bàu Lâm,2026,3,XGBoost,0.95
-Bàu Lâm,2026,4,XGBoost,0.95
-Bàu Lâm,2026,5,XGBoost,0.8186
-Bàu Lâm,2026,6,XGBoost,0.8214
-Bình Chánh,2026,1,XGBoost,0.3145
-Bình Chánh,2026,2,XGBoost,0.3997
-Bình Chánh,2026,3,XGBoost,0.4968
-Bình Chánh,2026,4,XGBoost,0.7234
-Bình Chánh,2026,5,XGBoost,0.513
-Bình Chánh,2026,6,XGBoost,0.6237
-Bình Châu,2026,1,XGBoost,0.12
-Bình Châu,2026,2,XGBoost,0.2365
-Bình Châu,2026,3,XGBoost,0.95
-Bình Châu,2026,4,XGBoost,0.8858
-Bình Châu,2026,5,XGBoost,0.7425
-Bình Châu,2026,6,XGBoost,0.7497
-Bình Cơ,2026,1,XGBoost,0.5157
-Bình Cơ,2026,2,XGBoost,0.6627
-Bình Cơ,2026,3,XGBoost,0.7688
-Bình Cơ,2026,4,XGBoost,0.5067
-Bình Cơ,2026,5,XGBoost,0.6708
-Bình Cơ,2026,6,XGBoost,0.5284
-Bình Dương,2026,1,XGBoost,0.3489
-Bình Dương,2026,2,XGBoost,0.6436
-Bình Dương,2026,3,XGBoost,0.6436
-Bình Dương,2026,4,XGBoost,0.5167
-Bình Dương,2026,5,XGBoost,0.5439
-Bình Dương,2026,6,XGBoost,0.5339
-Bình Giã,2026,1,XGBoost,0.12
-Bình Giã,2026,2,XGBoost,0.5974
-Bình Giã,2026,3,XGBoost,0.7534
-Bình Giã,2026,4,XGBoost,0.12
-Bình Giã,2026,5,XGBoost,0.5303
-Bình Giã,2026,6,XGBoost,0.5992
-Bình Hoà,2026,1,XGBoost,0.4495
-Bình Hoà,2026,2,XGBoost,0.5121
-Bình Hoà,2026,3,XGBoost,0.5575
-Bình Hoà,2026,4,XGBoost,0.5992
-Bình Hoà,2026,5,XGBoost,0.7035
-Bình Hoà,2026,6,XGBoost,0.5494
-Bình Hưng,2026,1,XGBoost,0.5003
-Bình Hưng,2026,2,XGBoost,0.4813
-Bình Hưng,2026,3,XGBoost,0.602
-Bình Hưng,2026,4,XGBoost,0.6572
-Bình Hưng,2026,5,XGBoost,0.5529
-Bình Hưng,2026,6,XGBoost,0.5466
-Bình Hưng Hoà,2026,1,XGBoost,0.6491
-Bình Hưng Hoà,2026,2,XGBoost,0.6798
-Bình Hưng Hoà,2026,3,XGBoost,0.6554
-Bình Hưng Hoà,2026,4,XGBoost,0.4523
-Bình Hưng Hoà,2026,5,XGBoost,0.6255
-Bình Hưng Hoà,2026,6,XGBoost,0.543
-Bình Khánh,2026,1,XGBoost,0.3625
-Bình Khánh,2026,2,XGBoost,0.4324
-Bình Khánh,2026,3,XGBoost,0.95
-Bình Khánh,2026,4,XGBoost,0.932
-Bình Khánh,2026,5,XGBoost,0.7216
-Bình Khánh,2026,6,XGBoost,0.7315
-Bình Lợi,2026,1,XGBoost,0.552
-Bình Lợi,2026,2,XGBoost,0.6173
-Bình Lợi,2026,3,XGBoost,0.6671
-Bình Lợi,2026,4,XGBoost,0.6581
-Bình Lợi,2026,5,XGBoost,0.5738
-Bình Lợi,2026,6,XGBoost,0.5466
-Bình Lợi Trung,2026,1,XGBoost,0.4832
-Bình Lợi Trung,2026,2,XGBoost,0.4885
-Bình Lợi Trung,2026,3,XGBoost,0.5621
-Bình Lợi Trung,2026,4,XGBoost,0.5393
-Bình Lợi Trung,2026,5,XGBoost,0.5411
-Bình Lợi Trung,2026,6,XGBoost,0.5312
-Bình Mỹ,2026,1,XGBoost,0.6264
-Bình Mỹ,2026,2,XGBoost,0.4442
-Bình Mỹ,2026,3,XGBoost,0.3706
-Bình Mỹ,2026,4,XGBoost,0.5547
-Bình Mỹ,2026,5,XGBoost,0.5194
-Bình Mỹ,2026,6,XGBoost,0.5139
-Bình Phú,2026,1,XGBoost,0.746
-Bình Phú,2026,2,XGBoost,0.4477
-Bình Phú,2026,3,XGBoost,0.6798
-Bình Phú,2026,4,XGBoost,0.4324
-Bình Phú,2026,5,XGBoost,0.5466
-Bình Phú,2026,6,XGBoost,0.542
-Bình Quới,2026,1,XGBoost,0.4432
-Bình Quới,2026,2,XGBoost,0.602
-Bình Quới,2026,3,XGBoost,0.8041
-Bình Quới,2026,4,XGBoost,0.6145
-Bình Quới,2026,5,XGBoost,0.5874
-Bình Quới,2026,6,XGBoost,0.5711
-Bình Thạnh,2026,1,XGBoost,0.5766
-Bình Thạnh,2026,2,XGBoost,0.4895
-Bình Thạnh,2026,3,XGBoost,0.4442
-Bình Thạnh,2026,4,XGBoost,0.5148
-Bình Thạnh,2026,5,XGBoost,0.5031
-Bình Thạnh,2026,6,XGBoost,0.5121
-Bình Thới,2026,1,XGBoost,0.5621
-Bình Thới,2026,2,XGBoost,0.4514
-Bình Thới,2026,3,XGBoost,0.6073
-Bình Thới,2026,4,XGBoost,0.659
-Bình Thới,2026,5,XGBoost,0.5494
-Bình Thới,2026,6,XGBoost,0.5529
-Bình Tiên,2026,1,XGBoost,0.7578
-Bình Tiên,2026,2,XGBoost,0.4387
-Bình Tiên,2026,3,XGBoost,0.9138
-Bình Tiên,2026,4,XGBoost,0.6055
-Bình Tiên,2026,5,XGBoost,0.6436
-Bình Tiên,2026,6,XGBoost,0.5439
-Bình Trưng,2026,1,XGBoost,0.4333
-Bình Trưng,2026,2,XGBoost,0.5746
-Bình Trưng,2026,3,XGBoost,0.7026
-Bình Trưng,2026,4,XGBoost,0.5494
-Bình Trưng,2026,5,XGBoost,0.6283
-Bình Trưng,2026,6,XGBoost,0.5411
-Bình Trị Đông,2026,1,XGBoost,0.6119
-Bình Trị Đông,2026,2,XGBoost,0.5104
-Bình Trị Đông,2026,3,XGBoost,0.8104
-Bình Trị Đông,2026,4,XGBoost,0.5294
-Bình Trị Đông,2026,5,XGBoost,0.7651
-Bình Trị Đông,2026,6,XGBoost,0.5483
-Bình Tân,2026,1,XGBoost,0.6219
-Bình Tân,2026,2,XGBoost,0.7107
-Bình Tân,2026,3,XGBoost,0.6182
-Bình Tân,2026,4,XGBoost,0.5656
-Bình Tân,2026,5,XGBoost,0.6662
-Bình Tân,2026,6,XGBoost,0.5439
-Bình Tây,2026,1,XGBoost,0.5746
-Bình Tây,2026,2,XGBoost,0.5284
-Bình Tây,2026,3,XGBoost,0.6055
-Bình Tây,2026,4,XGBoost,0.6156
-Bình Tây,2026,5,XGBoost,0.5494
-Bình Tây,2026,6,XGBoost,0.5439
-Bình Đông,2026,1,XGBoost,0.5457
-Bình Đông,2026,2,XGBoost,0.3598
-Bình Đông,2026,3,XGBoost,0.62
-Bình Đông,2026,4,XGBoost,0.6454
-Bình Đông,2026,5,XGBoost,0.5529
-Bình Đông,2026,6,XGBoost,0.5494
-Bảy Hiền,2026,1,XGBoost,0.5231
-Bảy Hiền,2026,2,XGBoost,0.4359
-Bảy Hiền,2026,3,XGBoost,0.6237
-Bảy Hiền,2026,4,XGBoost,0.6662
-Bảy Hiền,2026,5,XGBoost,0.5494
-Bảy Hiền,2026,6,XGBoost,0.5647
-Bắc Tân Uyên,2026,1,XGBoost,0.3671
-Bắc Tân Uyên,2026,2,XGBoost,0.6064
-Bắc Tân Uyên,2026,3,XGBoost,0.8612
-Bắc Tân Uyên,2026,4,XGBoost,0.6327
-Bắc Tân Uyên,2026,5,XGBoost,0.6028
-Bắc Tân Uyên,2026,6,XGBoost,0.5711
-Bến Cát,2026,1,XGBoost,0.5983
-Bến Cát,2026,2,XGBoost,0.4659
-Bến Cát,2026,3,XGBoost,0.9057
-Bến Cát,2026,4,XGBoost,0.6336
-Bến Cát,2026,5,XGBoost,0.7343
-Bến Cát,2026,6,XGBoost,0.5448
-Bến Thành,2026,1,XGBoost,0.465
-Bến Thành,2026,2,XGBoost,0.3943
-Bến Thành,2026,3,XGBoost,0.62
-Bến Thành,2026,4,XGBoost,0.6554
-Bến Thành,2026,5,XGBoost,0.5494
-Bến Thành,2026,6,XGBoost,0.5494
-Chánh Hiệp,2026,1,XGBoost,0.3453
-Chánh Hiệp,2026,2,XGBoost,0.2255
-Chánh Hiệp,2026,3,XGBoost,0.8586
-Chánh Hiệp,2026,4,XGBoost,0.6092
-Chánh Hiệp,2026,5,XGBoost,0.7234
-Chánh Hiệp,2026,6,XGBoost,0.5176
-Chánh Hưng,2026,1,XGBoost,0.6454
-Chánh Hưng,2026,2,XGBoost,0.4768
-Chánh Hưng,2026,3,XGBoost,0.6526
-Chánh Hưng,2026,4,XGBoost,0.7153
-Chánh Hưng,2026,5,XGBoost,0.5575
-Chánh Hưng,2026,6,XGBoost,0.6291
-Chánh Phú Hoà,2026,1,XGBoost,0.611
-Chánh Phú Hoà,2026,2,XGBoost,0.9237
-Chánh Phú Hoà,2026,3,XGBoost,0.95
-Chánh Phú Hoà,2026,4,XGBoost,0.7488
-Chánh Phú Hoà,2026,5,XGBoost,0.7679
-Chánh Phú Hoà,2026,6,XGBoost,0.6853
-Châu Pha,2026,1,XGBoost,0.339
-Châu Pha,2026,2,XGBoost,0.7905
-Châu Pha,2026,3,XGBoost,0.6526
-Châu Pha,2026,4,XGBoost,0.5893
-Châu Pha,2026,5,XGBoost,0.5257
-Châu Pha,2026,6,XGBoost,0.6173
-Châu Đức,2026,1,XGBoost,0.12
-Châu Đức,2026,2,XGBoost,0.2301
-Châu Đức,2026,3,XGBoost,0.95
-Châu Đức,2026,4,XGBoost,0.2455
-Châu Đức,2026,5,XGBoost,0.6028
-Châu Đức,2026,6,XGBoost,0.5738
-Chợ Lớn,2026,1,XGBoost,0.8214
-Chợ Lớn,2026,2,XGBoost,0.5792
-Chợ Lớn,2026,3,XGBoost,0.6899
-Chợ Lớn,2026,4,XGBoost,0.6156
-Chợ Lớn,2026,5,XGBoost,0.669
-Chợ Lớn,2026,6,XGBoost,0.6535
-Chợ Quán,2026,1,XGBoost,0.7416
-Chợ Quán,2026,2,XGBoost,0.4867
-Chợ Quán,2026,3,XGBoost,0.5738
-Chợ Quán,2026,4,XGBoost,0.6662
-Chợ Quán,2026,5,XGBoost,0.5494
-Chợ Quán,2026,6,XGBoost,0.5647
-Cát Lái,2026,1,XGBoost,0.3281
-Cát Lái,2026,2,XGBoost,0.5049
-Cát Lái,2026,3,XGBoost,0.4913
-Cát Lái,2026,4,XGBoost,0.4768
-Cát Lái,2026,5,XGBoost,0.4994
-Cát Lái,2026,6,XGBoost,0.4977
-Cần Giờ,2026,1,XGBoost,0.12
-Cần Giờ,2026,2,XGBoost,0.2038
-Cần Giờ,2026,3,XGBoost,0.8884
-Cần Giờ,2026,4,XGBoost,0.7343
-Cần Giờ,2026,5,XGBoost,0.5838
-Cần Giờ,2026,6,XGBoost,0.7334
-Cầu Kiệu,2026,1,XGBoost,0.6046
-Cầu Kiệu,2026,2,XGBoost,0.474
-Cầu Kiệu,2026,3,XGBoost,0.5757
-Cầu Kiệu,2026,4,XGBoost,0.6808
-Cầu Kiệu,2026,5,XGBoost,0.5494
-Cầu Kiệu,2026,6,XGBoost,0.572
-Cầu Ông Lãnh,2026,1,XGBoost,0.5621
-Cầu Ông Lãnh,2026,2,XGBoost,0.4532
-Cầu Ông Lãnh,2026,3,XGBoost,0.5893
-Cầu Ông Lãnh,2026,4,XGBoost,0.6763
-Cầu Ông Lãnh,2026,5,XGBoost,0.5494
-Cầu Ông Lãnh,2026,6,XGBoost,0.5711
-Củ Chi,2026,1,XGBoost,0.5656
-Củ Chi,2026,2,XGBoost,0.6572
-Củ Chi,2026,3,XGBoost,0.5621
-Củ Chi,2026,4,XGBoost,0.6899
-Củ Chi,2026,5,XGBoost,0.5494
-Củ Chi,2026,6,XGBoost,0.6219
-Diên Hồng,2026,1,XGBoost,0.563
-Diên Hồng,2026,2,XGBoost,0.465
-Diên Hồng,2026,3,XGBoost,0.5956
-Diên Hồng,2026,4,XGBoost,0.6272
-Diên Hồng,2026,5,XGBoost,0.5529
-Diên Hồng,2026,6,XGBoost,0.543
-Dĩ An,2026,1,XGBoost,0.6346
-Dĩ An,2026,2,XGBoost,0.1812
-Dĩ An,2026,3,XGBoost,0.513
-Dĩ An,2026,4,XGBoost,0.5647
-Dĩ An,2026,5,XGBoost,0.6998
-Dĩ An,2026,6,XGBoost,0.5257
-Dầu Tiếng,2026,1,XGBoost,0.3843
-Dầu Tiếng,2026,2,XGBoost,0.708
-Dầu Tiếng,2026,3,XGBoost,0.911
-Dầu Tiếng,2026,4,XGBoost,0.7162
-Dầu Tiếng,2026,5,XGBoost,0.6681
-Dầu Tiếng,2026,6,XGBoost,0.6228
-Gia Định,2026,1,XGBoost,0.5611
-Gia Định,2026,2,XGBoost,0.4977
-Gia Định,2026,3,XGBoost,0.5774
-Gia Định,2026,4,XGBoost,0.6662
-Gia Định,2026,5,XGBoost,0.5494
-Gia Định,2026,6,XGBoost,0.5647
-Gò Vấp,2026,1,XGBoost,0.6064
-Gò Vấp,2026,2,XGBoost,0.5511
-Gò Vấp,2026,3,XGBoost,0.602
-Gò Vấp,2026,4,XGBoost,0.591
-Gò Vấp,2026,5,XGBoost,0.6535
-Gò Vấp,2026,6,XGBoost,0.5439
-Hiệp Bình,2026,1,XGBoost,0.4895
-Hiệp Bình,2026,2,XGBoost,0.4686
-Hiệp Bình,2026,3,XGBoost,0.6472
-Hiệp Bình,2026,4,XGBoost,0.5393
-Hiệp Bình,2026,5,XGBoost,0.5529
-Hiệp Bình,2026,6,XGBoost,0.5339
-Hiệp Phước,2026,1,XGBoost,0.2864
-Hiệp Phước,2026,2,XGBoost,0.6092
-Hiệp Phước,2026,3,XGBoost,0.6554
-Hiệp Phước,2026,4,XGBoost,0.922
-Hiệp Phước,2026,5,XGBoost,0.6518
-Hiệp Phước,2026,6,XGBoost,0.6681
-Hoà Bình,2026,1,XGBoost,0.5494
-Hoà Bình,2026,2,XGBoost,0.4078
-Hoà Bình,2026,3,XGBoost,0.5693
-Hoà Bình,2026,4,XGBoost,0.4541
-Hoà Bình,2026,5,XGBoost,0.5157
-Hoà Bình,2026,6,XGBoost,0.5095
-Hoà Hiệp,2026,1,XGBoost,0.12
-Hoà Hiệp,2026,2,XGBoost,0.4541
-Hoà Hiệp,2026,3,XGBoost,0.95
-Hoà Hiệp,2026,4,XGBoost,0.95
-Hoà Hiệp,2026,5,XGBoost,0.9311
-Hoà Hiệp,2026,6,XGBoost,0.8477
-Hoà Hưng,2026,1,XGBoost,0.6971
-Hoà Hưng,2026,2,XGBoost,0.5494
-Hoà Hưng,2026,3,XGBoost,0.7252
-Hoà Hưng,2026,4,XGBoost,0.65
-Hoà Hưng,2026,5,XGBoost,0.6336
-Hoà Hưng,2026,6,XGBoost,0.552
-Hoà Hội,2026,1,XGBoost,0.12
-Hoà Hội,2026,2,XGBoost,0.12
-Hoà Hội,2026,3,XGBoost,0.95
-Hoà Hội,2026,4,XGBoost,0.3969
-Hoà Hội,2026,5,XGBoost,0.6989
-Hoà Hội,2026,6,XGBoost,0.4749
-Hoà Lợi,2026,1,XGBoost,0.4251
-Hoà Lợi,2026,2,XGBoost,0.3625
-Hoà Lợi,2026,3,XGBoost,0.8667
-Hoà Lợi,2026,4,XGBoost,0.6092
-Hoà Lợi,2026,5,XGBoost,0.6581
-Hoà Lợi,2026,6,XGBoost,0.5411
-Hóc Môn,2026,1,XGBoost,0.7806
-Hóc Môn,2026,2,XGBoost,0.4477
-Hóc Môn,2026,3,XGBoost,0.6763
-Hóc Môn,2026,4,XGBoost,0.6808
-Hóc Môn,2026,5,XGBoost,0.6191
-Hóc Môn,2026,6,XGBoost,0.6092
-Hưng Long,2026,1,XGBoost,0.4033
-Hưng Long,2026,2,XGBoost,0.5402
-Hưng Long,2026,3,XGBoost,0.6291
-Hưng Long,2026,4,XGBoost,0.766
-Hưng Long,2026,5,XGBoost,0.5167
-Hưng Long,2026,6,XGBoost,0.6237
-Hạnh Thông,2026,1,XGBoost,0.6228
-Hạnh Thông,2026,2,XGBoost,0.5511
-Hạnh Thông,2026,3,XGBoost,0.4813
-Hạnh Thông,2026,4,XGBoost,0.6355
-Hạnh Thông,2026,5,XGBoost,0.543
-Hạnh Thông,2026,6,XGBoost,0.5439
-Hồ Tràm,2026,1,XGBoost,0.12
-Hồ Tràm,2026,2,XGBoost,0.4541
-Hồ Tràm,2026,3,XGBoost,0.95
-Hồ Tràm,2026,4,XGBoost,0.12
-Hồ Tràm,2026,5,XGBoost,0.5647
-Hồ Tràm,2026,6,XGBoost,0.6327
-Khánh Hội,2026,1,XGBoost,0.6662
-Khánh Hội,2026,2,XGBoost,0.602
-Khánh Hội,2026,3,XGBoost,0.6472
-Khánh Hội,2026,4,XGBoost,0.6817
-Khánh Hội,2026,5,XGBoost,0.5575
-Khánh Hội,2026,6,XGBoost,0.572
-Kim Long,2026,1,XGBoost,0.12
-Kim Long,2026,2,XGBoost,0.1812
-Kim Long,2026,3,XGBoost,0.6418
-Kim Long,2026,4,XGBoost,0.12
-Kim Long,2026,5,XGBoost,0.3272
-Kim Long,2026,6,XGBoost,0.542
-Linh Xuân,2026,1,XGBoost,0.3607
-Linh Xuân,2026,2,XGBoost,0.6318
-Linh Xuân,2026,3,XGBoost,0.4931
-Linh Xuân,2026,4,XGBoost,0.5185
-Linh Xuân,2026,5,XGBoost,0.513
-Linh Xuân,2026,6,XGBoost,0.5031
-Long Bình,2026,1,XGBoost,0.3453
-Long Bình,2026,2,XGBoost,0.5738
-Long Bình,2026,3,XGBoost,0.669
-Long Bình,2026,4,XGBoost,0.5257
-Long Bình,2026,5,XGBoost,0.5621
-Long Bình,2026,6,XGBoost,0.5611
-Long Hoà,2026,1,XGBoost,0.2928
-Long Hoà,2026,2,XGBoost,0.7134
-Long Hoà,2026,3,XGBoost,0.9084
-Long Hoà,2026,4,XGBoost,0.7252
-Long Hoà,2026,5,XGBoost,0.6654
-Long Hoà,2026,6,XGBoost,0.6246
-Long Hương,2026,1,XGBoost,0.1376
-Long Hương,2026,2,XGBoost,0.6182
-Long Hương,2026,3,XGBoost,0.7561
-Long Hương,2026,4,XGBoost,0.1486
-Long Hương,2026,5,XGBoost,0.5113
-Long Hương,2026,6,XGBoost,0.5683
-Long Hải,2026,1,XGBoost,0.1286
-Long Hải,2026,2,XGBoost,0.552
-Long Hải,2026,3,XGBoost,0.7959
-Long Hải,2026,4,XGBoost,0.12
-Long Hải,2026,5,XGBoost,0.5303
-Long Hải,2026,6,XGBoost,0.5992
-Long Nguyên,2026,1,XGBoost,0.4822
-Long Nguyên,2026,2,XGBoost,0.4378
-Long Nguyên,2026,3,XGBoost,0.854
-Long Nguyên,2026,4,XGBoost,0.5693
-Long Nguyên,2026,5,XGBoost,0.6546
-Long Nguyên,2026,6,XGBoost,0.5411
-Long Phước,2026,1,XGBoost,0.4723
-Long Phước,2026,2,XGBoost,0.4768
-Long Phước,2026,3,XGBoost,0.6772
-Long Phước,2026,4,XGBoost,0.6618
-Long Phước,2026,5,XGBoost,0.533
-Long Phước,2026,6,XGBoost,0.5792
-Long Sơn,2026,1,XGBoost,0.2882
-Long Sơn,2026,2,XGBoost,0.5638
-Long Sơn,2026,3,XGBoost,0.6754
-Long Sơn,2026,4,XGBoost,0.7751
-Long Sơn,2026,5,XGBoost,0.5483
-Long Sơn,2026,6,XGBoost,0.6708
-Long Trường,2026,1,XGBoost,0.1277
-Long Trường,2026,2,XGBoost,0.4677
-Long Trường,2026,3,XGBoost,0.4596
-Long Trường,2026,4,XGBoost,0.474
-Long Trường,2026,5,XGBoost,0.4714
-Long Trường,2026,6,XGBoost,0.4949
-Long Điền,2026,1,XGBoost,0.12
-Long Điền,2026,2,XGBoost,0.3318
-Long Điền,2026,3,XGBoost,0.8086
-Long Điền,2026,4,XGBoost,0.12
-Long Điền,2026,5,XGBoost,0.3462
-Long Điền,2026,6,XGBoost,0.5656
-Lái Thiêu,2026,1,XGBoost,0.3553
-Lái Thiêu,2026,2,XGBoost,0.6418
-Lái Thiêu,2026,3,XGBoost,0.5076
-Lái Thiêu,2026,4,XGBoost,0.5212
-Lái Thiêu,2026,5,XGBoost,0.5439
-Lái Thiêu,2026,6,XGBoost,0.5339
-Minh Phụng,2026,1,XGBoost,0.6046
-Minh Phụng,2026,2,XGBoost,0.4686
-Minh Phụng,2026,3,XGBoost,0.6073
-Minh Phụng,2026,4,XGBoost,0.6772
-Minh Phụng,2026,5,XGBoost,0.5494
-Minh Phụng,2026,6,XGBoost,0.572
-Minh Thạnh,2026,1,XGBoost,0.1413
-Minh Thạnh,2026,2,XGBoost,0.922
-Minh Thạnh,2026,3,XGBoost,0.8376
-Minh Thạnh,2026,4,XGBoost,0.6881
-Minh Thạnh,2026,5,XGBoost,0.6699
-Minh Thạnh,2026,6,XGBoost,0.6835
-Nghĩa Thành,2026,1,XGBoost,0.3434
-Nghĩa Thành,2026,2,XGBoost,0.6717
-Nghĩa Thành,2026,3,XGBoost,0.6844
-Nghĩa Thành,2026,4,XGBoost,0.7515
-Nghĩa Thành,2026,5,XGBoost,0.5448
-Nghĩa Thành,2026,6,XGBoost,0.6546
-Ngãi Giao,2026,1,XGBoost,0.3281
-Ngãi Giao,2026,2,XGBoost,0.7506
-Ngãi Giao,2026,3,XGBoost,0.6491
-Ngãi Giao,2026,4,XGBoost,0.4695
-Ngãi Giao,2026,5,XGBoost,0.5575
-Ngãi Giao,2026,6,XGBoost,0.5611
-Nhiêu Lộc,2026,1,XGBoost,0.6609
-Nhiêu Lộc,2026,2,XGBoost,0.5729
-Nhiêu Lộc,2026,3,XGBoost,0.6427
-Nhiêu Lộc,2026,4,XGBoost,0.6925
-Nhiêu Lộc,2026,5,XGBoost,0.5494
-Nhiêu Lộc,2026,6,XGBoost,0.6209
-Nhuận Đức,2026,1,XGBoost,0.602
-Nhuận Đức,2026,2,XGBoost,0.6291
-Nhuận Đức,2026,3,XGBoost,0.5494
-Nhuận Đức,2026,4,XGBoost,0.5411
-Nhuận Đức,2026,5,XGBoost,0.5411
-Nhuận Đức,2026,6,XGBoost,0.5439
-Nhà Bè,2026,1,XGBoost,0.4024
-Nhà Bè,2026,2,XGBoost,0.5647
-Nhà Bè,2026,3,XGBoost,0.6699
-Nhà Bè,2026,4,XGBoost,0.7243
-Nhà Bè,2026,5,XGBoost,0.5384
-Nhà Bè,2026,6,XGBoost,0.6546
-Phú An,2026,1,XGBoost,0.6156
-Phú An,2026,2,XGBoost,0.6763
-Phú An,2026,3,XGBoost,0.5647
-Phú An,2026,4,XGBoost,0.5212
-Phú An,2026,5,XGBoost,0.5711
-Phú An,2026,6,XGBoost,0.542
-Phú Giáo,2026,1,XGBoost,0.6073
-Phú Giáo,2026,2,XGBoost,0.7642
-Phú Giáo,2026,3,XGBoost,0.5937
-Phú Giáo,2026,4,XGBoost,0.5638
-Phú Giáo,2026,5,XGBoost,0.5711
-Phú Giáo,2026,6,XGBoost,0.5602
-Phú Hoà Đông,2026,1,XGBoost,0.7361
-Phú Hoà Đông,2026,2,XGBoost,0.5983
-Phú Hoà Đông,2026,3,XGBoost,0.4749
-Phú Hoà Đông,2026,4,XGBoost,0.4867
-Phú Hoà Đông,2026,5,XGBoost,0.5121
-Phú Hoà Đông,2026,6,XGBoost,0.5113
-Phú Lâm,2026,1,XGBoost,0.4949
-Phú Lâm,2026,2,XGBoost,0.3616
-Phú Lâm,2026,3,XGBoost,0.6318
-Phú Lâm,2026,4,XGBoost,0.5393
-Phú Lâm,2026,5,XGBoost,0.5529
-Phú Lâm,2026,6,XGBoost,0.5284
-Phú Lợi,2026,1,XGBoost,0.416
-Phú Lợi,2026,2,XGBoost,0.95
-Phú Lợi,2026,3,XGBoost,0.8658
-Phú Lợi,2026,4,XGBoost,0.7162
-Phú Lợi,2026,5,XGBoost,0.728
-Phú Lợi,2026,6,XGBoost,0.6962
-Phú Mỹ,2026,1,XGBoost,0.8803
-Phú Mỹ,2026,2,XGBoost,0.95
-Phú Mỹ,2026,3,XGBoost,0.8177
-Phú Mỹ,2026,4,XGBoost,0.6037
-Phú Mỹ,2026,5,XGBoost,0.7506
-Phú Mỹ,2026,6,XGBoost,0.5983
-Phú Nhuận,2026,1,XGBoost,0.563
-Phú Nhuận,2026,2,XGBoost,0.4405
-Phú Nhuận,2026,3,XGBoost,0.5602
-Phú Nhuận,2026,4,XGBoost,0.6808
-Phú Nhuận,2026,5,XGBoost,0.5494
-Phú Nhuận,2026,6,XGBoost,0.5711
-Phú Thuận,2026,1,XGBoost,0.5457
-Phú Thuận,2026,2,XGBoost,0.5783
-Phú Thuận,2026,3,XGBoost,0.6463
-Phú Thuận,2026,4,XGBoost,0.6817
-Phú Thuận,2026,5,XGBoost,0.5575
-Phú Thuận,2026,6,XGBoost,0.5683
-Phú Thạnh,2026,1,XGBoost,0.6028
-Phú Thạnh,2026,2,XGBoost,0.5021
-Phú Thạnh,2026,3,XGBoost,0.5085
-Phú Thạnh,2026,4,XGBoost,0.4096
-Phú Thạnh,2026,5,XGBoost,0.5067
-Phú Thạnh,2026,6,XGBoost,0.5003
-Phú Thọ,2026,1,XGBoost,0.6272
-Phú Thọ,2026,2,XGBoost,0.5974
-Phú Thọ,2026,3,XGBoost,0.6055
-Phú Thọ,2026,4,XGBoost,0.6156
-Phú Thọ,2026,5,XGBoost,0.5494
-Phú Thọ,2026,6,XGBoost,0.5439
-Phú Thọ Hoà,2026,1,XGBoost,0.5638
-Phú Thọ Hoà,2026,2,XGBoost,0.5711
-Phú Thọ Hoà,2026,3,XGBoost,0.6255
-Phú Thọ Hoà,2026,4,XGBoost,0.6418
-Phú Thọ Hoà,2026,5,XGBoost,0.5494
-Phú Thọ Hoà,2026,6,XGBoost,0.5439
-Phú Định,2026,1,XGBoost,0.5494
-Phú Định,2026,2,XGBoost,0.3824
-Phú Định,2026,3,XGBoost,0.5956
-Phú Định,2026,4,XGBoost,0.6291
-Phú Định,2026,5,XGBoost,0.5494
-Phú Định,2026,6,XGBoost,0.5411
-Phước Hoà,2026,1,XGBoost,0.6101
-Phước Hoà,2026,2,XGBoost,0.7451
-Phước Hoà,2026,3,XGBoost,0.6717
-Phước Hoà,2026,4,XGBoost,0.5874
-Phước Hoà,2026,5,XGBoost,0.5919
-Phước Hoà,2026,6,XGBoost,0.5448
-Phước Hải,2026,1,XGBoost,0.12
-Phước Hải,2026,2,XGBoost,0.12
-Phước Hải,2026,3,XGBoost,0.8395
-Phước Hải,2026,4,XGBoost,0.12
-Phước Hải,2026,5,XGBoost,0.3662
-Phước Hải,2026,6,XGBoost,0.474
-Phước Long,2026,1,XGBoost,0.5538
-Phước Long,2026,2,XGBoost,0.5638
-Phước Long,2026,3,XGBoost,0.5411
-Phước Long,2026,4,XGBoost,0.6119
-Phước Long,2026,5,XGBoost,0.6808
-Phước Long,2026,6,XGBoost,0.5439
-Phước Thành,2026,1,XGBoost,0.6156
-Phước Thành,2026,2,XGBoost,0.12
-Phước Thành,2026,3,XGBoost,0.4822
-Phước Thành,2026,4,XGBoost,0.4931
-Phước Thành,2026,5,XGBoost,0.4622
-Phước Thành,2026,6,XGBoost,0.4867
-Phước Thắng,2026,1,XGBoost,0.12
-Phước Thắng,2026,2,XGBoost,0.1939
-Phước Thắng,2026,3,XGBoost,0.95
-Phước Thắng,2026,4,XGBoost,0.1495
-Phước Thắng,2026,5,XGBoost,0.5956
-Phước Thắng,2026,6,XGBoost,0.5738
-Rạch Dừa,2026,1,XGBoost,0.1657
-Rạch Dừa,2026,2,XGBoost,0.4569
-Rạch Dừa,2026,3,XGBoost,0.7171
-Rạch Dừa,2026,4,XGBoost,0.12
-Rạch Dừa,2026,5,XGBoost,0.5266
-Rạch Dừa,2026,6,XGBoost,0.5494
-Sài Gòn,2026,1,XGBoost,0.6101
-Sài Gòn,2026,2,XGBoost,0.6237
-Sài Gòn,2026,3,XGBoost,0.6092
-Sài Gòn,2026,4,XGBoost,0.6581
-Sài Gòn,2026,5,XGBoost,0.5593
-Sài Gòn,2026,6,XGBoost,0.5511
-Tam Bình,2026,1,XGBoost,0.5503
-Tam Bình,2026,2,XGBoost,0.5185
-Tam Bình,2026,3,XGBoost,0.5674
-Tam Bình,2026,4,XGBoost,0.6119
-Tam Bình,2026,5,XGBoost,0.669
-Tam Bình,2026,6,XGBoost,0.5439
-Tam Long,2026,1,XGBoost,0.2347
-Tam Long,2026,2,XGBoost,0.5702
-Tam Long,2026,3,XGBoost,0.6609
-Tam Long,2026,4,XGBoost,0.6581
-Tam Long,2026,5,XGBoost,0.5113
-Tam Long,2026,6,XGBoost,0.5511
-Tam Thắng,2026,1,XGBoost,0.3254
-Tam Thắng,2026,2,XGBoost,0.5901
-Tam Thắng,2026,3,XGBoost,0.6745
-Tam Thắng,2026,4,XGBoost,0.5049
-Tam Thắng,2026,5,XGBoost,0.513
-Tam Thắng,2026,6,XGBoost,0.5303
-Thanh An,2026,1,XGBoost,0.5312
-Thanh An,2026,2,XGBoost,0.6436
-Thanh An,2026,3,XGBoost,0.7026
-Thanh An,2026,4,XGBoost,0.5203
-Thanh An,2026,5,XGBoost,0.6373
-Thanh An,2026,6,XGBoost,0.5284
-Thuận An,2026,1,XGBoost,0.3925
-Thuận An,2026,2,XGBoost,0.6355
-Thuận An,2026,3,XGBoost,0.5946
-Thuận An,2026,4,XGBoost,0.5167
-Thuận An,2026,5,XGBoost,0.5439
-Thuận An,2026,6,XGBoost,0.5339
-Thuận Giao,2026,1,XGBoost,0.5838
-Thuận Giao,2026,2,XGBoost,0.9437
-Thuận Giao,2026,3,XGBoost,0.6136
-Thuận Giao,2026,4,XGBoost,0.6826
-Thuận Giao,2026,5,XGBoost,0.7334
-Thuận Giao,2026,6,XGBoost,0.6445
-Thái Mỹ,2026,1,XGBoost,0.5783
-Thái Mỹ,2026,2,XGBoost,0.2038
-Thái Mỹ,2026,3,XGBoost,0.6482
-Thái Mỹ,2026,4,XGBoost,0.4841
-Thái Mỹ,2026,5,XGBoost,0.5483
-Thái Mỹ,2026,6,XGBoost,0.5212
-Thông Tây Hội,2026,1,XGBoost,0.5085
-Thông Tây Hội,2026,2,XGBoost,0.7144
-Thông Tây Hội,2026,3,XGBoost,0.6699
-Thông Tây Hội,2026,4,XGBoost,0.7651
-Thông Tây Hội,2026,5,XGBoost,0.5702
-Thông Tây Hội,2026,6,XGBoost,0.6283
-Thường Tân,2026,1,XGBoost,0.222
-Thường Tân,2026,2,XGBoost,0.4559
-Thường Tân,2026,3,XGBoost,0.6781
-Thường Tân,2026,4,XGBoost,0.6327
-Thường Tân,2026,5,XGBoost,0.4822
-Thường Tân,2026,6,XGBoost,0.543
-Thạnh An,2026,1,XGBoost,0.12
-Thạnh An,2026,2,XGBoost,0.2483
-Thạnh An,2026,3,XGBoost,0.95
-Thạnh An,2026,4,XGBoost,0.12
-Thạnh An,2026,5,XGBoost,0.5584
-Thạnh An,2026,6,XGBoost,0.5992
-Thạnh Mỹ Tây,2026,1,XGBoost,0.5393
-Thạnh Mỹ Tây,2026,2,XGBoost,0.5729
-Thạnh Mỹ Tây,2026,3,XGBoost,0.5511
-Thạnh Mỹ Tây,2026,4,XGBoost,0.5529
-Thạnh Mỹ Tây,2026,5,XGBoost,0.5384
-Thạnh Mỹ Tây,2026,6,XGBoost,0.5411
-Thới An,2026,1,XGBoost,0.4668
-Thới An,2026,2,XGBoost,0.8196
-Thới An,2026,3,XGBoost,0.6336
-Thới An,2026,4,XGBoost,0.6336
-Thới An,2026,5,XGBoost,0.5411
-Thới An,2026,6,XGBoost,0.5829
-Thới Hoà,2026,1,XGBoost,0.3843
-Thới Hoà,2026,2,XGBoost,0.7878
-Thới Hoà,2026,3,XGBoost,0.8884
-Thới Hoà,2026,4,XGBoost,0.7569
-Thới Hoà,2026,5,XGBoost,0.6699
-Thới Hoà,2026,6,XGBoost,0.6699
-Thủ Dầu Một,2026,1,XGBoost,0.4033
-Thủ Dầu Một,2026,2,XGBoost,0.6436
-Thủ Dầu Một,2026,3,XGBoost,0.6708
-Thủ Dầu Một,2026,4,XGBoost,0.5167
-Thủ Dầu Một,2026,5,XGBoost,0.5647
-Thủ Dầu Một,2026,6,XGBoost,0.5339
-Thủ Đức,2026,1,XGBoost,0.5231
-Thủ Đức,2026,2,XGBoost,0.7534
-Thủ Đức,2026,3,XGBoost,0.6808
-Thủ Đức,2026,4,XGBoost,0.7017
-Thủ Đức,2026,5,XGBoost,0.7089
-Thủ Đức,2026,6,XGBoost,0.6336
-Trung Mỹ Tây,2026,1,XGBoost,0.5638
-Trung Mỹ Tây,2026,2,XGBoost,0.8332
-Trung Mỹ Tây,2026,3,XGBoost,0.6408
-Trung Mỹ Tây,2026,4,XGBoost,0.6899
-Trung Mỹ Tây,2026,5,XGBoost,0.6509
-Trung Mỹ Tây,2026,6,XGBoost,0.6627
-Trừ Văn Thố,2026,1,XGBoost,0.3716
-Trừ Văn Thố,2026,2,XGBoost,0.8349
-Trừ Văn Thố,2026,3,XGBoost,0.95
-Trừ Văn Thố,2026,4,XGBoost,0.7388
-Trừ Văn Thố,2026,5,XGBoost,0.7125
-Trừ Văn Thố,2026,6,XGBoost,0.6671
-Tân An Hội,2026,1,XGBoost,0.6164
-Tân An Hội,2026,2,XGBoost,0.5275
-Tân An Hội,2026,3,XGBoost,0.5212
-Tân An Hội,2026,4,XGBoost,0.543
-Tân An Hội,2026,5,XGBoost,0.5284
-Tân An Hội,2026,6,XGBoost,0.5439
-Tân Bình,2026,1,XGBoost,0.5231
-Tân Bình,2026,2,XGBoost,0.5284
-Tân Bình,2026,3,XGBoost,0.8503
-Tân Bình,2026,4,XGBoost,0.728
-Tân Bình,2026,5,XGBoost,0.6336
-Tân Bình,2026,6,XGBoost,0.6283
-Tân Hiệp,2026,1,XGBoost,0.5367
-Tân Hiệp,2026,2,XGBoost,0.2755
-Tân Hiệp,2026,3,XGBoost,0.5611
-Tân Hiệp,2026,4,XGBoost,0.4994
-Tân Hiệp,2026,5,XGBoost,0.5466
-Tân Hiệp,2026,6,XGBoost,0.5339
-Tân Hoà,2026,1,XGBoost,0.5294
-Tân Hoà,2026,2,XGBoost,0.4913
-Tân Hoà,2026,3,XGBoost,0.8231
-Tân Hoà,2026,4,XGBoost,0.6364
-Tân Hoà,2026,5,XGBoost,0.6336
-Tân Hoà,2026,6,XGBoost,0.5439
-Tân Hưng,2026,1,XGBoost,0.6228
-Tân Hưng,2026,2,XGBoost,0.5602
-Tân Hưng,2026,3,XGBoost,0.6145
-Tân Hưng,2026,4,XGBoost,0.6789
-Tân Hưng,2026,5,XGBoost,0.5529
-Tân Hưng,2026,6,XGBoost,0.572
-Tân Hải,2026,1,XGBoost,0.1413
-Tân Hải,2026,2,XGBoost,0.6844
-Tân Hải,2026,3,XGBoost,0.95
-Tân Hải,2026,4,XGBoost,0.3544
-Tân Hải,2026,5,XGBoost,0.5584
-Tân Hải,2026,6,XGBoost,0.5992
-Tân Khánh,2026,1,XGBoost,0.4758
-Tân Khánh,2026,2,XGBoost,0.8177
-Tân Khánh,2026,3,XGBoost,0.8141
-Tân Khánh,2026,4,XGBoost,0.6662
-Tân Khánh,2026,5,XGBoost,0.6581
-Tân Khánh,2026,6,XGBoost,0.6073
-Tân Mỹ,2026,1,XGBoost,0.6209
-Tân Mỹ,2026,2,XGBoost,0.5856
-Tân Mỹ,2026,3,XGBoost,0.6291
-Tân Mỹ,2026,4,XGBoost,0.5566
-Tân Mỹ,2026,5,XGBoost,0.5529
-Tân Mỹ,2026,6,XGBoost,0.5448
-Tân Nhựt,2026,1,XGBoost,0.4188
-Tân Nhựt,2026,2,XGBoost,0.4604
-Tân Nhựt,2026,3,XGBoost,0.7334
-Tân Nhựt,2026,4,XGBoost,0.7569
-Tân Nhựt,2026,5,XGBoost,0.6009
-Tân Nhựt,2026,6,XGBoost,0.6546
-Tân Phú,2026,1,XGBoost,0.5647
-Tân Phú,2026,2,XGBoost,0.5766
-Tân Phú,2026,3,XGBoost,0.6182
-Tân Phú,2026,4,XGBoost,0.4569
-Tân Phú,2026,5,XGBoost,0.5076
-Tân Phú,2026,6,XGBoost,0.5121
-Tân Phước,2026,1,XGBoost,0.3145
-Tân Phước,2026,2,XGBoost,0.7705
-Tân Phước,2026,3,XGBoost,0.6699
-Tân Phước,2026,4,XGBoost,0.513
-Tân Phước,2026,5,XGBoost,0.5729
-Tân Phước,2026,6,XGBoost,0.5792
-Tân Sơn,2026,1,XGBoost,0.6291
-Tân Sơn,2026,2,XGBoost,0.6083
-Tân Sơn,2026,3,XGBoost,0.6526
-Tân Sơn,2026,4,XGBoost,0.6092
-Tân Sơn,2026,5,XGBoost,0.6754
-Tân Sơn,2026,6,XGBoost,0.5439
-Tân Sơn Hoà,2026,1,XGBoost,0.5257
-Tân Sơn Hoà,2026,2,XGBoost,0.5928
-Tân Sơn Hoà,2026,3,XGBoost,0.6572
-Tân Sơn Hoà,2026,4,XGBoost,0.6817
-Tân Sơn Hoà,2026,5,XGBoost,0.5494
-Tân Sơn Hoà,2026,6,XGBoost,0.5711
-Tân Sơn Nhì,2026,1,XGBoost,0.5231
-Tân Sơn Nhì,2026,2,XGBoost,0.5058
-Tân Sơn Nhì,2026,3,XGBoost,0.6264
-Tân Sơn Nhì,2026,4,XGBoost,0.5746
-Tân Sơn Nhì,2026,5,XGBoost,0.5494
-Tân Sơn Nhì,2026,6,XGBoost,0.5439
-Tân Sơn Nhất,2026,1,XGBoost,0.5738
-Tân Sơn Nhất,2026,2,XGBoost,0.5792
-Tân Sơn Nhất,2026,3,XGBoost,0.6373
-Tân Sơn Nhất,2026,4,XGBoost,0.6817
-Tân Sơn Nhất,2026,5,XGBoost,0.5411
-Tân Sơn Nhất,2026,6,XGBoost,0.5711
-Tân Thuận,2026,1,XGBoost,0.5266
-Tân Thuận,2026,2,XGBoost,0.3888
-Tân Thuận,2026,3,XGBoost,0.5865
-Tân Thuận,2026,4,XGBoost,0.6899
-Tân Thuận,2026,5,XGBoost,0.5494
-Tân Thuận,2026,6,XGBoost,0.6209
-Tân Thành,2026,1,XGBoost,0.1784
-Tân Thành,2026,2,XGBoost,0.5376
-Tân Thành,2026,3,XGBoost,0.659
-Tân Thành,2026,4,XGBoost,0.4505
-Tân Thành,2026,5,XGBoost,0.5376
-Tân Thành,2026,6,XGBoost,0.5638
-Tân Thới Hiệp,2026,1,XGBoost,0.6355
-Tân Thới Hiệp,2026,2,XGBoost,0.7806
-Tân Thới Hiệp,2026,3,XGBoost,0.6219
-Tân Thới Hiệp,2026,4,XGBoost,0.6925
-Tân Thới Hiệp,2026,5,XGBoost,0.6662
-Tân Thới Hiệp,2026,6,XGBoost,0.6645
-Tân Tạo,2026,1,XGBoost,0.5157
-Tân Tạo,2026,2,XGBoost,0.4197
-Tân Tạo,2026,3,XGBoost,0.7923
-Tân Tạo,2026,4,XGBoost,0.4559
-Tân Tạo,2026,5,XGBoost,0.5992
-Tân Tạo,2026,6,XGBoost,0.5339
-Tân Uyên,2026,1,XGBoost,0.4804
-Tân Uyên,2026,2,XGBoost,0.7488
-Tân Uyên,2026,3,XGBoost,0.8703
-Tân Uyên,2026,4,XGBoost,0.6654
-Tân Uyên,2026,5,XGBoost,0.7234
-Tân Uyên,2026,6,XGBoost,0.5602
-Tân Vĩnh Lộc,2026,1,XGBoost,0.543
-Tân Vĩnh Lộc,2026,2,XGBoost,0.7171
-Tân Vĩnh Lộc,2026,3,XGBoost,0.6346
-Tân Vĩnh Lộc,2026,4,XGBoost,0.7506
-Tân Vĩnh Lộc,2026,5,XGBoost,0.5494
-Tân Vĩnh Lộc,2026,6,XGBoost,0.6283
-Tân Đông Hiệp,2026,1,XGBoost,0.3072
-Tân Đông Hiệp,2026,2,XGBoost,0.3035
-Tân Đông Hiệp,2026,3,XGBoost,0.9038
-Tân Đông Hiệp,2026,4,XGBoost,0.6482
-Tân Đông Hiệp,2026,5,XGBoost,0.6681
-Tân Đông Hiệp,2026,6,XGBoost,0.552
-Tân Định,2026,1,XGBoost,0.6726
-Tân Định,2026,2,XGBoost,0.4913
-Tân Định,2026,3,XGBoost,0.5992
-Tân Định,2026,4,XGBoost,0.6808
-Tân Định,2026,5,XGBoost,0.5494
-Tân Định,2026,6,XGBoost,0.572
-Tây Nam,2026,1,XGBoost,0.4949
-Tây Nam,2026,2,XGBoost,0.5402
-Tây Nam,2026,3,XGBoost,0.6662
-Tây Nam,2026,4,XGBoost,0.5339
-Tây Nam,2026,5,XGBoost,0.5621
-Tây Nam,2026,6,XGBoost,0.5312
-Tây Thạnh,2026,1,XGBoost,0.785
-Tây Thạnh,2026,2,XGBoost,0.7107
-Tây Thạnh,2026,3,XGBoost,0.5829
-Tây Thạnh,2026,4,XGBoost,0.5312
-Tây Thạnh,2026,5,XGBoost,0.6064
-Tây Thạnh,2026,6,XGBoost,0.5774
-Tăng Nhơn Phú,2026,1,XGBoost,0.4015
-Tăng Nhơn Phú,2026,2,XGBoost,0.7869
-Tăng Nhơn Phú,2026,3,XGBoost,0.4442
-Tăng Nhơn Phú,2026,4,XGBoost,0.5992
-Tăng Nhơn Phú,2026,5,XGBoost,0.5439
-Tăng Nhơn Phú,2026,6,XGBoost,0.5856
-Vĩnh Hội,2026,1,XGBoost,0.6798
-Vĩnh Hội,2026,2,XGBoost,0.6382
-Vĩnh Hội,2026,3,XGBoost,0.6618
-Vĩnh Hội,2026,4,XGBoost,0.7035
-Vĩnh Hội,2026,5,XGBoost,0.5575
-Vĩnh Hội,2026,6,XGBoost,0.6291
-Vĩnh Lộc,2026,1,XGBoost,0.533
-Vĩnh Lộc,2026,2,XGBoost,0.5992
-Vĩnh Lộc,2026,3,XGBoost,0.5884
-Vĩnh Lộc,2026,4,XGBoost,0.6817
-Vĩnh Lộc,2026,5,XGBoost,0.5494
-Vĩnh Lộc,2026,6,XGBoost,0.5683
-Vĩnh Tân,2026,1,XGBoost,0.5638
-Vĩnh Tân,2026,2,XGBoost,0.6391
-Vĩnh Tân,2026,3,XGBoost,0.863
-Vĩnh Tân,2026,4,XGBoost,0.6028
-Vĩnh Tân,2026,5,XGBoost,0.6546
-Vĩnh Tân,2026,6,XGBoost,0.5448
-Vũng Tàu,2026,1,XGBoost,0.12
-Vũng Tàu,2026,2,XGBoost,0.4451
-Vũng Tàu,2026,3,XGBoost,0.7416
-Vũng Tàu,2026,4,XGBoost,0.9002
-Vũng Tàu,2026,5,XGBoost,0.7044
-Vũng Tàu,2026,6,XGBoost,0.7125
-Vườn Lài,2026,1,XGBoost,0.7696
-Vườn Lài,2026,2,XGBoost,0.611
-Vườn Lài,2026,3,XGBoost,0.7098
-Vườn Lài,2026,4,XGBoost,0.6671
-Vườn Lài,2026,5,XGBoost,0.6509
-Vườn Lài,2026,6,XGBoost,0.5665
-Xuyên Mộc,2026,1,XGBoost,0.2047
-Xuyên Mộc,2026,2,XGBoost,0.3154
-Xuyên Mộc,2026,3,XGBoost,0.95
-Xuyên Mộc,2026,4,XGBoost,0.95
-Xuyên Mộc,2026,5,XGBoost,0.7425
-Xuyên Mộc,2026,6,XGBoost,0.7569
-Xuân Hoà,2026,1,XGBoost,0.6526
-Xuân Hoà,2026,2,XGBoost,0.4523
-Xuân Hoà,2026,3,XGBoost,0.5919
-Xuân Hoà,2026,4,XGBoost,0.7017
-Xuân Hoà,2026,5,XGBoost,0.5494
-Xuân Hoà,2026,6,XGBoost,0.6291
-Xuân Sơn,2026,1,XGBoost,0.1512
-Xuân Sơn,2026,2,XGBoost,0.3453
-Xuân Sơn,2026,3,XGBoost,0.95
-Xuân Sơn,2026,4,XGBoost,0.2555
-Xuân Sơn,2026,5,XGBoost,0.6264
-Xuân Sơn,2026,6,XGBoost,0.5665
-Xuân Thới Sơn,2026,1,XGBoost,0.6219
-Xuân Thới Sơn,2026,2,XGBoost,0.6237
-Xuân Thới Sơn,2026,3,XGBoost,0.5874
-Xuân Thới Sơn,2026,4,XGBoost,0.6581
-Xuân Thới Sơn,2026,5,XGBoost,0.5529
-Xuân Thới Sơn,2026,6,XGBoost,0.5529
-Xóm Chiếu,2026,1,XGBoost,0.6708
-Xóm Chiếu,2026,2,XGBoost,0.6173
-Xóm Chiếu,2026,3,XGBoost,0.659
-Xóm Chiếu,2026,4,XGBoost,0.6817
-Xóm Chiếu,2026,5,XGBoost,0.5575
-Xóm Chiếu,2026,6,XGBoost,0.572
-Đông Hoà,2026,1,XGBoost,0.435
-Đông Hoà,2026,2,XGBoost,0.12
-Đông Hoà,2026,3,XGBoost,0.4197
-Đông Hoà,2026,4,XGBoost,0.4269
-Đông Hoà,2026,5,XGBoost,0.6272
-Đông Hoà,2026,6,XGBoost,0.6618
-Đông Hưng Thuận,2026,1,XGBoost,0.602
-Đông Hưng Thuận,2026,2,XGBoost,0.8186
-Đông Hưng Thuận,2026,3,XGBoost,0.5557
-Đông Hưng Thuận,2026,4,XGBoost,0.6899
-Đông Hưng Thuận,2026,5,XGBoost,0.6662
-Đông Hưng Thuận,2026,6,XGBoost,0.659
-Đông Thạnh,2026,1,XGBoost,0.6219
-Đông Thạnh,2026,2,XGBoost,0.6156
-Đông Thạnh,2026,3,XGBoost,0.6699
-Đông Thạnh,2026,4,XGBoost,0.5783
-Đông Thạnh,2026,5,XGBoost,0.5647
-Đông Thạnh,2026,6,XGBoost,0.5448
-Đất Đỏ,2026,1,XGBoost,0.1422
-Đất Đỏ,2026,2,XGBoost,0.5965
-Đất Đỏ,2026,3,XGBoost,0.9066
-Đất Đỏ,2026,4,XGBoost,0.2518
-Đất Đỏ,2026,5,XGBoost,0.5856
-Đất Đỏ,2026,6,XGBoost,0.5992
-Đức Nhuận,2026,1,XGBoost,0.572
-Đức Nhuận,2026,2,XGBoost,0.6563
-Đức Nhuận,2026,3,XGBoost,0.611
-Đức Nhuận,2026,4,XGBoost,0.6754
-Đức Nhuận,2026,5,XGBoost,0.5494
-Đức Nhuận,2026,6,XGBoost,0.5711
+fullname,nam,thang,tvdi_du_bao,mo_hinh,loai
+Phường An Hội Tây,2026,1,0.6069,GRU,du_bao
+Phường An Hội Đông,2026,1,0.5864,GRU,du_bao
+Phường An Khánh,2026,1,0.4476,GRU,du_bao
+Phường An Lạc,2026,1,0.6219,GRU,du_bao
+Phường An Nhơn,2026,1,0.5603,GRU,du_bao
+Phường An Phú,2026,1,0.788,GRU,du_bao
+Phường An Phú Đông,2026,1,0.5466,GRU,du_bao
+Phường An Đông,2026,1,0.5065,GRU,du_bao
+Phường Bà Rịa,2026,1,0.5444,GRU,du_bao
+Phường Bàn Cờ,2026,1,0.5611,GRU,du_bao
+Phường Bình Cơ,2026,1,0.5059,GRU,du_bao
+Phường Bình Dương,2026,1,0.7285,GRU,du_bao
+Phường Bình Hoà,2026,1,0.6893,GRU,du_bao
+Phường Bình Hưng Hoà,2026,1,0.6757,GRU,du_bao
+Phường Bình Lợi Trung,2026,1,0.5243,GRU,du_bao
+Phường Bình Phú,2026,1,0.5861,GRU,du_bao
+Phường Bình Quới,2026,1,0.3721,GRU,du_bao
+Phường Bình Thạnh,2026,1,0.5428,GRU,du_bao
+Phường Bình Thới,2026,1,0.5181,GRU,du_bao
+Phường Bình Tiên,2026,1,0.5067,GRU,du_bao
+Phường Bình Trưng,2026,1,0.5255,GRU,du_bao
+Phường Bình Trị Đông,2026,1,0.6418,GRU,du_bao
+Phường Bình Tân,2026,1,0.668,GRU,du_bao
+Phường Bình Tây,2026,1,0.5259,GRU,du_bao
+Phường Bình Đông,2026,1,0.5429,GRU,du_bao
+Phường Bảy Hiền,2026,1,0.6029,GRU,du_bao
+Phường Bến Cát,2026,1,0.5969,GRU,du_bao
+Phường Bến Thành,2026,1,0.528,GRU,du_bao
+Phường Chánh Hiệp,2026,1,0.5922,GRU,du_bao
+Phường Chánh Hưng,2026,1,0.5484,GRU,du_bao
+Phường Chánh Phú Hoà,2026,1,0.5499,GRU,du_bao
+Phường Chợ Lớn,2026,1,0.5042,GRU,du_bao
+Phường Chợ Quán,2026,1,0.547,GRU,du_bao
+Phường Cát Lái,2026,1,0.4328,GRU,du_bao
+Phường Cầu Kiệu,2026,1,0.518,GRU,du_bao
+Phường Cầu Ông Lãnh,2026,1,0.5801,GRU,du_bao
+Phường Diên Hồng,2026,1,0.5246,GRU,du_bao
+Phường Dĩ An,2026,1,0.7457,GRU,du_bao
+Phường Gia Định,2026,1,0.5227,GRU,du_bao
+Phường Gò Vấp,2026,1,0.6144,GRU,du_bao
+Phường Hiệp Bình,2026,1,0.5306,GRU,du_bao
+Phường Hoà Bình,2026,1,0.6101,GRU,du_bao
+Phường Hoà Hưng,2026,1,0.5627,GRU,du_bao
+Phường Hoà Lợi,2026,1,0.6365,GRU,du_bao
+Phường Hạnh Thông,2026,1,0.5793,GRU,du_bao
+Phường Khánh Hội,2026,1,0.5303,GRU,du_bao
+Phường Linh Xuân,2026,1,0.7063,GRU,du_bao
+Phường Long Bình,2026,1,0.5642,GRU,du_bao
+Phường Long Hương,2026,1,0.4173,GRU,du_bao
+Phường Long Nguyên,2026,1,0.5388,GRU,du_bao
+Phường Long Phước,2026,1,0.38,GRU,du_bao
+Phường Long Trường,2026,1,0.487,GRU,du_bao
+Phường Lái Thiêu,2026,1,0.5982,GRU,du_bao
+Phường Minh Phụng,2026,1,0.4616,GRU,du_bao
+Phường Nhiêu Lộc,2026,1,0.5218,GRU,du_bao
+Phường Phú An,2026,1,0.5479,GRU,du_bao
+Phường Phú Lâm,2026,1,0.6257,GRU,du_bao
+Phường Phú Lợi,2026,1,0.6383,GRU,du_bao
+Phường Phú Mỹ,2026,1,0.5171,GRU,du_bao
+Phường Phú Nhuận,2026,1,0.5341,GRU,du_bao
+Phường Phú Thuận,2026,1,0.3619,GRU,du_bao
+Phường Phú Thạnh,2026,1,0.6194,GRU,du_bao
+Phường Phú Thọ,2026,1,0.5805,GRU,du_bao
+Phường Phú Thọ Hoà,2026,1,0.5992,GRU,du_bao
+Phường Phú Định,2026,1,0.5703,GRU,du_bao
+Phường Phước Long,2026,1,0.6395,GRU,du_bao
+Phường Phước Thắng,2026,1,0.4345,GRU,du_bao
+Phường Rạch Dừa,2026,1,0.6023,GRU,du_bao
+Phường Sài Gòn,2026,1,0.4496,GRU,du_bao
+Phường Tam Bình,2026,1,0.6536,GRU,du_bao
+Phường Tam Long,2026,1,0.5557,GRU,du_bao
+Phường Tam Thắng,2026,1,0.6215,GRU,du_bao
+Phường Thuận An,2026,1,0.5661,GRU,du_bao
+Phường Thuận Giao,2026,1,0.7453,GRU,du_bao
+Phường Thông Tây Hội,2026,1,0.5754,GRU,du_bao
+Phường Thạnh Mỹ Tây,2026,1,0.4639,GRU,du_bao
+Phường Thới An,2026,1,0.5851,GRU,du_bao
+Phường Thới Hoà,2026,1,0.7198,GRU,du_bao
+Phường Thủ Dầu Một,2026,1,0.5548,GRU,du_bao
+Phường Thủ Đức,2026,1,0.6744,GRU,du_bao
+Phường Trung Mỹ Tây,2026,1,0.6667,GRU,du_bao
+Phường Tân Bình,2026,1,0.6008,GRU,du_bao
+Phường Tân Hiệp,2026,1,0.6967,GRU,du_bao
+Phường Tân Hoà,2026,1,0.6208,GRU,du_bao
+Phường Tân Hưng,2026,1,0.5183,GRU,du_bao
+Phường Tân Hải,2026,1,0.4365,GRU,du_bao
+Phường Tân Khánh,2026,1,0.6526,GRU,du_bao
+Phường Tân Mỹ,2026,1,0.5104,GRU,du_bao
+Phường Tân Phú,2026,1,0.6322,GRU,du_bao
+Phường Tân Phước,2026,1,0.4819,GRU,du_bao
+Phường Tân Sơn,2026,1,0.7229,GRU,du_bao
+Phường Tân Sơn Hoà,2026,1,0.6149,GRU,du_bao
+Phường Tân Sơn Nhì,2026,1,0.6265,GRU,du_bao
+Phường Tân Sơn Nhất,2026,1,0.61,GRU,du_bao
+Phường Tân Thuận,2026,1,0.551,GRU,du_bao
+Phường Tân Thành,2026,1,0.5327,GRU,du_bao
+Phường Tân Thới Hiệp,2026,1,0.6932,GRU,du_bao
+Phường Tân Tạo,2026,1,0.6139,GRU,du_bao
+Phường Tân Uyên,2026,1,0.5446,GRU,du_bao
+Phường Tân Đông Hiệp,2026,1,0.6797,GRU,du_bao
+Phường Tân Định,2026,1,0.4769,GRU,du_bao
+Phường Tây Nam,2026,1,0.5414,GRU,du_bao
+Phường Tây Thạnh,2026,1,0.7223,GRU,du_bao
+Phường Tăng Nhơn Phú,2026,1,0.6749,GRU,du_bao
+Phường Vĩnh Hội,2026,1,0.5086,GRU,du_bao
+Phường Vĩnh Tân,2026,1,0.6395,GRU,du_bao
+Phường Vũng Tàu,2026,1,0.4877,GRU,du_bao
+Phường Vườn Lài,2026,1,0.5432,GRU,du_bao
+Phường Xuân Hoà,2026,1,0.516,GRU,du_bao
+Phường Xóm Chiếu,2026,1,0.5141,GRU,du_bao
+Phường Đông Hoà,2026,1,0.6084,GRU,du_bao
+Phường Đông Hưng Thuận,2026,1,0.6991,GRU,du_bao
+Phường Đức Nhuận,2026,1,0.5765,GRU,du_bao
+Xã An Long,2026,1,0.5288,GRU,du_bao
+Xã An Nhơn Tây,2026,1,0.5447,GRU,du_bao
+Xã An Thới Đông,2026,1,0.2381,GRU,du_bao
+Xã Bà Điểm,2026,1,0.6344,GRU,du_bao
+Xã Bàu Bàng,2026,1,0.5769,GRU,du_bao
+Xã Bàu Lâm,2026,1,0.5396,GRU,du_bao
+Xã Bình Chánh,2026,1,0.4808,GRU,du_bao
+Xã Bình Châu,2026,1,0.4919,GRU,du_bao
+Xã Bình Giã,2026,1,0.578,GRU,du_bao
+Xã Bình Hưng,2026,1,0.5051,GRU,du_bao
+Xã Bình Khánh,2026,1,0.2283,GRU,du_bao
+Xã Bình Lợi,2026,1,0.4605,GRU,du_bao
+Xã Bình Mỹ,2026,1,0.5256,GRU,du_bao
+Xã Bắc Tân Uyên,2026,1,0.4576,GRU,du_bao
+Xã Châu Pha,2026,1,0.4932,GRU,du_bao
+Xã Châu Đức,2026,1,0.3621,GRU,du_bao
+Xã Cần Giờ,2026,1,0.2658,GRU,du_bao
+Xã Củ Chi,2026,1,0.5822,GRU,du_bao
+Xã Dầu Tiếng,2026,1,0.5093,GRU,du_bao
+Xã Hiệp Phước,2026,1,0.3523,GRU,du_bao
+Xã Hoà Hiệp,2026,1,0.578,GRU,du_bao
+Xã Hoà Hội,2026,1,0.53,GRU,du_bao
+Xã Hóc Môn,2026,1,0.5708,GRU,du_bao
+Xã Hưng Long,2026,1,0.5074,GRU,du_bao
+Xã Hồ Tràm,2026,1,0.4407,GRU,du_bao
+Xã Kim Long,2026,1,0.4388,GRU,du_bao
+Xã Long Hoà,2026,1,0.5857,GRU,du_bao
+Xã Long Hải,2026,1,0.5227,GRU,du_bao
+Xã Long Sơn,2026,1,0.3651,GRU,du_bao
+Xã Long Điền,2026,1,0.4453,GRU,du_bao
+Xã Minh Thạnh,2026,1,0.4964,GRU,du_bao
+Xã Nghĩa Thành,2026,1,0.6246,GRU,du_bao
+Xã Ngãi Giao,2026,1,0.4923,GRU,du_bao
+Xã Nhuận Đức,2026,1,0.5746,GRU,du_bao
+Xã Nhà Bè,2026,1,0.3766,GRU,du_bao
+Xã Phú Giáo,2026,1,0.4499,GRU,du_bao
+Xã Phú Hoà Đông,2026,1,0.5275,GRU,du_bao
+Xã Phước Hoà,2026,1,0.4742,GRU,du_bao
+Xã Phước Hải,2026,1,0.4404,GRU,du_bao
+Xã Phước Thành,2026,1,0.5008,GRU,du_bao
+Xã Thanh An,2026,1,0.5795,GRU,du_bao
+Xã Thái Mỹ,2026,1,0.571,GRU,du_bao
+Xã Thường Tân,2026,1,0.4717,GRU,du_bao
+Xã Thạnh An,2026,1,0.216,GRU,du_bao
+Xã Trừ Văn Thố,2026,1,0.5189,GRU,du_bao
+Xã Tân An Hội,2026,1,0.5934,GRU,du_bao
+Xã Tân Nhựt,2026,1,0.5148,GRU,du_bao
+Xã Tân Vĩnh Lộc,2026,1,0.6245,GRU,du_bao
+Xã Vĩnh Lộc,2026,1,0.5865,GRU,du_bao
+Xã Xuyên Mộc,2026,1,0.4433,GRU,du_bao
+Xã Xuân Sơn,2026,1,0.5397,GRU,du_bao
+Xã Xuân Thới Sơn,2026,1,0.511,GRU,du_bao
+Xã Đông Thạnh,2026,1,0.5644,GRU,du_bao
+Xã Đất Đỏ,2026,1,0.4711,GRU,du_bao
+Phường An Hội Tây,2026,2,0.5875,GRU,du_bao
+Phường An Hội Đông,2026,2,0.5915,GRU,du_bao
+Phường An Khánh,2026,2,0.5174,GRU,du_bao
+Phường An Lạc,2026,2,0.624,GRU,du_bao
+Phường An Nhơn,2026,2,0.5472,GRU,du_bao
+Phường An Phú,2026,2,0.8549,GRU,du_bao
+Phường An Phú Đông,2026,2,0.5403,GRU,du_bao
+Phường An Đông,2026,2,0.5871,GRU,du_bao
+Phường Bà Rịa,2026,2,0.4073,GRU,du_bao
+Phường Bàn Cờ,2026,2,0.5474,GRU,du_bao
+Phường Bình Cơ,2026,2,0.5575,GRU,du_bao
+Phường Bình Dương,2026,2,0.7754,GRU,du_bao
+Phường Bình Hoà,2026,2,0.7274,GRU,du_bao
+Phường Bình Hưng Hoà,2026,2,0.652,GRU,du_bao
+Phường Bình Lợi Trung,2026,2,0.5323,GRU,du_bao
+Phường Bình Phú,2026,2,0.6366,GRU,du_bao
+Phường Bình Quới,2026,2,0.4366,GRU,du_bao
+Phường Bình Thạnh,2026,2,0.6256,GRU,du_bao
+Phường Bình Thới,2026,2,0.5558,GRU,du_bao
+Phường Bình Tiên,2026,2,0.603,GRU,du_bao
+Phường Bình Trưng,2026,2,0.6196,GRU,du_bao
+Phường Bình Trị Đông,2026,2,0.645,GRU,du_bao
+Phường Bình Tân,2026,2,0.6572,GRU,du_bao
+Phường Bình Tây,2026,2,0.6017,GRU,du_bao
+Phường Bình Đông,2026,2,0.5571,GRU,du_bao
+Phường Bảy Hiền,2026,2,0.5824,GRU,du_bao
+Phường Bến Cát,2026,2,0.6008,GRU,du_bao
+Phường Bến Thành,2026,2,0.5397,GRU,du_bao
+Phường Chánh Hiệp,2026,2,0.672,GRU,du_bao
+Phường Chánh Hưng,2026,2,0.5783,GRU,du_bao
+Phường Chánh Phú Hoà,2026,2,0.5905,GRU,du_bao
+Phường Chợ Lớn,2026,2,0.5832,GRU,du_bao
+Phường Chợ Quán,2026,2,0.5621,GRU,du_bao
+Phường Cát Lái,2026,2,0.4789,GRU,du_bao
+Phường Cầu Kiệu,2026,2,0.5203,GRU,du_bao
+Phường Cầu Ông Lãnh,2026,2,0.5849,GRU,du_bao
+Phường Diên Hồng,2026,2,0.5909,GRU,du_bao
+Phường Dĩ An,2026,2,0.7667,GRU,du_bao
+Phường Gia Định,2026,2,0.5454,GRU,du_bao
+Phường Gò Vấp,2026,2,0.6269,GRU,du_bao
+Phường Hiệp Bình,2026,2,0.5957,GRU,du_bao
+Phường Hoà Bình,2026,2,0.6745,GRU,du_bao
+Phường Hoà Hưng,2026,2,0.5843,GRU,du_bao
+Phường Hoà Lợi,2026,2,0.6902,GRU,du_bao
+Phường Hạnh Thông,2026,2,0.5534,GRU,du_bao
+Phường Khánh Hội,2026,2,0.5373,GRU,du_bao
+Phường Linh Xuân,2026,2,0.7851,GRU,du_bao
+Phường Long Bình,2026,2,0.5962,GRU,du_bao
+Phường Long Hương,2026,2,0.2926,GRU,du_bao
+Phường Long Nguyên,2026,2,0.5468,GRU,du_bao
+Phường Long Phước,2026,2,0.4022,GRU,du_bao
+Phường Long Trường,2026,2,0.535,GRU,du_bao
+Phường Lái Thiêu,2026,2,0.636,GRU,du_bao
+Phường Minh Phụng,2026,2,0.5563,GRU,du_bao
+Phường Nhiêu Lộc,2026,2,0.5729,GRU,du_bao
+Phường Phú An,2026,2,0.5804,GRU,du_bao
+Phường Phú Lâm,2026,2,0.6505,GRU,du_bao
+Phường Phú Lợi,2026,2,0.7382,GRU,du_bao
+Phường Phú Mỹ,2026,2,0.528,GRU,du_bao
+Phường Phú Nhuận,2026,2,0.5537,GRU,du_bao
+Phường Phú Thuận,2026,2,0.3842,GRU,du_bao
+Phường Phú Thạnh,2026,2,0.6403,GRU,du_bao
+Phường Phú Thọ,2026,2,0.6348,GRU,du_bao
+Phường Phú Thọ Hoà,2026,2,0.5524,GRU,du_bao
+Phường Phú Định,2026,2,0.593,GRU,du_bao
+Phường Phước Long,2026,2,0.7724,GRU,du_bao
+Phường Phước Thắng,2026,2,0.3106,GRU,du_bao
+Phường Rạch Dừa,2026,2,0.5264,GRU,du_bao
+Phường Sài Gòn,2026,2,0.4753,GRU,du_bao
+Phường Tam Bình,2026,2,0.6548,GRU,du_bao
+Phường Tam Long,2026,2,0.44,GRU,du_bao
+Phường Tam Thắng,2026,2,0.5116,GRU,du_bao
+Phường Thuận An,2026,2,0.5951,GRU,du_bao
+Phường Thuận Giao,2026,2,0.8174,GRU,du_bao
+Phường Thông Tây Hội,2026,2,0.5647,GRU,du_bao
+Phường Thạnh Mỹ Tây,2026,2,0.5352,GRU,du_bao
+Phường Thới An,2026,2,0.543,GRU,du_bao
+Phường Thới Hoà,2026,2,0.7295,GRU,du_bao
+Phường Thủ Dầu Một,2026,2,0.6501,GRU,du_bao
+Phường Thủ Đức,2026,2,0.7071,GRU,du_bao
+Phường Trung Mỹ Tây,2026,2,0.6407,GRU,du_bao
+Phường Tân Bình,2026,2,0.5787,GRU,du_bao
+Phường Tân Hiệp,2026,2,0.7548,GRU,du_bao
+Phường Tân Hoà,2026,2,0.6207,GRU,du_bao
+Phường Tân Hưng,2026,2,0.5313,GRU,du_bao
+Phường Tân Hải,2026,2,0.3447,GRU,du_bao
+Phường Tân Khánh,2026,2,0.7064,GRU,du_bao
+Phường Tân Mỹ,2026,2,0.5608,GRU,du_bao
+Phường Tân Phú,2026,2,0.6512,GRU,du_bao
+Phường Tân Phước,2026,2,0.4601,GRU,du_bao
+Phường Tân Sơn,2026,2,0.6935,GRU,du_bao
+Phường Tân Sơn Hoà,2026,2,0.5855,GRU,du_bao
+Phường Tân Sơn Nhì,2026,2,0.5993,GRU,du_bao
+Phường Tân Sơn Nhất,2026,2,0.5928,GRU,du_bao
+Phường Tân Thuận,2026,2,0.5914,GRU,du_bao
+Phường Tân Thành,2026,2,0.5538,GRU,du_bao
+Phường Tân Thới Hiệp,2026,2,0.6507,GRU,du_bao
+Phường Tân Tạo,2026,2,0.6052,GRU,du_bao
+Phường Tân Uyên,2026,2,0.6024,GRU,du_bao
+Phường Tân Đông Hiệp,2026,2,0.7083,GRU,du_bao
+Phường Tân Định,2026,2,0.5131,GRU,du_bao
+Phường Tây Nam,2026,2,0.5216,GRU,du_bao
+Phường Tây Thạnh,2026,2,0.6815,GRU,du_bao
+Phường Tăng Nhơn Phú,2026,2,0.7718,GRU,du_bao
+Phường Vĩnh Hội,2026,2,0.5137,GRU,du_bao
+Phường Vĩnh Tân,2026,2,0.6717,GRU,du_bao
+Phường Vũng Tàu,2026,2,0.3834,GRU,du_bao
+Phường Vườn Lài,2026,2,0.5396,GRU,du_bao
+Phường Xuân Hoà,2026,2,0.5275,GRU,du_bao
+Phường Xóm Chiếu,2026,2,0.4929,GRU,du_bao
+Phường Đông Hoà,2026,2,0.7219,GRU,du_bao
+Phường Đông Hưng Thuận,2026,2,0.6606,GRU,du_bao
+Phường Đức Nhuận,2026,2,0.5605,GRU,du_bao
+Xã An Long,2026,2,0.6233,GRU,du_bao
+Xã An Nhơn Tây,2026,2,0.535,GRU,du_bao
+Xã An Thới Đông,2026,2,0.1793,GRU,du_bao
+Xã Bà Điểm,2026,2,0.5845,GRU,du_bao
+Xã Bàu Bàng,2026,2,0.6449,GRU,du_bao
+Xã Bàu Lâm,2026,2,0.4366,GRU,du_bao
+Xã Bình Chánh,2026,2,0.5529,GRU,du_bao
+Xã Bình Châu,2026,2,0.3901,GRU,du_bao
+Xã Bình Giã,2026,2,0.5337,GRU,du_bao
+Xã Bình Hưng,2026,2,0.4867,GRU,du_bao
+Xã Bình Khánh,2026,2,0.1892,GRU,du_bao
+Xã Bình Lợi,2026,2,0.4954,GRU,du_bao
+Xã Bình Mỹ,2026,2,0.549,GRU,du_bao
+Xã Bắc Tân Uyên,2026,2,0.5499,GRU,du_bao
+Xã Châu Pha,2026,2,0.5298,GRU,du_bao
+Xã Châu Đức,2026,2,0.3187,GRU,du_bao
+Xã Cần Giờ,2026,2,0.1704,GRU,du_bao
+Xã Củ Chi,2026,2,0.5773,GRU,du_bao
+Xã Dầu Tiếng,2026,2,0.5008,GRU,du_bao
+Xã Hiệp Phước,2026,2,0.3748,GRU,du_bao
+Xã Hoà Hiệp,2026,2,0.5012,GRU,du_bao
+Xã Hoà Hội,2026,2,0.4453,GRU,du_bao
+Xã Hóc Môn,2026,2,0.526,GRU,du_bao
+Xã Hưng Long,2026,2,0.527,GRU,du_bao
+Xã Hồ Tràm,2026,2,0.3453,GRU,du_bao
+Xã Kim Long,2026,2,0.4513,GRU,du_bao
+Xã Long Hoà,2026,2,0.5749,GRU,du_bao
+Xã Long Hải,2026,2,0.3737,GRU,du_bao
+Xã Long Sơn,2026,2,0.235,GRU,du_bao
+Xã Long Điền,2026,2,0.3176,GRU,du_bao
+Xã Minh Thạnh,2026,2,0.5418,GRU,du_bao
+Xã Nghĩa Thành,2026,2,0.5724,GRU,du_bao
+Xã Ngãi Giao,2026,2,0.5194,GRU,du_bao
+Xã Nhuận Đức,2026,2,0.5746,GRU,du_bao
+Xã Nhà Bè,2026,2,0.3854,GRU,du_bao
+Xã Phú Giáo,2026,2,0.5933,GRU,du_bao
+Xã Phú Hoà Đông,2026,2,0.5202,GRU,du_bao
+Xã Phước Hoà,2026,2,0.5902,GRU,du_bao
+Xã Phước Hải,2026,2,0.3643,GRU,du_bao
+Xã Phước Thành,2026,2,0.6313,GRU,du_bao
+Xã Thanh An,2026,2,0.5476,GRU,du_bao
+Xã Thái Mỹ,2026,2,0.5147,GRU,du_bao
+Xã Thường Tân,2026,2,0.4147,GRU,du_bao
+Xã Thạnh An,2026,2,0.1459,GRU,du_bao
+Xã Trừ Văn Thố,2026,2,0.5824,GRU,du_bao
+Xã Tân An Hội,2026,2,0.5768,GRU,du_bao
+Xã Tân Nhựt,2026,2,0.5661,GRU,du_bao
+Xã Tân Vĩnh Lộc,2026,2,0.6084,GRU,du_bao
+Xã Vĩnh Lộc,2026,2,0.5565,GRU,du_bao
+Xã Xuyên Mộc,2026,2,0.3323,GRU,du_bao
+Xã Xuân Sơn,2026,2,0.4928,GRU,du_bao
+Xã Xuân Thới Sơn,2026,2,0.4947,GRU,du_bao
+Xã Đông Thạnh,2026,2,0.5502,GRU,du_bao
+Xã Đất Đỏ,2026,2,0.4231,GRU,du_bao
+Phường An Hội Tây,2026,3,0.5957,GRU,du_bao
+Phường An Hội Đông,2026,3,0.5662,GRU,du_bao
+Phường An Khánh,2026,3,0.4269,GRU,du_bao
+Phường An Lạc,2026,3,0.5635,GRU,du_bao
+Phường An Nhơn,2026,3,0.5199,GRU,du_bao
+Phường An Phú,2026,3,0.7375,GRU,du_bao
+Phường An Phú Đông,2026,3,0.4974,GRU,du_bao
+Phường An Đông,2026,3,0.4836,GRU,du_bao
+Phường Bà Rịa,2026,3,0.5328,GRU,du_bao
+Phường Bàn Cờ,2026,3,0.4708,GRU,du_bao
+Phường Bình Cơ,2026,3,0.5098,GRU,du_bao
+Phường Bình Dương,2026,3,0.6819,GRU,du_bao
+Phường Bình Hoà,2026,3,0.6405,GRU,du_bao
+Phường Bình Hưng Hoà,2026,3,0.5637,GRU,du_bao
+Phường Bình Lợi Trung,2026,3,0.5035,GRU,du_bao
+Phường Bình Phú,2026,3,0.5723,GRU,du_bao
+Phường Bình Quới,2026,3,0.3378,GRU,du_bao
+Phường Bình Thạnh,2026,3,0.5633,GRU,du_bao
+Phường Bình Thới,2026,3,0.5666,GRU,du_bao
+Phường Bình Tiên,2026,3,0.5869,GRU,du_bao
+Phường Bình Trưng,2026,3,0.5481,GRU,du_bao
+Phường Bình Trị Đông,2026,3,0.5642,GRU,du_bao
+Phường Bình Tân,2026,3,0.5452,GRU,du_bao
+Phường Bình Tây,2026,3,0.5566,GRU,du_bao
+Phường Bình Đông,2026,3,0.502,GRU,du_bao
+Phường Bảy Hiền,2026,3,0.564,GRU,du_bao
+Phường Bến Cát,2026,3,0.5397,GRU,du_bao
+Phường Bến Thành,2026,3,0.4649,GRU,du_bao
+Phường Chánh Hiệp,2026,3,0.5406,GRU,du_bao
+Phường Chánh Hưng,2026,3,0.4857,GRU,du_bao
+Phường Chánh Phú Hoà,2026,3,0.4782,GRU,du_bao
+Phường Chợ Lớn,2026,3,0.4902,GRU,du_bao
+Phường Chợ Quán,2026,3,0.4734,GRU,du_bao
+Phường Cát Lái,2026,3,0.436,GRU,du_bao
+Phường Cầu Kiệu,2026,3,0.4844,GRU,du_bao
+Phường Cầu Ông Lãnh,2026,3,0.496,GRU,du_bao
+Phường Diên Hồng,2026,3,0.5592,GRU,du_bao
+Phường Dĩ An,2026,3,0.7469,GRU,du_bao
+Phường Gia Định,2026,3,0.542,GRU,du_bao
+Phường Gò Vấp,2026,3,0.6254,GRU,du_bao
+Phường Hiệp Bình,2026,3,0.5343,GRU,du_bao
+Phường Hoà Bình,2026,3,0.6331,GRU,du_bao
+Phường Hoà Hưng,2026,3,0.5451,GRU,du_bao
+Phường Hoà Lợi,2026,3,0.5683,GRU,du_bao
+Phường Hạnh Thông,2026,3,0.5873,GRU,du_bao
+Phường Khánh Hội,2026,3,0.5026,GRU,du_bao
+Phường Linh Xuân,2026,3,0.756,GRU,du_bao
+Phường Long Bình,2026,3,0.5572,GRU,du_bao
+Phường Long Hương,2026,3,0.4078,GRU,du_bao
+Phường Long Nguyên,2026,3,0.4585,GRU,du_bao
+Phường Long Phước,2026,3,0.3854,GRU,du_bao
+Phường Long Trường,2026,3,0.5027,GRU,du_bao
+Phường Lái Thiêu,2026,3,0.5404,GRU,du_bao
+Phường Minh Phụng,2026,3,0.583,GRU,du_bao
+Phường Nhiêu Lộc,2026,3,0.5235,GRU,du_bao
+Phường Phú An,2026,3,0.4717,GRU,du_bao
+Phường Phú Lâm,2026,3,0.5872,GRU,du_bao
+Phường Phú Lợi,2026,3,0.6375,GRU,du_bao
+Phường Phú Mỹ,2026,3,0.6238,GRU,du_bao
+Phường Phú Nhuận,2026,3,0.5269,GRU,du_bao
+Phường Phú Thuận,2026,3,0.3421,GRU,du_bao
+Phường Phú Thạnh,2026,3,0.6022,GRU,du_bao
+Phường Phú Thọ,2026,3,0.6263,GRU,du_bao
+Phường Phú Thọ Hoà,2026,3,0.569,GRU,du_bao
+Phường Phú Định,2026,3,0.5642,GRU,du_bao
+Phường Phước Long,2026,3,0.7315,GRU,du_bao
+Phường Phước Thắng,2026,3,0.4064,GRU,du_bao
+Phường Rạch Dừa,2026,3,0.5839,GRU,du_bao
+Phường Sài Gòn,2026,3,0.3996,GRU,du_bao
+Phường Tam Bình,2026,3,0.6425,GRU,du_bao
+Phường Tam Long,2026,3,0.6236,GRU,du_bao
+Phường Tam Thắng,2026,3,0.6102,GRU,du_bao
+Phường Thuận An,2026,3,0.4809,GRU,du_bao
+Phường Thuận Giao,2026,3,0.7229,GRU,du_bao
+Phường Thông Tây Hội,2026,3,0.5705,GRU,du_bao
+Phường Thạnh Mỹ Tây,2026,3,0.4694,GRU,du_bao
+Phường Thới An,2026,3,0.5185,GRU,du_bao
+Phường Thới Hoà,2026,3,0.6403,GRU,du_bao
+Phường Thủ Dầu Một,2026,3,0.5659,GRU,du_bao
+Phường Thủ Đức,2026,3,0.6402,GRU,du_bao
+Phường Trung Mỹ Tây,2026,3,0.5895,GRU,du_bao
+Phường Tân Bình,2026,3,0.5626,GRU,du_bao
+Phường Tân Hiệp,2026,3,0.5889,GRU,du_bao
+Phường Tân Hoà,2026,3,0.594,GRU,du_bao
+Phường Tân Hưng,2026,3,0.4833,GRU,du_bao
+Phường Tân Hải,2026,3,0.3935,GRU,du_bao
+Phường Tân Khánh,2026,3,0.6022,GRU,du_bao
+Phường Tân Mỹ,2026,3,0.4794,GRU,du_bao
+Phường Tân Phú,2026,3,0.6077,GRU,du_bao
+Phường Tân Phước,2026,3,0.5252,GRU,du_bao
+Phường Tân Sơn,2026,3,0.6349,GRU,du_bao
+Phường Tân Sơn Hoà,2026,3,0.5816,GRU,du_bao
+Phường Tân Sơn Nhì,2026,3,0.5617,GRU,du_bao
+Phường Tân Sơn Nhất,2026,3,0.5669,GRU,du_bao
+Phường Tân Thuận,2026,3,0.5395,GRU,du_bao
+Phường Tân Thành,2026,3,0.6788,GRU,du_bao
+Phường Tân Thới Hiệp,2026,3,0.6286,GRU,du_bao
+Phường Tân Tạo,2026,3,0.5002,GRU,du_bao
+Phường Tân Uyên,2026,3,0.5452,GRU,du_bao
+Phường Tân Đông Hiệp,2026,3,0.6097,GRU,du_bao
+Phường Tân Định,2026,3,0.4644,GRU,du_bao
+Phường Tây Nam,2026,3,0.4001,GRU,du_bao
+Phường Tây Thạnh,2026,3,0.638,GRU,du_bao
+Phường Tăng Nhơn Phú,2026,3,0.6997,GRU,du_bao
+Phường Vĩnh Hội,2026,3,0.4898,GRU,du_bao
+Phường Vĩnh Tân,2026,3,0.5767,GRU,du_bao
+Phường Vũng Tàu,2026,3,0.4091,GRU,du_bao
+Phường Vườn Lài,2026,3,0.4975,GRU,du_bao
+Phường Xuân Hoà,2026,3,0.484,GRU,du_bao
+Phường Xóm Chiếu,2026,3,0.4864,GRU,du_bao
+Phường Đông Hoà,2026,3,0.6763,GRU,du_bao
+Phường Đông Hưng Thuận,2026,3,0.6173,GRU,du_bao
+Phường Đức Nhuận,2026,3,0.5497,GRU,du_bao
+Xã An Long,2026,3,0.5245,GRU,du_bao
+Xã An Nhơn Tây,2026,3,0.4123,GRU,du_bao
+Xã An Thới Đông,2026,3,0.1708,GRU,du_bao
+Xã Bà Điểm,2026,3,0.4054,GRU,du_bao
+Xã Bàu Bàng,2026,3,0.5993,GRU,du_bao
+Xã Bàu Lâm,2026,3,0.6536,GRU,du_bao
+Xã Bình Chánh,2026,3,0.5434,GRU,du_bao
+Xã Bình Châu,2026,3,0.5555,GRU,du_bao
+Xã Bình Giã,2026,3,0.7252,GRU,du_bao
+Xã Bình Hưng,2026,3,0.3935,GRU,du_bao
+Xã Bình Khánh,2026,3,0.1951,GRU,du_bao
+Xã Bình Lợi,2026,3,0.3724,GRU,du_bao
+Xã Bình Mỹ,2026,3,0.4446,GRU,du_bao
+Xã Bắc Tân Uyên,2026,3,0.5545,GRU,du_bao
+Xã Châu Pha,2026,3,0.6532,GRU,du_bao
+Xã Châu Đức,2026,3,0.4546,GRU,du_bao
+Xã Cần Giờ,2026,3,0.1659,GRU,du_bao
+Xã Củ Chi,2026,3,0.4175,GRU,du_bao
+Xã Dầu Tiếng,2026,3,0.3908,GRU,du_bao
+Xã Hiệp Phước,2026,3,0.2695,GRU,du_bao
+Xã Hoà Hiệp,2026,3,0.6976,GRU,du_bao
+Xã Hoà Hội,2026,3,0.6151,GRU,du_bao
+Xã Hóc Môn,2026,3,0.4691,GRU,du_bao
+Xã Hưng Long,2026,3,0.5093,GRU,du_bao
+Xã Hồ Tràm,2026,3,0.5033,GRU,du_bao
+Xã Kim Long,2026,3,0.658,GRU,du_bao
+Xã Long Hoà,2026,3,0.4903,GRU,du_bao
+Xã Long Hải,2026,3,0.4907,GRU,du_bao
+Xã Long Sơn,2026,3,0.2985,GRU,du_bao
+Xã Long Điền,2026,3,0.489,GRU,du_bao
+Xã Minh Thạnh,2026,3,0.4378,GRU,du_bao
+Xã Nghĩa Thành,2026,3,0.769,GRU,du_bao
+Xã Ngãi Giao,2026,3,0.7109,GRU,du_bao
+Xã Nhuận Đức,2026,3,0.4353,GRU,du_bao
+Xã Nhà Bè,2026,3,0.3168,GRU,du_bao
+Xã Phú Giáo,2026,3,0.5895,GRU,du_bao
+Xã Phú Hoà Đông,2026,3,0.3962,GRU,du_bao
+Xã Phước Hoà,2026,3,0.5744,GRU,du_bao
+Xã Phước Hải,2026,3,0.516,GRU,du_bao
+Xã Phước Thành,2026,3,0.5654,GRU,du_bao
+Xã Thanh An,2026,3,0.4297,GRU,du_bao
+Xã Thái Mỹ,2026,3,0.4003,GRU,du_bao
+Xã Thường Tân,2026,3,0.5096,GRU,du_bao
+Xã Thạnh An,2026,3,0.1617,GRU,du_bao
+Xã Trừ Văn Thố,2026,3,0.5233,GRU,du_bao
+Xã Tân An Hội,2026,3,0.4276,GRU,du_bao
+Xã Tân Nhựt,2026,3,0.4989,GRU,du_bao
+Xã Tân Vĩnh Lộc,2026,3,0.492,GRU,du_bao
+Xã Vĩnh Lộc,2026,3,0.4548,GRU,du_bao
+Xã Xuyên Mộc,2026,3,0.4802,GRU,du_bao
+Xã Xuân Sơn,2026,3,0.6569,GRU,du_bao
+Xã Xuân Thới Sơn,2026,3,0.3973,GRU,du_bao
+Xã Đông Thạnh,2026,3,0.4961,GRU,du_bao
+Xã Đất Đỏ,2026,3,0.5781,GRU,du_bao
+Phường An Hội Tây,2026,4,0.6391,GRU,du_bao
+Phường An Hội Đông,2026,4,0.5177,GRU,du_bao
+Phường An Khánh,2026,4,0.4317,GRU,du_bao
+Phường An Lạc,2026,4,0.5524,GRU,du_bao
+Phường An Nhơn,2026,4,0.5107,GRU,du_bao
+Phường An Phú,2026,4,0.6647,GRU,du_bao
+Phường An Phú Đông,2026,4,0.4619,GRU,du_bao
+Phường An Đông,2026,4,0.5709,GRU,du_bao
+Phường Bà Rịa,2026,4,0.5385,GRU,du_bao
+Phường Bàn Cờ,2026,4,0.5122,GRU,du_bao
+Phường Bình Cơ,2026,4,0.4203,GRU,du_bao
+Phường Bình Dương,2026,4,0.6849,GRU,du_bao
+Phường Bình Hoà,2026,4,0.5958,GRU,du_bao
+Phường Bình Hưng Hoà,2026,4,0.5791,GRU,du_bao
+Phường Bình Lợi Trung,2026,4,0.525,GRU,du_bao
+Phường Bình Phú,2026,4,0.5521,GRU,du_bao
+Phường Bình Quới,2026,4,0.3423,GRU,du_bao
+Phường Bình Thạnh,2026,4,0.5387,GRU,du_bao
+Phường Bình Thới,2026,4,0.6019,GRU,du_bao
+Phường Bình Tiên,2026,4,0.6248,GRU,du_bao
+Phường Bình Trưng,2026,4,0.539,GRU,du_bao
+Phường Bình Trị Đông,2026,4,0.5636,GRU,du_bao
+Phường Bình Tân,2026,4,0.6442,GRU,du_bao
+Phường Bình Tây,2026,4,0.5928,GRU,du_bao
+Phường Bình Đông,2026,4,0.5071,GRU,du_bao
+Phường Bảy Hiền,2026,4,0.5231,GRU,du_bao
+Phường Bến Cát,2026,4,0.5261,GRU,du_bao
+Phường Bến Thành,2026,4,0.4798,GRU,du_bao
+Phường Chánh Hiệp,2026,4,0.5577,GRU,du_bao
+Phường Chánh Hưng,2026,4,0.5492,GRU,du_bao
+Phường Chánh Phú Hoà,2026,4,0.4451,GRU,du_bao
+Phường Chợ Lớn,2026,4,0.5335,GRU,du_bao
+Phường Chợ Quán,2026,4,0.5495,GRU,du_bao
+Phường Cát Lái,2026,4,0.5528,GRU,du_bao
+Phường Cầu Kiệu,2026,4,0.5499,GRU,du_bao
+Phường Cầu Ông Lãnh,2026,4,0.5283,GRU,du_bao
+Phường Diên Hồng,2026,4,0.5763,GRU,du_bao
+Phường Dĩ An,2026,4,0.6724,GRU,du_bao
+Phường Gia Định,2026,4,0.5615,GRU,du_bao
+Phường Gò Vấp,2026,4,0.5882,GRU,du_bao
+Phường Hiệp Bình,2026,4,0.5453,GRU,du_bao
+Phường Hoà Bình,2026,4,0.6223,GRU,du_bao
+Phường Hoà Hưng,2026,4,0.5411,GRU,du_bao
+Phường Hoà Lợi,2026,4,0.5303,GRU,du_bao
+Phường Hạnh Thông,2026,4,0.5096,GRU,du_bao
+Phường Khánh Hội,2026,4,0.5324,GRU,du_bao
+Phường Linh Xuân,2026,4,0.7108,GRU,du_bao
+Phường Long Bình,2026,4,0.5835,GRU,du_bao
+Phường Long Hương,2026,4,0.4463,GRU,du_bao
+Phường Long Nguyên,2026,4,0.4761,GRU,du_bao
+Phường Long Phước,2026,4,0.4144,GRU,du_bao
+Phường Long Trường,2026,4,0.5183,GRU,du_bao
+Phường Lái Thiêu,2026,4,0.4837,GRU,du_bao
+Phường Minh Phụng,2026,4,0.6522,GRU,du_bao
+Phường Nhiêu Lộc,2026,4,0.561,GRU,du_bao
+Phường Phú An,2026,4,0.4519,GRU,du_bao
+Phường Phú Lâm,2026,4,0.5639,GRU,du_bao
+Phường Phú Lợi,2026,4,0.6281,GRU,du_bao
+Phường Phú Mỹ,2026,4,0.6037,GRU,du_bao
+Phường Phú Nhuận,2026,4,0.4994,GRU,du_bao
+Phường Phú Thuận,2026,4,0.3595,GRU,du_bao
+Phường Phú Thạnh,2026,4,0.5459,GRU,du_bao
+Phường Phú Thọ,2026,4,0.6194,GRU,du_bao
+Phường Phú Thọ Hoà,2026,4,0.525,GRU,du_bao
+Phường Phú Định,2026,4,0.5864,GRU,du_bao
+Phường Phước Long,2026,4,0.7067,GRU,du_bao
+Phường Phước Thắng,2026,4,0.444,GRU,du_bao
+Phường Rạch Dừa,2026,4,0.6402,GRU,du_bao
+Phường Sài Gòn,2026,4,0.4556,GRU,du_bao
+Phường Tam Bình,2026,4,0.6269,GRU,du_bao
+Phường Tam Long,2026,4,0.6831,GRU,du_bao
+Phường Tam Thắng,2026,4,0.6798,GRU,du_bao
+Phường Thuận An,2026,4,0.4469,GRU,du_bao
+Phường Thuận Giao,2026,4,0.7115,GRU,du_bao
+Phường Thông Tây Hội,2026,4,0.5418,GRU,du_bao
+Phường Thạnh Mỹ Tây,2026,4,0.4732,GRU,du_bao
+Phường Thới An,2026,4,0.5333,GRU,du_bao
+Phường Thới Hoà,2026,4,0.6337,GRU,du_bao
+Phường Thủ Dầu Một,2026,4,0.5501,GRU,du_bao
+Phường Thủ Đức,2026,4,0.6542,GRU,du_bao
+Phường Trung Mỹ Tây,2026,4,0.6325,GRU,du_bao
+Phường Tân Bình,2026,4,0.5468,GRU,du_bao
+Phường Tân Hiệp,2026,4,0.6149,GRU,du_bao
+Phường Tân Hoà,2026,4,0.511,GRU,du_bao
+Phường Tân Hưng,2026,4,0.549,GRU,du_bao
+Phường Tân Hải,2026,4,0.4299,GRU,du_bao
+Phường Tân Khánh,2026,4,0.6099,GRU,du_bao
+Phường Tân Mỹ,2026,4,0.5431,GRU,du_bao
+Phường Tân Phú,2026,4,0.5449,GRU,du_bao
+Phường Tân Phước,2026,4,0.5148,GRU,du_bao
+Phường Tân Sơn,2026,4,0.559,GRU,du_bao
+Phường Tân Sơn Hoà,2026,4,0.5082,GRU,du_bao
+Phường Tân Sơn Nhì,2026,4,0.5261,GRU,du_bao
+Phường Tân Sơn Nhất,2026,4,0.5083,GRU,du_bao
+Phường Tân Thuận,2026,4,0.5934,GRU,du_bao
+Phường Tân Thành,2026,4,0.7173,GRU,du_bao
+Phường Tân Thới Hiệp,2026,4,0.6806,GRU,du_bao
+Phường Tân Tạo,2026,4,0.5489,GRU,du_bao
+Phường Tân Uyên,2026,4,0.5001,GRU,du_bao
+Phường Tân Đông Hiệp,2026,4,0.5228,GRU,du_bao
+Phường Tân Định,2026,4,0.5335,GRU,du_bao
+Phường Tây Nam,2026,4,0.4161,GRU,du_bao
+Phường Tây Thạnh,2026,4,0.6554,GRU,du_bao
+Phường Tăng Nhơn Phú,2026,4,0.7251,GRU,du_bao
+Phường Vĩnh Hội,2026,4,0.521,GRU,du_bao
+Phường Vĩnh Tân,2026,4,0.5631,GRU,du_bao
+Phường Vũng Tàu,2026,4,0.5196,GRU,du_bao
+Phường Vườn Lài,2026,4,0.5761,GRU,du_bao
+Phường Xuân Hoà,2026,4,0.5287,GRU,du_bao
+Phường Xóm Chiếu,2026,4,0.5568,GRU,du_bao
+Phường Đông Hoà,2026,4,0.6878,GRU,du_bao
+Phường Đông Hưng Thuận,2026,4,0.6418,GRU,du_bao
+Phường Đức Nhuận,2026,4,0.5621,GRU,du_bao
+Xã An Long,2026,4,0.3917,GRU,du_bao
+Xã An Nhơn Tây,2026,4,0.461,GRU,du_bao
+Xã An Thới Đông,2026,4,0.1949,GRU,du_bao
+Xã Bà Điểm,2026,4,0.585,GRU,du_bao
+Xã Bàu Bàng,2026,4,0.493,GRU,du_bao
+Xã Bàu Lâm,2026,4,0.7016,GRU,du_bao
+Xã Bình Chánh,2026,4,0.5791,GRU,du_bao
+Xã Bình Châu,2026,4,0.6425,GRU,du_bao
+Xã Bình Giã,2026,4,0.7197,GRU,du_bao
+Xã Bình Hưng,2026,4,0.3998,GRU,du_bao
+Xã Bình Khánh,2026,4,0.2284,GRU,du_bao
+Xã Bình Lợi,2026,4,0.4941,GRU,du_bao
+Xã Bình Mỹ,2026,4,0.4482,GRU,du_bao
+Xã Bắc Tân Uyên,2026,4,0.5126,GRU,du_bao
+Xã Châu Pha,2026,4,0.6659,GRU,du_bao
+Xã Châu Đức,2026,4,0.4719,GRU,du_bao
+Xã Cần Giờ,2026,4,0.1927,GRU,du_bao
+Xã Củ Chi,2026,4,0.5218,GRU,du_bao
+Xã Dầu Tiếng,2026,4,0.3659,GRU,du_bao
+Xã Hiệp Phước,2026,4,0.3263,GRU,du_bao
+Xã Hoà Hiệp,2026,4,0.7458,GRU,du_bao
+Xã Hoà Hội,2026,4,0.6871,GRU,du_bao
+Xã Hóc Môn,2026,4,0.4678,GRU,du_bao
+Xã Hưng Long,2026,4,0.5277,GRU,du_bao
+Xã Hồ Tràm,2026,4,0.6079,GRU,du_bao
+Xã Kim Long,2026,4,0.6564,GRU,du_bao
+Xã Long Hoà,2026,4,0.4417,GRU,du_bao
+Xã Long Hải,2026,4,0.5452,GRU,du_bao
+Xã Long Sơn,2026,4,0.3332,GRU,du_bao
+Xã Long Điền,2026,4,0.5444,GRU,du_bao
+Xã Minh Thạnh,2026,4,0.3946,GRU,du_bao
+Xã Nghĩa Thành,2026,4,0.791,GRU,du_bao
+Xã Ngãi Giao,2026,4,0.6951,GRU,du_bao
+Xã Nhuận Đức,2026,4,0.5184,GRU,du_bao
+Xã Nhà Bè,2026,4,0.4092,GRU,du_bao
+Xã Phú Giáo,2026,4,0.5138,GRU,du_bao
+Xã Phú Hoà Đông,2026,4,0.4534,GRU,du_bao
+Xã Phước Hoà,2026,4,0.4432,GRU,du_bao
+Xã Phước Hải,2026,4,0.5546,GRU,du_bao
+Xã Phước Thành,2026,4,0.387,GRU,du_bao
+Xã Thanh An,2026,4,0.4328,GRU,du_bao
+Xã Thái Mỹ,2026,4,0.5258,GRU,du_bao
+Xã Thường Tân,2026,4,0.5755,GRU,du_bao
+Xã Thạnh An,2026,4,0.1823,GRU,du_bao
+Xã Trừ Văn Thố,2026,4,0.4166,GRU,du_bao
+Xã Tân An Hội,2026,4,0.5765,GRU,du_bao
+Xã Tân Nhựt,2026,4,0.5591,GRU,du_bao
+Xã Tân Vĩnh Lộc,2026,4,0.5672,GRU,du_bao
+Xã Vĩnh Lộc,2026,4,0.5387,GRU,du_bao
+Xã Xuyên Mộc,2026,4,0.5908,GRU,du_bao
+Xã Xuân Sơn,2026,4,0.6823,GRU,du_bao
+Xã Xuân Thới Sơn,2026,4,0.4696,GRU,du_bao
+Xã Đông Thạnh,2026,4,0.4759,GRU,du_bao
+Xã Đất Đỏ,2026,4,0.6486,GRU,du_bao
+Phường An Hội Tây,2026,5,0.6498,GRU,du_bao
+Phường An Hội Đông,2026,5,0.6178,GRU,du_bao
+Phường An Khánh,2026,5,0.4124,GRU,du_bao
+Phường An Lạc,2026,5,0.6318,GRU,du_bao
+Phường An Nhơn,2026,5,0.5515,GRU,du_bao
+Phường An Phú,2026,5,0.6482,GRU,du_bao
+Phường An Phú Đông,2026,5,0.54,GRU,du_bao
+Phường An Đông,2026,5,0.5389,GRU,du_bao
+Phường Bà Rịa,2026,5,0.5293,GRU,du_bao
+Phường Bàn Cờ,2026,5,0.5171,GRU,du_bao
+Phường Bình Cơ,2026,5,0.5126,GRU,du_bao
+Phường Bình Dương,2026,5,0.6059,GRU,du_bao
+Phường Bình Hoà,2026,5,0.6021,GRU,du_bao
+Phường Bình Hưng Hoà,2026,5,0.6248,GRU,du_bao
+Phường Bình Lợi Trung,2026,5,0.5368,GRU,du_bao
+Phường Bình Phú,2026,5,0.5445,GRU,du_bao
+Phường Bình Quới,2026,5,0.3526,GRU,du_bao
+Phường Bình Thạnh,2026,5,0.5026,GRU,du_bao
+Phường Bình Thới,2026,5,0.5486,GRU,du_bao
+Phường Bình Tiên,2026,5,0.5414,GRU,du_bao
+Phường Bình Trưng,2026,5,0.5371,GRU,du_bao
+Phường Bình Trị Đông,2026,5,0.6298,GRU,du_bao
+Phường Bình Tân,2026,5,0.644,GRU,du_bao
+Phường Bình Tây,2026,5,0.4538,GRU,du_bao
+Phường Bình Đông,2026,5,0.5821,GRU,du_bao
+Phường Bảy Hiền,2026,5,0.6354,GRU,du_bao
+Phường Bến Cát,2026,5,0.5045,GRU,du_bao
+Phường Bến Thành,2026,5,0.5254,GRU,du_bao
+Phường Chánh Hiệp,2026,5,0.52,GRU,du_bao
+Phường Chánh Hưng,2026,5,0.4904,GRU,du_bao
+Phường Chánh Phú Hoà,2026,5,0.4665,GRU,du_bao
+Phường Chợ Lớn,2026,5,0.5606,GRU,du_bao
+Phường Chợ Quán,2026,5,0.5,GRU,du_bao
+Phường Cát Lái,2026,5,0.4836,GRU,du_bao
+Phường Cầu Kiệu,2026,5,0.6343,GRU,du_bao
+Phường Cầu Ông Lãnh,2026,5,0.4993,GRU,du_bao
+Phường Diên Hồng,2026,5,0.6253,GRU,du_bao
+Phường Dĩ An,2026,5,0.6369,GRU,du_bao
+Phường Gia Định,2026,5,0.5752,GRU,du_bao
+Phường Gò Vấp,2026,5,0.6276,GRU,du_bao
+Phường Hiệp Bình,2026,5,0.5467,GRU,du_bao
+Phường Hoà Bình,2026,5,0.5949,GRU,du_bao
+Phường Hoà Hưng,2026,5,0.5413,GRU,du_bao
+Phường Hoà Lợi,2026,5,0.5331,GRU,du_bao
+Phường Hạnh Thông,2026,5,0.5501,GRU,du_bao
+Phường Khánh Hội,2026,5,0.5595,GRU,du_bao
+Phường Linh Xuân,2026,5,0.6567,GRU,du_bao
+Phường Long Bình,2026,5,0.6041,GRU,du_bao
+Phường Long Hương,2026,5,0.402,GRU,du_bao
+Phường Long Nguyên,2026,5,0.5185,GRU,du_bao
+Phường Long Phước,2026,5,0.4647,GRU,du_bao
+Phường Long Trường,2026,5,0.5125,GRU,du_bao
+Phường Lái Thiêu,2026,5,0.5363,GRU,du_bao
+Phường Minh Phụng,2026,5,0.5592,GRU,du_bao
+Phường Nhiêu Lộc,2026,5,0.5736,GRU,du_bao
+Phường Phú An,2026,5,0.5047,GRU,du_bao
+Phường Phú Lâm,2026,5,0.5418,GRU,du_bao
+Phường Phú Lợi,2026,5,0.5748,GRU,du_bao
+Phường Phú Mỹ,2026,5,0.5761,GRU,du_bao
+Phường Phú Nhuận,2026,5,0.5273,GRU,du_bao
+Phường Phú Thuận,2026,5,0.4205,GRU,du_bao
+Phường Phú Thạnh,2026,5,0.5844,GRU,du_bao
+Phường Phú Thọ,2026,5,0.4505,GRU,du_bao
+Phường Phú Thọ Hoà,2026,5,0.5388,GRU,du_bao
+Phường Phú Định,2026,5,0.6257,GRU,du_bao
+Phường Phước Long,2026,5,0.6656,GRU,du_bao
+Phường Phước Thắng,2026,5,0.438,GRU,du_bao
+Phường Rạch Dừa,2026,5,0.6647,GRU,du_bao
+Phường Sài Gòn,2026,5,0.4744,GRU,du_bao
+Phường Tam Bình,2026,5,0.5733,GRU,du_bao
+Phường Tam Long,2026,5,0.7083,GRU,du_bao
+Phường Tam Thắng,2026,5,0.6676,GRU,du_bao
+Phường Thuận An,2026,5,0.4823,GRU,du_bao
+Phường Thuận Giao,2026,5,0.6911,GRU,du_bao
+Phường Thông Tây Hội,2026,5,0.6558,GRU,du_bao
+Phường Thạnh Mỹ Tây,2026,5,0.4651,GRU,du_bao
+Phường Thới An,2026,5,0.5312,GRU,du_bao
+Phường Thới Hoà,2026,5,0.6069,GRU,du_bao
+Phường Thủ Dầu Một,2026,5,0.5421,GRU,du_bao
+Phường Thủ Đức,2026,5,0.6055,GRU,du_bao
+Phường Trung Mỹ Tây,2026,5,0.6551,GRU,du_bao
+Phường Tân Bình,2026,5,0.6397,GRU,du_bao
+Phường Tân Hiệp,2026,5,0.5819,GRU,du_bao
+Phường Tân Hoà,2026,5,0.5066,GRU,du_bao
+Phường Tân Hưng,2026,5,0.5592,GRU,du_bao
+Phường Tân Hải,2026,5,0.3906,GRU,du_bao
+Phường Tân Khánh,2026,5,0.5531,GRU,du_bao
+Phường Tân Mỹ,2026,5,0.5516,GRU,du_bao
+Phường Tân Phú,2026,5,0.5942,GRU,du_bao
+Phường Tân Phước,2026,5,0.4501,GRU,du_bao
+Phường Tân Sơn,2026,5,0.6508,GRU,du_bao
+Phường Tân Sơn Hoà,2026,5,0.6167,GRU,du_bao
+Phường Tân Sơn Nhì,2026,5,0.5672,GRU,du_bao
+Phường Tân Sơn Nhất,2026,5,0.5696,GRU,du_bao
+Phường Tân Thuận,2026,5,0.5815,GRU,du_bao
+Phường Tân Thành,2026,5,0.5709,GRU,du_bao
+Phường Tân Thới Hiệp,2026,5,0.7016,GRU,du_bao
+Phường Tân Tạo,2026,5,0.639,GRU,du_bao
+Phường Tân Uyên,2026,5,0.5144,GRU,du_bao
+Phường Tân Đông Hiệp,2026,5,0.5072,GRU,du_bao
+Phường Tân Định,2026,5,0.5348,GRU,du_bao
+Phường Tây Nam,2026,5,0.4629,GRU,du_bao
+Phường Tây Thạnh,2026,5,0.698,GRU,du_bao
+Phường Tăng Nhơn Phú,2026,5,0.6931,GRU,du_bao
+Phường Vĩnh Hội,2026,5,0.5609,GRU,du_bao
+Phường Vĩnh Tân,2026,5,0.5586,GRU,du_bao
+Phường Vũng Tàu,2026,5,0.5571,GRU,du_bao
+Phường Vườn Lài,2026,5,0.5678,GRU,du_bao
+Phường Xuân Hoà,2026,5,0.6036,GRU,du_bao
+Phường Xóm Chiếu,2026,5,0.5627,GRU,du_bao
+Phường Đông Hoà,2026,5,0.6595,GRU,du_bao
+Phường Đông Hưng Thuận,2026,5,0.6257,GRU,du_bao
+Phường Đức Nhuận,2026,5,0.5412,GRU,du_bao
+Xã An Long,2026,5,0.4902,GRU,du_bao
+Xã An Nhơn Tây,2026,5,0.4426,GRU,du_bao
+Xã An Thới Đông,2026,5,0.2532,GRU,du_bao
+Xã Bà Điểm,2026,5,0.5791,GRU,du_bao
+Xã Bàu Bàng,2026,5,0.4868,GRU,du_bao
+Xã Bàu Lâm,2026,5,0.6393,GRU,du_bao
+Xã Bình Chánh,2026,5,0.6309,GRU,du_bao
+Xã Bình Châu,2026,5,0.6125,GRU,du_bao
+Xã Bình Giã,2026,5,0.6531,GRU,du_bao
+Xã Bình Hưng,2026,5,0.4278,GRU,du_bao
+Xã Bình Khánh,2026,5,0.3007,GRU,du_bao
+Xã Bình Lợi,2026,5,0.4301,GRU,du_bao
+Xã Bình Mỹ,2026,5,0.4432,GRU,du_bao
+Xã Bắc Tân Uyên,2026,5,0.5694,GRU,du_bao
+Xã Châu Pha,2026,5,0.5645,GRU,du_bao
+Xã Châu Đức,2026,5,0.4261,GRU,du_bao
+Xã Cần Giờ,2026,5,0.2171,GRU,du_bao
+Xã Củ Chi,2026,5,0.4171,GRU,du_bao
+Xã Dầu Tiếng,2026,5,0.4204,GRU,du_bao
+Xã Hiệp Phước,2026,5,0.3239,GRU,du_bao
+Xã Hoà Hiệp,2026,5,0.7513,GRU,du_bao
+Xã Hoà Hội,2026,5,0.5844,GRU,du_bao
+Xã Hóc Môn,2026,5,0.5029,GRU,du_bao
+Xã Hưng Long,2026,5,0.6141,GRU,du_bao
+Xã Hồ Tràm,2026,5,0.5294,GRU,du_bao
+Xã Kim Long,2026,5,0.5878,GRU,du_bao
+Xã Long Hoà,2026,5,0.5146,GRU,du_bao
+Xã Long Hải,2026,5,0.5889,GRU,du_bao
+Xã Long Sơn,2026,5,0.3396,GRU,du_bao
+Xã Long Điền,2026,5,0.5937,GRU,du_bao
+Xã Minh Thạnh,2026,5,0.4977,GRU,du_bao
+Xã Nghĩa Thành,2026,5,0.7623,GRU,du_bao
+Xã Ngãi Giao,2026,5,0.6594,GRU,du_bao
+Xã Nhuận Đức,2026,5,0.5097,GRU,du_bao
+Xã Nhà Bè,2026,5,0.392,GRU,du_bao
+Xã Phú Giáo,2026,5,0.567,GRU,du_bao
+Xã Phú Hoà Đông,2026,5,0.4481,GRU,du_bao
+Xã Phước Hoà,2026,5,0.5649,GRU,du_bao
+Xã Phước Hải,2026,5,0.5918,GRU,du_bao
+Xã Phước Thành,2026,5,0.4863,GRU,du_bao
+Xã Thanh An,2026,5,0.5072,GRU,du_bao
+Xã Thái Mỹ,2026,5,0.5093,GRU,du_bao
+Xã Thường Tân,2026,5,0.6026,GRU,du_bao
+Xã Thạnh An,2026,5,0.2637,GRU,du_bao
+Xã Trừ Văn Thố,2026,5,0.5092,GRU,du_bao
+Xã Tân An Hội,2026,5,0.5094,GRU,du_bao
+Xã Tân Nhựt,2026,5,0.6,GRU,du_bao
+Xã Tân Vĩnh Lộc,2026,5,0.5673,GRU,du_bao
+Xã Vĩnh Lộc,2026,5,0.4647,GRU,du_bao
+Xã Xuyên Mộc,2026,5,0.5156,GRU,du_bao
+Xã Xuân Sơn,2026,5,0.6155,GRU,du_bao
+Xã Xuân Thới Sơn,2026,5,0.4555,GRU,du_bao
+Xã Đông Thạnh,2026,5,0.563,GRU,du_bao
+Xã Đất Đỏ,2026,5,0.6732,GRU,du_bao
+Phường An Hội Tây,2026,6,0.7489,GRU,du_bao
+Phường An Hội Đông,2026,6,0.7114,GRU,du_bao
+Phường An Khánh,2026,6,0.5354,GRU,du_bao
+Phường An Lạc,2026,6,0.6985,GRU,du_bao
+Phường An Nhơn,2026,6,0.7032,GRU,du_bao
+Phường An Phú,2026,6,0.7547,GRU,du_bao
+Phường An Phú Đông,2026,6,0.7076,GRU,du_bao
+Phường An Đông,2026,6,0.6288,GRU,du_bao
+Phường Bà Rịa,2026,6,0.6838,GRU,du_bao
+Phường Bàn Cờ,2026,6,0.6235,GRU,du_bao
+Phường Bình Cơ,2026,6,0.5464,GRU,du_bao
+Phường Bình Dương,2026,6,0.665,GRU,du_bao
+Phường Bình Hoà,2026,6,0.725,GRU,du_bao
+Phường Bình Hưng Hoà,2026,6,0.754,GRU,du_bao
+Phường Bình Lợi Trung,2026,6,0.6409,GRU,du_bao
+Phường Bình Phú,2026,6,0.6475,GRU,du_bao
+Phường Bình Quới,2026,6,0.407,GRU,du_bao
+Phường Bình Thạnh,2026,6,0.6281,GRU,du_bao
+Phường Bình Thới,2026,6,0.7376,GRU,du_bao
+Phường Bình Tiên,2026,6,0.6553,GRU,du_bao
+Phường Bình Trưng,2026,6,0.593,GRU,du_bao
+Phường Bình Trị Đông,2026,6,0.7356,GRU,du_bao
+Phường Bình Tân,2026,6,0.7422,GRU,du_bao
+Phường Bình Tây,2026,6,0.6588,GRU,du_bao
+Phường Bình Đông,2026,6,0.67,GRU,du_bao
+Phường Bảy Hiền,2026,6,0.7326,GRU,du_bao
+Phường Bến Cát,2026,6,0.4958,GRU,du_bao
+Phường Bến Thành,2026,6,0.6434,GRU,du_bao
+Phường Chánh Hiệp,2026,6,0.5646,GRU,du_bao
+Phường Chánh Hưng,2026,6,0.624,GRU,du_bao
+Phường Chánh Phú Hoà,2026,6,0.487,GRU,du_bao
+Phường Chợ Lớn,2026,6,0.6659,GRU,du_bao
+Phường Chợ Quán,2026,6,0.6412,GRU,du_bao
+Phường Cát Lái,2026,6,0.5813,GRU,du_bao
+Phường Cầu Kiệu,2026,6,0.6425,GRU,du_bao
+Phường Cầu Ông Lãnh,2026,6,0.683,GRU,du_bao
+Phường Diên Hồng,2026,6,0.6438,GRU,du_bao
+Phường Dĩ An,2026,6,0.825,GRU,du_bao
+Phường Gia Định,2026,6,0.6602,GRU,du_bao
+Phường Gò Vấp,2026,6,0.7751,GRU,du_bao
+Phường Hiệp Bình,2026,6,0.6357,GRU,du_bao
+Phường Hoà Bình,2026,6,0.6815,GRU,du_bao
+Phường Hoà Hưng,2026,6,0.7374,GRU,du_bao
+Phường Hoà Lợi,2026,6,0.5552,GRU,du_bao
+Phường Hạnh Thông,2026,6,0.757,GRU,du_bao
+Phường Khánh Hội,2026,6,0.654,GRU,du_bao
+Phường Linh Xuân,2026,6,0.7462,GRU,du_bao
+Phường Long Bình,2026,6,0.5671,GRU,du_bao
+Phường Long Hương,2026,6,0.5355,GRU,du_bao
+Phường Long Nguyên,2026,6,0.514,GRU,du_bao
+Phường Long Phước,2026,6,0.461,GRU,du_bao
+Phường Long Trường,2026,6,0.5206,GRU,du_bao
+Phường Lái Thiêu,2026,6,0.6422,GRU,du_bao
+Phường Minh Phụng,2026,6,0.7141,GRU,du_bao
+Phường Nhiêu Lộc,2026,6,0.6861,GRU,du_bao
+Phường Phú An,2026,6,0.5105,GRU,du_bao
+Phường Phú Lâm,2026,6,0.7121,GRU,du_bao
+Phường Phú Lợi,2026,6,0.6956,GRU,du_bao
+Phường Phú Mỹ,2026,6,0.6315,GRU,du_bao
+Phường Phú Nhuận,2026,6,0.6905,GRU,du_bao
+Phường Phú Thuận,2026,6,0.395,GRU,du_bao
+Phường Phú Thạnh,2026,6,0.6713,GRU,du_bao
+Phường Phú Thọ,2026,6,0.7635,GRU,du_bao
+Phường Phú Thọ Hoà,2026,6,0.6286,GRU,du_bao
+Phường Phú Định,2026,6,0.6748,GRU,du_bao
+Phường Phước Long,2026,6,0.7349,GRU,du_bao
+Phường Phước Thắng,2026,6,0.5564,GRU,du_bao
+Phường Rạch Dừa,2026,6,0.7685,GRU,du_bao
+Phường Sài Gòn,2026,6,0.5417,GRU,du_bao
+Phường Tam Bình,2026,6,0.7319,GRU,du_bao
+Phường Tam Long,2026,6,0.7031,GRU,du_bao
+Phường Tam Thắng,2026,6,0.7422,GRU,du_bao
+Phường Thuận An,2026,6,0.5579,GRU,du_bao
+Phường Thuận Giao,2026,6,0.7791,GRU,du_bao
+Phường Thông Tây Hội,2026,6,0.7468,GRU,du_bao
+Phường Thạnh Mỹ Tây,2026,6,0.5279,GRU,du_bao
+Phường Thới An,2026,6,0.6929,GRU,du_bao
+Phường Thới Hoà,2026,6,0.6575,GRU,du_bao
+Phường Thủ Dầu Một,2026,6,0.6556,GRU,du_bao
+Phường Thủ Đức,2026,6,0.7044,GRU,du_bao
+Phường Trung Mỹ Tây,2026,6,0.7127,GRU,du_bao
+Phường Tân Bình,2026,6,0.7151,GRU,du_bao
+Phường Tân Hiệp,2026,6,0.6736,GRU,du_bao
+Phường Tân Hoà,2026,6,0.7049,GRU,du_bao
+Phường Tân Hưng,2026,6,0.6507,GRU,du_bao
+Phường Tân Hải,2026,6,0.4616,GRU,du_bao
+Phường Tân Khánh,2026,6,0.66,GRU,du_bao
+Phường Tân Mỹ,2026,6,0.6158,GRU,du_bao
+Phường Tân Phú,2026,6,0.7227,GRU,du_bao
+Phường Tân Phước,2026,6,0.5481,GRU,du_bao
+Phường Tân Sơn,2026,6,0.7644,GRU,du_bao
+Phường Tân Sơn Hoà,2026,6,0.7385,GRU,du_bao
+Phường Tân Sơn Nhì,2026,6,0.7062,GRU,du_bao
+Phường Tân Sơn Nhất,2026,6,0.7309,GRU,du_bao
+Phường Tân Thuận,2026,6,0.6276,GRU,du_bao
+Phường Tân Thành,2026,6,0.5795,GRU,du_bao
+Phường Tân Thới Hiệp,2026,6,0.7465,GRU,du_bao
+Phường Tân Tạo,2026,6,0.6725,GRU,du_bao
+Phường Tân Uyên,2026,6,0.5319,GRU,du_bao
+Phường Tân Đông Hiệp,2026,6,0.657,GRU,du_bao
+Phường Tân Định,2026,6,0.5808,GRU,du_bao
+Phường Tây Nam,2026,6,0.5595,GRU,du_bao
+Phường Tây Thạnh,2026,6,0.7814,GRU,du_bao
+Phường Tăng Nhơn Phú,2026,6,0.6937,GRU,du_bao
+Phường Vĩnh Hội,2026,6,0.6263,GRU,du_bao
+Phường Vĩnh Tân,2026,6,0.5698,GRU,du_bao
+Phường Vũng Tàu,2026,6,0.6369,GRU,du_bao
+Phường Vườn Lài,2026,6,0.6944,GRU,du_bao
+Phường Xuân Hoà,2026,6,0.619,GRU,du_bao
+Phường Xóm Chiếu,2026,6,0.6565,GRU,du_bao
+Phường Đông Hoà,2026,6,0.7429,GRU,du_bao
+Phường Đông Hưng Thuận,2026,6,0.7359,GRU,du_bao
+Phường Đức Nhuận,2026,6,0.7492,GRU,du_bao
+Xã An Long,2026,6,0.5095,GRU,du_bao
+Xã An Nhơn Tây,2026,6,0.5982,GRU,du_bao
+Xã An Thới Đông,2026,6,0.2933,GRU,du_bao
+Xã Bà Điểm,2026,6,0.6449,GRU,du_bao
+Xã Bàu Bàng,2026,6,0.5305,GRU,du_bao
+Xã Bàu Lâm,2026,6,0.4616,GRU,du_bao
+Xã Bình Chánh,2026,6,0.6216,GRU,du_bao
+Xã Bình Châu,2026,6,0.6104,GRU,du_bao
+Xã Bình Giã,2026,6,0.6079,GRU,du_bao
+Xã Bình Hưng,2026,6,0.5857,GRU,du_bao
+Xã Bình Khánh,2026,6,0.3211,GRU,du_bao
+Xã Bình Lợi,2026,6,0.5356,GRU,du_bao
+Xã Bình Mỹ,2026,6,0.5237,GRU,du_bao
+Xã Bắc Tân Uyên,2026,6,0.551,GRU,du_bao
+Xã Châu Pha,2026,6,0.6066,GRU,du_bao
+Xã Châu Đức,2026,6,0.4461,GRU,du_bao
+Xã Cần Giờ,2026,6,0.226,GRU,du_bao
+Xã Củ Chi,2026,6,0.5744,GRU,du_bao
+Xã Dầu Tiếng,2026,6,0.4665,GRU,du_bao
+Xã Hiệp Phước,2026,6,0.4198,GRU,du_bao
+Xã Hoà Hiệp,2026,6,0.6423,GRU,du_bao
+Xã Hoà Hội,2026,6,0.5746,GRU,du_bao
+Xã Hóc Môn,2026,6,0.5632,GRU,du_bao
+Xã Hưng Long,2026,6,0.6113,GRU,du_bao
+Xã Hồ Tràm,2026,6,0.603,GRU,du_bao
+Xã Kim Long,2026,6,0.5401,GRU,du_bao
+Xã Long Hoà,2026,6,0.5371,GRU,du_bao
+Xã Long Hải,2026,6,0.6176,GRU,du_bao
+Xã Long Sơn,2026,6,0.4565,GRU,du_bao
+Xã Long Điền,2026,6,0.5909,GRU,du_bao
+Xã Minh Thạnh,2026,6,0.5231,GRU,du_bao
+Xã Nghĩa Thành,2026,6,0.6992,GRU,du_bao
+Xã Ngãi Giao,2026,6,0.6374,GRU,du_bao
+Xã Nhuận Đức,2026,6,0.5825,GRU,du_bao
+Xã Nhà Bè,2026,6,0.5023,GRU,du_bao
+Xã Phú Giáo,2026,6,0.5012,GRU,du_bao
+Xã Phú Hoà Đông,2026,6,0.5213,GRU,du_bao
+Xã Phước Hoà,2026,6,0.5639,GRU,du_bao
+Xã Phước Hải,2026,6,0.595,GRU,du_bao
+Xã Phước Thành,2026,6,0.5008,GRU,du_bao
+Xã Thanh An,2026,6,0.564,GRU,du_bao
+Xã Thái Mỹ,2026,6,0.6495,GRU,du_bao
+Xã Thường Tân,2026,6,0.5401,GRU,du_bao
+Xã Thạnh An,2026,6,0.2515,GRU,du_bao
+Xã Trừ Văn Thố,2026,6,0.5037,GRU,du_bao
+Xã Tân An Hội,2026,6,0.6247,GRU,du_bao
+Xã Tân Nhựt,2026,6,0.6116,GRU,du_bao
+Xã Tân Vĩnh Lộc,2026,6,0.6696,GRU,du_bao
+Xã Vĩnh Lộc,2026,6,0.6021,GRU,du_bao
+Xã Xuyên Mộc,2026,6,0.5794,GRU,du_bao
+Xã Xuân Sơn,2026,6,0.6152,GRU,du_bao
+Xã Xuân Thới Sơn,2026,6,0.5458,GRU,du_bao
+Xã Đông Thạnh,2026,6,0.581,GRU,du_bao
+Xã Đất Đỏ,2026,6,0.6559,GRU,du_bao
