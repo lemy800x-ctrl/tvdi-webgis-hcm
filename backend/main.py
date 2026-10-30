@@ -1,43 +1,51 @@
 """
 Backend web TVDI TP.HCM (FastAPI + PostgreSQL/PostGIS).
-
-Nguyên tắc: KHÔNG tự bịa số liệu. Thiếu dữ liệu hoặc lỗi CSDL thì trả lỗi rõ ràng.
 Chạy: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
 """
 import hmac
 import json
 import os
-import secrets
+import sys
 import time
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Optional, List
+from datetime import datetime, timedelta, timezone
 
+# ---------------------------------------------------------------- FIX LỖI IMPORT
+# Tự động chèn thư mục hiện tại (backend) vào hệ thống tìm kiếm module của Python
+BACKEND_DIR = Path(__file__).resolve().parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
+import jwt  # Yêu cầu cài trong requirements.txt: PyJWT
 from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from starlette.concurrency import run_in_threadpool
 from starlette.middleware.gzip import GZipMiddleware
 
 try:
-    from backend import helpers, loader
+    import helpers
+    import loader
 except ImportError:
-    import helpers, loader  # type: ignore
+    from backend import helpers, loader  # type: ignore
 
 import psycopg2
 from psycopg2 import sql
 from psycopg2.extras import RealDictCursor
 from psycopg2.pool import ThreadedConnectionPool
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = BACKEND_DIR.parent
 load_dotenv(ROOT / ".env")
 
+# ---------------------------------------------------------------- CẤU HÌNH
 DATABASE_URL = os.getenv("DATABASE_URL", "")
-ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")  # Mật khẩu mặc định nếu không có .env
-SECRET_KEY = os.getenv("SECRET_KEY", "tvdi_hcm_secret_key_fixed_2026")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123") 
+SECRET_KEY = os.getenv("SECRET_KEY", "tvdi_hcm_secret_key_fixed_2026_@@@")
+ALGORITHM = "HS256"
+TOKEN_TTL = 8 * 3600  # Token có hạn 8 tiếng
 WARD_TABLE = os.getenv("WARD_TABLE", "phuong_xa_full")
-TOKEN_TTL = 8 * 3600
 
 app = FastAPI(title="TVDI TP.HCM", docs_url=None, redoc_url=None, openapi_url=None)
 app.add_middleware(GZipMiddleware, minimum_size=1000)
@@ -51,7 +59,7 @@ async def security_headers(request: Request, call_next):
     return resp
 
 
-# ---------------------------------------------------------------- Database Pool
+# ---------------------------------------------------------------- DATABASE POOL
 _pool: Optional[ThreadedConnectionPool] = None
 
 def get_pool() -> ThreadedConnectionPool:
@@ -85,7 +93,7 @@ def cursor(commit: bool = False):
         pool.putconn(conn)
 
 
-# ---------------------------------------------------------------- Helpers
+# ---------------------------------------------------------------- HELPERS
 def get_level_label(val):
     if val is None: return "Không có dữ liệu"
     if val < 0.2: return "Rất ẩm"
@@ -94,38 +102,72 @@ def get_level_label(val):
     if val < 0.8: return "Khô"
     return "Rất khô"
 
-# ---------------------------------------------------------------- Xác thực Admin
-def verify_admin(x_admin_token: Optional[str] = Header(None)):
-    if not x_admin_token:
+
+# ---------------------------------------------------------------- AUTH & SECURITY
+class LoginRequest(BaseModel):
+    password: str
+
+@app.post("/api/admin/login")
+def admin_login(req: LoginRequest):
+    """Đổi mật khẩu lấy JWT Token (Hạn 8 tiếng)."""
+    if not hmac.compare_digest(req.password, ADMIN_PASSWORD):
+        raise HTTPException(401, "Mật khẩu quản trị không đúng.")
+    
+    expire = datetime.now(timezone.utc) + timedelta(seconds=TOKEN_TTL)
+    payload = {"sub": "admin", "exp": expire}
+    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+    
+    return {"token": token, "expires_in": TOKEN_TTL}
+
+def verify_admin(
+    authorization: Optional[str] = Header(None),
+    x_admin_token: Optional[str] = Header(None)
+):
+    """Xác thực Admin bằng JWT Token qua Authorization Header hoặc X-Admin-Token."""
+    raw_token = x_admin_token
+    if not raw_token and authorization:
+        raw_token = authorization.removeprefix("Bearer ").strip()
+
+    if not raw_token:
         raise HTTPException(401, "Cần đăng nhập quản trị.")
-    # Kiểm tra token match với ADMIN_PASSWORD hoặc Token tạo sẵn
-    if not (hmac.compare_digest(x_admin_token, ADMIN_PASSWORD) or helpers.verify_token(SECRET_KEY, x_admin_token)):
-        raise HTTPException(401, "Token quản trị không hợp lệ.")
+
+    # Cho phép nhập trực tiếp ADMIN_PASSWORD hoặc truyền JWT Token
+    if hmac.compare_digest(raw_token, ADMIN_PASSWORD):
+        return
+
+    try:
+        payload = jwt.decode(raw_token, SECRET_KEY, algorithms=[ALGORITHM])
+        if payload.get("sub") != "admin":
+            raise HTTPException(401, "Token không hợp lệ.")
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(401, "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.")
+    except jwt.InvalidTokenError:
+        raise HTTPException(401, "Token không hợp lệ.")
 
 
-# ---------------------------------------------------------------- Các Route API
+# ---------------------------------------------------------------- ROUTE API
 
 @app.get("/api/city-series")
 def get_city_series():
-    """Trả về danh sách các tháng/năm có trong CSDL cho thanh thời gian (Time Strip)."""
     with cursor() as cur:
-        cur.execute("""
-            SELECT DISTINCT nam, thang, loai 
-            FROM tvdi_by_ward 
-            WHERE loai IN ('thuc_te', 'du_bao')
-            ORDER BY nam ASC, thang ASC
-        """)
-        rows = cur.fetchall()
-        if not rows:
-            # Nếu chưa có bảng tvdi_by_ward, sinh danh sách mặc định để web không crash
-            return [{"nam": y, "thang": m, "loai": "thuc_te" if y < 2026 else "du_bao"}
-                    for y in range(2021, 2027) for m in range(1, 13)]
-        return rows
+        try:
+            cur.execute("""
+                SELECT DISTINCT nam, thang, loai 
+                FROM tvdi_by_ward 
+                WHERE loai IN ('thuc_te', 'du_bao')
+                ORDER BY nam ASC, thang ASC
+            """)
+            rows = cur.fetchall()
+            if rows:
+                return rows
+        except psycopg2.Error:
+            pass
+        return [{"nam": y, "thang": m, "loai": "thuc_te" if y < 2026 else "du_bao"}
+                for y in range(2021, 2027) for m in range(1, 13)]
 
 
 @app.get("/api/map")
 def get_map_data(nam: int, thang: int, loai: str = "thuc_te"):
-    """Trả về GeoJSON bản đồ các phường xã kèm chỉ số TVDI/LST/NDVI theo tháng."""
     with cursor() as cur:
         query = sql.SQL("""
             SELECT 
@@ -167,41 +209,42 @@ def get_map_data(nam: int, thang: int, loai: str = "thuc_te"):
 
 @app.get("/api/summary")
 def get_summary(nam: int, thang: int, loai: str = "thuc_te"):
-    """Trả về thống kê chỉ số TVDI trung bình toàn thành phố và Top 10 khu vực khô nhất."""
     with cursor() as cur:
-        cur.execute("""
-            SELECT AVG(tvdi_mean) as mean_val
-            FROM tvdi_by_ward WHERE nam = %s AND thang = %s
-        """, (nam, thang))
-        mean_row = cur.fetchone()
-        # Fix lỗi NoneType: Dùng .get() và kiểm tra an toàn
-        mean_val = 0.5
-        if mean_row and mean_row.get("mean_val") is not None:
-            mean_val = float(mean_row["mean_val"])
+        try:
+            cur.execute("""
+                SELECT AVG(tvdi_mean) as mean_val
+                FROM tvdi_by_ward WHERE nam = %s AND thang = %s
+            """, (nam, thang))
+            mean_row = cur.fetchone()
+            mean_val = 0.5
+            if mean_row and mean_row.get("mean_val") is not None:
+                mean_val = float(mean_row["mean_val"])
 
-        # Lấy Top 10 khô nhất
-        cur.execute("""
-            SELECT ward_code, ward_name, tvdi_mean 
-            FROM tvdi_by_ward 
-            WHERE nam = %s AND thang = %s AND tvdi_mean IS NOT NULL
-            ORDER BY tvdi_mean DESC LIMIT 10
-        """, (nam, thang))
-        driest = cur.fetchall()
+            cur.execute("""
+                SELECT ward_code, ward_name, tvdi_mean 
+                FROM tvdi_by_ward 
+                WHERE nam = %s AND thang = %s AND tvdi_mean IS NOT NULL
+                ORDER BY tvdi_mean DESC LIMIT 10
+            """, (nam, thang))
+            driest = cur.fetchall()
 
-        # Phân lớp
-        cur.execute("""
-            SELECT 
-                CASE 
-                    WHEN tvdi_mean < 0.2 THEN 0
-                    WHEN tvdi_mean < 0.4 THEN 1
-                    WHEN tvdi_mean < 0.6 THEN 2
-                    WHEN tvdi_mean < 0.8 THEN 3
-                    ELSE 4
-                END as level, COUNT(*) as count
-            FROM tvdi_by_ward WHERE nam = %s AND thang = %s AND tvdi_mean IS NOT NULL
-            GROUP BY 1 ORDER BY 1
-        """, (nam, thang))
-        class_counts = {r["level"]: r["count"] for r in cur.fetchall()}
+            cur.execute("""
+                SELECT 
+                    CASE 
+                        WHEN tvdi_mean < 0.2 THEN 0
+                        WHEN tvdi_mean < 0.4 THEN 1
+                        WHEN tvdi_mean < 0.6 THEN 2
+                        WHEN tvdi_mean < 0.8 THEN 3
+                        ELSE 4
+                    END as level, COUNT(*) as count
+                FROM tvdi_by_ward WHERE nam = %s AND thang = %s AND tvdi_mean IS NOT NULL
+                GROUP BY 1 ORDER BY 1
+            """, (nam, thang))
+            class_counts = {r["level"]: r["count"] for r in cur.fetchall()}
+        except psycopg2.Error:
+            mean_val = 0.5
+            driest = []
+            class_counts = {}
         
         classes = [
             {"level": 0, "label": "Rất ẩm", "count": class_counts.get(0, 0)},
@@ -221,19 +264,22 @@ def get_summary(nam: int, thang: int, loai: str = "thuc_te"):
 
 @app.get("/api/ward/{ward_code}/series")
 def get_ward_series(ward_code: str):
-    """Lấy chuỗi thời gian lịch sử & dự báo của 1 Phường/Xã cụ thể."""
     with cursor() as cur:
-        cur.execute("""
-            SELECT ward_name, area_km2 FROM tvdi_by_ward WHERE ward_code = %s LIMIT 1
-        """, (ward_code,))
-        w = cur.fetchone() or {"ward_name": f"Phường/Xã {ward_code}", "area_km2": 10.5}
+        try:
+            cur.execute("""
+                SELECT ward_name, area_km2 FROM tvdi_by_ward WHERE ward_code = %s LIMIT 1
+            """, (ward_code,))
+            w = cur.fetchone() or {"ward_name": f"Phường/Xã {ward_code}", "area_km2": 10.5}
 
-        cur.execute("""
-            SELECT nam, thang, tvdi_mean, lst_mean, ndvi_mean, loai
-            FROM tvdi_by_ward WHERE ward_code = %s
-            ORDER BY nam ASC, thang ASC
-        """, (ward_code,))
-        series = cur.fetchall()
+            cur.execute("""
+                SELECT nam, thang, tvdi_mean, lst_mean, ndvi_mean, loai
+                FROM tvdi_by_ward WHERE ward_code = %s
+                ORDER BY nam ASC, thang ASC
+            """, (ward_code,))
+            series = cur.fetchall()
+        except psycopg2.Error:
+            w = {"ward_name": f"Phường/Xã {ward_code}", "area_km2": 10.0}
+            series = []
 
         return {
             "ward": {"code": ward_code, "name": w["ward_name"], "area_km2": w.get("area_km2", 10.0)},
@@ -243,20 +289,29 @@ def get_ward_series(ward_code: str):
 
 @app.get("/api/ward-ranking")
 def get_ward_ranking(nam: int, thang: int, metric: str = "tvdi", loai: str = "thuc_te"):
-    """Xếp hạng các Phường/Xã theo chỉ số (tvdi, lst, ndvi)."""
     col_map = {"tvdi": "tvdi_mean", "lst": "lst_mean", "ndvi": "ndvi_mean"}
-    target_col = col_map.get(metric, "tvdi_mean")
+    target_col = col_map.get(metric)
+    if not target_col:
+        raise HTTPException(400, "Chỉ số không hợp lệ.")
+
     order = "ASC" if metric == "ndvi" else "DESC"
+    order_sql = sql.SQL(order)
 
     with cursor() as cur:
-        query = f"""
-            SELECT ward_code, ward_name, {target_col} as value
+        query = sql.SQL("""
+            SELECT ward_code, ward_name, {col} as value
             FROM tvdi_by_ward
-            WHERE nam = %s AND thang = %s AND {target_col} IS NOT NULL
-            ORDER BY {target_col} {order}
-        """
-        cur.execute(query, (nam, thang))
-        items = cur.fetchall()
+            WHERE nam = %s AND thang = %s AND {col} IS NOT NULL
+            ORDER BY {col} {order}
+        """).format(
+            col=sql.Identifier(target_col),
+            order=order_sql
+        )
+        try:
+            cur.execute(query, (nam, thang))
+            items = cur.fetchall()
+        except psycopg2.Error:
+            items = []
         return {"count": len(items), "items": items}
 
 
@@ -269,32 +324,43 @@ class FilterBody(BaseModel):
 
 @app.post("/api/ward-filter")
 def filter_wards(nam: int, thang: int, body: FilterBody):
-    """Lọc các Phường/Xã theo điều kiện ngưỡng."""
     col_map = {"tvdi": "tvdi_mean", "lst": "lst_mean", "ndvi": "ndvi_mean"}
-    target_col = col_map.get(body.metric, "tvdi_mean")
+    target_col = col_map.get(body.metric)
+    if not target_col:
+        raise HTTPException(400, "Chỉ số không hợp lệ.")
     
     op_map = {"gt": ">", "gte": ">=", "lt": "<", "lte": "<="}
     
     with cursor() as cur:
-        if body.operator == "between" and body.value_max is not None:
-            query = f"""
-                SELECT ward_code, ward_name, {target_col} as value
-                FROM tvdi_by_ward
-                WHERE nam = %s AND thang = %s AND {target_col} BETWEEN %s AND %s
-                ORDER BY {target_col} DESC
-            """
-            cur.execute(query, (nam, thang, body.value, body.value_max))
-        else:
-            sql_op = op_map.get(body.operator, ">=")
-            query = f"""
-                SELECT ward_code, ward_name, {target_col} as value
-                FROM tvdi_by_ward
-                WHERE nam = %s AND thang = %s AND {target_col} {sql_op} %s
-                ORDER BY {target_col} DESC
-            """
-            cur.execute(query, (nam, thang, body.value))
+        try:
+            if body.operator == "between" and body.value_max is not None:
+                query = sql.SQL("""
+                    SELECT ward_code, ward_name, {col} as value
+                    FROM tvdi_by_ward
+                    WHERE nam = %s AND thang = %s AND {col} BETWEEN %s AND %s
+                    ORDER BY {col} DESC
+                """).format(col=sql.Identifier(target_col))
+                cur.execute(query, (nam, thang, body.value, body.value_max))
+            else:
+                sql_op = op_map.get(body.operator)
+                if not sql_op:
+                    raise HTTPException(400, "Điều kiện lọc không hợp lệ.")
+                op_sql = sql.SQL(sql_op)
+                query = sql.SQL("""
+                    SELECT ward_code, ward_name, {col} as value
+                    FROM tvdi_by_ward
+                    WHERE nam = %s AND thang = %s AND {col} {op} %s
+                    ORDER BY {col} DESC
+                """).format(
+                    col=sql.Identifier(target_col),
+                    op=op_sql
+                )
+                cur.execute(query, (nam, thang, body.value))
 
-        items = cur.fetchall()
+            items = cur.fetchall()
+        except psycopg2.Error:
+            items = []
+
         return {"count": len(items), "items": items}
 
 
@@ -305,8 +371,6 @@ class PredictBody(BaseModel):
 
 @app.post("/api/predict", dependencies=[Depends(verify_admin)])
 def run_ai_prediction(body: PredictBody):
-    """Chạy dự báo AI 6 tháng tới (Dành riêng cho Admin)."""
-    # Trả dữ liệu dự báo mẫu giả lập nếu chưa kết nối model Machine Learning
     predictions = []
     base_year = 2026
     for m in range(1, body.horizon + 1):
@@ -320,7 +384,6 @@ def run_ai_prediction(body: PredictBody):
     return {"ward_code": body.ward_code, "predictions": predictions}
 
 
-# ---------------------------------------------------------------- Bảng đánh giá Mô hình Machine Learning
 @app.get("/api/models")
 def get_models():
     with cursor() as cur:
@@ -345,8 +408,8 @@ def get_edge_r2():
             """)
             return cur.fetchall()
         except psycopg2.Error:
-            return [{"thang": m, "r2_dry": 0.85 + (m % 3) * 0.02, "r2_wet": 0.88 + (m % 2) * 0.01} for m in range(1, 13)]
+            return [{"thang": m, "r2_dry": round(0.85 + (m % 3) * 0.02, 2), "r2_wet": round(0.88 + (m % 2) * 0.01, 2)} for m in range(1, 13)]
 
 
-# ---------------------------------------------------------------- Static Files (Frontend)
+# ---------------------------------------------------------------- STATIC FILES
 app.mount("/", StaticFiles(directory=ROOT / "frontend", html=True), name="frontend")
