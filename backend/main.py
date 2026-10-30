@@ -12,19 +12,23 @@ from pathlib import Path
 from typing import Optional, List
 from datetime import datetime, timedelta, timezone
 
-# ---------------------------------------------------------------- FIX LỖI IMPORT
-# Tự động chèn thư mục hiện tại (backend) vào hệ thống tìm kiếm module của Python
+# ---------------------------------------------------------------- FIX DỨT ĐIỂM LỖI IMPORT
+# Thêm cả thư mục hiện tại (backend) lẫn thư mục gốc dự án vào PYTHONPATH
 BACKEND_DIR = Path(__file__).resolve().parent
-if str(BACKEND_DIR) not in sys.path:
-    sys.path.insert(0, str(BACKEND_DIR))
+ROOT_DIR = BACKEND_DIR.parent
 
-import jwt  # Yêu cầu cài trong requirements.txt: PyJWT
+for d in (str(BACKEND_DIR), str(ROOT_DIR)):
+    if d not in sys.path:
+        sys.path.insert(0, d)
+
+import jwt  # Cần có PyJWT trong requirements.txt
 from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from starlette.middleware.gzip import GZipMiddleware
 
+# Import module trực tiếp, fallback sang package import nếu môi trường đặc biệt
 try:
     import helpers
     import loader
@@ -36,15 +40,14 @@ from psycopg2 import sql
 from psycopg2.extras import RealDictCursor
 from psycopg2.pool import ThreadedConnectionPool
 
-ROOT = BACKEND_DIR.parent
-load_dotenv(ROOT / ".env")
+load_dotenv(ROOT_DIR / ".env")
 
 # ---------------------------------------------------------------- CẤU HÌNH
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123") 
 SECRET_KEY = os.getenv("SECRET_KEY", "tvdi_hcm_secret_key_fixed_2026_@@@")
 ALGORITHM = "HS256"
-TOKEN_TTL = 8 * 3600  # Token có hạn 8 tiếng
+TOKEN_TTL = 8 * 3600  # Token hạn 8 tiếng
 WARD_TABLE = os.getenv("WARD_TABLE", "phuong_xa_full")
 
 app = FastAPI(title="TVDI TP.HCM", docs_url=None, redoc_url=None, openapi_url=None)
@@ -131,7 +134,6 @@ def verify_admin(
     if not raw_token:
         raise HTTPException(401, "Cần đăng nhập quản trị.")
 
-    # Cho phép nhập trực tiếp ADMIN_PASSWORD hoặc truyền JWT Token
     if hmac.compare_digest(raw_token, ADMIN_PASSWORD):
         return
 
@@ -412,4 +414,4 @@ def get_edge_r2():
 
 
 # ---------------------------------------------------------------- STATIC FILES
-app.mount("/", StaticFiles(directory=ROOT / "frontend", html=True), name="frontend")
+app.mount("/", StaticFiles(directory=ROOT_DIR / "frontend", html=True), name="frontend")
