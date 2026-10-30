@@ -71,15 +71,26 @@ function el(tag, props = {}, children = []) {
   return node;
 }
 
+function getLevelLabel(val) {
+  if (val === null || val === undefined) return "Chưa có";
+  if (val < 0.2) return "Rất ẩm";
+  if (val < 0.4) return "Ẩm";
+  if (val < 0.6) return "Trung bình";
+  if (val < 0.8) return "Khô";
+  return "Rất khô";
+}
+
+// Gửi JWT Token qua Authorization Header
 function adminHeaders() {
   const token = sessionStorage.getItem("admin_token");
-  return token ? { "X-Admin-Token": token } : {};
+  return token ? { "Authorization": `Bearer ${token}` } : {};
 }
 
 function isAdmin() {
   return !!sessionStorage.getItem("admin_token");
 }
 
+// Hàm gọi API có tự động xử lý lỗi 401 (Token hết hạn)
 async function api(path, options = {}) {
   const opts = { ...options };
   opts.headers = { ...(opts.headers || {}), ...adminHeaders() };
@@ -89,7 +100,16 @@ async function api(path, options = {}) {
   } catch (e) {
     throw new Error("Không kết nối được máy chủ. Kiểm tra backend đã chạy chưa.");
   }
+  
   if (!res.ok) {
+    // FIX LỖI 2: Nếu Token hết hạn (401), tự động xóa và đăng xuất
+    if (res.status === 401) {
+      if (sessionStorage.getItem("admin_token")) {
+        sessionStorage.removeItem("admin_token");
+        if (typeof refreshAuthUI === "function") refreshAuthUI();
+      }
+    }
+    
     let detail = `Lỗi ${res.status}`;
     try { detail = (await res.json()).detail || detail; } catch (_) {}
     throw new Error(detail);
@@ -389,10 +409,49 @@ async function selectWard(code, zoom = false) {
 
     renderWardChart();
 
+    // Hiện nút bấm CHẠY AI nếu là Admin
     const predictBtn = $("predict-btn");
     if (predictBtn) predictBtn.hidden = !isAdmin();
+
+    // Tự động hiển thị bảng dự báo (nếu có sẵn trong CSDL) cho MỌI NGƯỜI
+    loadExistingForecast();
   } catch (err) {
     showNotice(err.message);
+  }
+}
+
+// Hàm tải bảng dự báo có sẵn cho tất cả người dùng
+function loadExistingForecast() {
+  const out = $("predict-result");
+  if (!out) return;
+  out.replaceChildren();
+
+  // Lấy dữ liệu dự báo (năm >= 2026) từ state.wardSeries
+  if (!state.wardSeries || !state.wardSeries.series) return;
+  
+  const forecasts = state.wardSeries.series.filter(s => s.nam >= 2026);
+
+  if (forecasts.length > 0) {
+    const tbody = el("tbody");
+    forecasts.forEach((p) => {
+      tbody.append(el("tr", {}, [
+        el("td", { text: `${String(p.thang).padStart(2, "0")}/${p.nam}` }),
+        el("td", { text: fmt(p.tvdi_mean) }),
+        el("td", { text: getLevelLabel(p.tvdi_mean) })
+      ]));
+    });
+
+    out.append(
+      el("p", { text: "Kết quả dự báo 6 tháng tới (từ CSDL):" }),
+      el("table", {}, [
+        el("thead", {}, [el("tr", {}, [
+          el("th", { text: "Tháng" }),
+          el("th", { text: "TVDI" }),
+          el("th", { text: "Mức độ" })
+        ])]),
+        tbody
+      ])
+    );
   }
 }
 
@@ -494,7 +553,11 @@ async function runPredict() {
     state.live = res.predictions || [];
     renderWardChart();
 
-    if (out) {
+    // Cập nhật lại bảng dự báo (gọi selectWard để reload dữ liệu mới)
+    await selectWard(state.wardCode, false);
+    
+    if (out && out.children.length === 0) {
+      // Nếu chưa có dữ liệu trong CSDL, hiển thị tạm kết quả vừa dự báo
       const tbody = el("tbody");
       state.live.forEach((p) => {
         tbody.append(el("tr", {}, [
@@ -666,7 +729,7 @@ function setupMapTools() {
 }
 
 /* =========================================================
-   13. ADMIN LOGIN
+   13. ADMIN LOGIN (JWT Token)
    ========================================================= */
 
 function refreshAuthUI() {
@@ -684,22 +747,59 @@ function refreshAuthUI() {
   if ($("predict-btn")) $("predict-btn").hidden = !admin;
 }
 
-function setupAdminLogin() {
-  $("admin-toggle-btn")?.addEventListener("click", () => {
+async function setupAdminLogin() {
+  const adminBtn = $("admin-toggle-btn");
+  const authStatus = $("auth-status");
+  
+  // Hàm xử lý chung khi bấm đăng nhập/đăng xuất
+  const handleAuthClick = async () => {
     if (isAdmin()) {
       sessionStorage.removeItem("admin_token");
       refreshAuthUI();
       return;
     }
-    const token = window.prompt("Nhập mã admin:");
-    if (!token) return;
-    sessionStorage.setItem("admin_token", token.trim());
-    refreshAuthUI();
-  });
+    
+    const password = window.prompt("Nhập mật khẩu Admin:");
+    if (!password) return;
+
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: password })
+      });
+      
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || "Mật khẩu sai");
+      }
+      
+      const data = await res.json();
+      sessionStorage.setItem("admin_token", data.token);
+      refreshAuthUI();
+      alert("Đăng nhập Admin thành công!");
+      
+    } catch (err) {
+      alert("Lỗi đăng nhập: " + err.message);
+    }
+  };
+
+  // Gán sự kiện cho nút Admin
+  if (adminBtn) {
+    adminBtn.addEventListener("click", handleAuthClick);
+  }
+  
+  // FIX LỖI 1: Gán sự kiện click cho cả dòng chữ trạng thái
+  if (authStatus) {
+    authStatus.style.cursor = "pointer"; // Đổi con trỏ chuột
+    authStatus.style.textDecoration = "underline"; // Gạch chân để giống link
+    authStatus.title = "Bấm để đăng nhập/đăng xuất Admin";
+    authStatus.addEventListener("click", handleAuthClick);
+  }
 }
 
 /* =========================================================
-   14. PANEL MÔ HÌNH (DÀNH CHO ĐÁNH GIÁ MÔ HÌNH)
+   14. PANEL MÔ HÌNH
    ========================================================= */
 
 function setupTabs() {
