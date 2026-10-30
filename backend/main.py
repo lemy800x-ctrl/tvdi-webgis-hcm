@@ -12,28 +12,23 @@ from pathlib import Path
 from typing import Optional, List
 from datetime import datetime, timedelta, timezone
 
-# ---------------------------------------------------------------- FIX DỨT ĐIỂM LỖI IMPORT
-# Thêm cả thư mục hiện tại (backend) lẫn thư mục gốc dự án vào PYTHONPATH
+# ---------------------------------------------------------------- SETUP PATH
 BACKEND_DIR = Path(__file__).resolve().parent
 ROOT_DIR = BACKEND_DIR.parent
 
-for d in (str(BACKEND_DIR), str(ROOT_DIR)):
-    if d not in sys.path:
-        sys.path.insert(0, d)
+for path_str in (str(BACKEND_DIR), str(ROOT_DIR)):
+    if path_str not in sys.path:
+        sys.path.insert(0, path_str)
 
-import jwt  # Cần có PyJWT trong requirements.txt
+import jwt  # Cần PyJWT trong requirements.txt
 from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from starlette.middleware.gzip import GZipMiddleware
 
-# Import module trực tiếp, fallback sang package import nếu môi trường đặc biệt
-try:
-    import helpers
-    import loader
-except ImportError:
-    from backend import helpers, loader  # type: ignore
+# DÙNG DUY NHẤT HELPERS (ĐÃ XÓA LOADER)
+import helpers
 
 import psycopg2
 from psycopg2 import sql
